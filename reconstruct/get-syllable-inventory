@@ -1,0 +1,96 @@
+#!/usr/bin/python
+# Compile Burmish lexicon
+# Dependencies: Python ICU; Parsy
+# Usage: Unix-ish
+
+# Basic imports
+import sys
+import re
+import parsy
+import csv
+from functools import reduce
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+# Convert Old Burmese reconstruction from the TSV format to the format to be displayed
+# 55 → H
+# 53 → X
+# 22 → Ø
+# consonant4 → Ø
+# no tone → error
+def print_reconstruction(text, formatting = None, error_text = None):
+    if re.search('[^ptk]⁵⁵$', text):
+        return (formatting or '%s') % (text[:-2] + 'H')
+    elif re.search('[^ptk]⁵³$', text):
+        return (formatting or '%s') % (text[:-2] + 'X')
+    elif re.search('[^ptk]²²$', text):
+        return (formatting or '%s') % (text[:-2])
+    elif re.search('[ptksc]⁴$', text):
+        return (formatting or '%s') % (text[:-1])
+    else:
+        return (error_text or '[PBurm tone notation not understood: %s]') % text
+
+# Convert a piece of text to its component syllables
+# If there is alrady "◦" or a space, use it to separate them
+# Otherwise, separate the tone letters other letters
+def syllabize(text):
+    split_result = re.split(r'([ ◦¹²³⁴⁵]+)', text)
+    l = len(split_result)
+
+    # There are two possibilities
+    # 'a◦b◦' → ['a', '◦', 'b', '◦', '']
+    # 'a◦b' → ['a', '◦', 'b']
+    # Both of them are odd, but should be treated differently
+    # At least, everything but the last can be done in the same way
+    # (5-1)/2 = 2
+
+    result = []
+    for i in range((l-1) // 2):
+        result.append(split_result[i*2] + split_result[i*2+1].strip('◦ '))
+    # If last non-zero, then copy to result
+    if split_result[l-1]:
+        result.append(split_result[l-1])
+
+    return result
+
+# emphasize_syllable("mi ma mu", 1) → "mi<ma>mu"
+def emphasize_syllable(text, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    syllables = syllabize(text)
+    l = len(syllables)
+    result = ''
+    for i in range(l):
+        if i == syllable_index:
+            result = result + (emphatic_formatting or '<%s>') % syllables[i]
+        else:
+            result = result + (usual_formatting or '%s') % syllables[i]
+    return result
+
+# Parse arguments with argparse
+import argparse
+parser = argparse.ArgumentParser(description='Get all attested syllables from a certain language.', add_help=True)
+parser.add_argument('language', choices=['achang', 'maru'], help='type to compile into')
+parser.add_argument('files', metavar='filename', nargs='*', help='files to be concatenated and sorted')
+args = parser.parse_args()
+
+language = {'achang':'Achang_Longchuan', 'maru':'Maru'}[args.language]
+
+print(language)
+
+# Use fileinput to imitate standard UNIX utility behaviour
+import fileinput
+csvreader = csv.DictReader(fileinput.input(files=args.files, mode='r'), dialect='excel-tab')
+
+def process_row(row):
+    if row['ID'].startswith('#'):
+        # internal to lingpy
+        return
+
+    if row['DOCULECT'] == language:
+        syls = syllabize(row['IPA'])
+        for syl in syls:
+            print(syl)
+
+eprint('Processing TSV rows...')
+for row in csvreader:
+    process_row(row)

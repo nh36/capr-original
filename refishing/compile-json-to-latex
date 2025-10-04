@@ -1,0 +1,447 @@
+#!/usr/bin/python
+# Compile the cognate assignment result (JSON) to the LaTeX source file of the printable dictionary
+# Dependencies: Python ICU; Parsy
+# Usage: Unix-ish
+
+# Constants
+language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xiandao': 'Acha-XD', 'Maru': 'Maru', 'Bola': 'Bola', 'Atsi': 'Atsi', 'Lashi': 'Lashi'}
+fst_index = {'Old_Burmese': 'burmese', 'Achang_Longchuan': 'ngochang', 'Xiandao': 'xiandao', 'Maru': 'maru', 'Bola': 'bola', 'Atsi': 'atsi', 'Lashi': 'lashi'}
+
+# Basic imports
+import sys
+import re
+import json
+import csv
+from functools import reduce
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+# Replace unicode diacritics with ASCII equivalents for sending to the transducers
+UNICODE_MACRON_UNDER = " ̱ "[1]
+UNICODE_TILDE_OVER = " ̃"[1]
+def replace_diacritics(s):
+    return s.replace(UNICODE_MACRON_UNDER, '_').replace(UNICODE_TILDE_OVER, '~').replace('_~', '~_')
+
+def replace_diacritics_down(s):
+    return s.replace('_', UNICODE_MACRON_UNDER).replace('~', UNICODE_TILDE_OVER)
+
+# Convert a piece of text to its component syllables
+# If there is alrady "◦" or a space, use it to separate them
+# Otherwise, separate the tone letters other letters
+def syllabize(text):
+    split_result = re.split(r'([ ◦¹²³⁴⁵˩˨˧˦˥]+)', text)
+    l = len(split_result)
+
+    # There are two possibilities
+    # 'a◦b◦' → ['a', '◦', 'b', '◦', '']
+    # 'a◦b' → ['a', '◦', 'b']
+    # Both of them are odd, but should be treated differently
+    # At least, everything but the last can be done in the same way
+    # (5-1)/2 = 2
+
+    result = []
+    for i in range((l-1) // 2):
+        result.append(split_result[i*2] + split_result[i*2+1].strip('◦ '))
+    # If last non-zero, then copy to result
+    if split_result[l-1]:
+        result.append(split_result[l-1])
+
+    return result
+
+def emphasize_syllable_raw(syllables, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    l = len(syllables)
+    result = ''
+    for i in range(l):
+        if i == syllable_index:
+            result = result + (emphatic_formatting or '<%s>') % syllables[i]
+        else:
+            result = result + (usual_formatting or '%s') % syllables[i]
+    return result
+
+# emphasize_syllable("mi ma mu", 1) → "mi<ma>mu"
+def emphasize_syllable(text, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    return emphasize_syllable_raw(syllabize(text), syllable_index, usual_formatting, emphatic_formatting)
+
+# fetch_syllable("mi ma mu", 1) → "ma"
+def fetch_syllable(text, syllable_index):
+    syllables = syllabize(text)
+    return syllables[syllable_index]
+
+# Convert internal language name to printed name
+def print_language_name(name):
+    if name not in language_title or name == language_title[name]:
+        return name
+    else:
+        return language_title[name] + '.'
+
+# Convert text to LaTeX-compatible format
+def format_latex(str):
+    return str.replace('&', r'\&')
+
+##### MAIN PROGRAM #####
+
+from foma import FST
+import tempfile
+import os
+import subprocess
+
+# Parse arguments with argparse
+import argparse
+parser = argparse.ArgumentParser(description='Compile the cognate assignment result (JSON) to the LaTeX source file of the printable dictionary.', add_help=True)
+parser.add_argument('jsonfile', metavar='json_file', help='JSON board file')
+parser.add_argument('csvfile', metavar='csv_file', help='Original file containing the lexical data')
+parser.add_argument('fstfile', metavar='fst_file', help='Transducers for reconstruction')
+
+args = parser.parse_args()
+
+fsts_new = {}
+
+# Read and compile the FST
+script_path = os.path.dirname(os.path.realpath(__file__))
+fsts_new = {}
+with open(args.fstfile) as fst_file:
+    new_transducer = fst_file.read()
+
+with tempfile.TemporaryDirectory() as tmpdirname:
+    os.chdir(tmpdirname)
+    eprint('Compiling FSTs (new)')
+    with open('transducer.foma', 'w') as fp:
+        fp.write(new_transducer)
+    output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
+    eprint('\n'.join(output.split('\n')[-5:]))
+    for doculect_name in fst_index:
+        if os.path.isfile(fst_index[doculect_name] + '.bin'):
+            fsts_new[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
+    os.chdir(script_path)
+    eprint('FSTs loaded:', ', '.join(fsts_new))
+fsts = fsts_new
+
+# read the word CSV
+# import fileinput
+csvreader = csv.DictReader(filter(lambda row: row.strip() and row[0]!='#', open(args.csvfile, 'r')), dialect='excel-tab')
+
+eprint('Processing TSV rows...')
+words = {}
+def process_row(row):
+    if row['ID'].startswith('#'):
+        # internal to lingpy
+        return
+
+    if row['CROSSIDS']:
+        crossids = row['CROSSIDS'].split(' ')
+    else:
+        eprint('SANITY: empty crossid: ', row['ID'])
+        return
+
+    word_id = 'word-' + row['ID']
+    syllables = syllabize(row['IPA'])
+    word_json = {
+            'id':word_id,
+            'doculect': row['DOCULECT'],
+            'syllables': syllables,
+            'gloss': row['CONCEPT'],
+            'glossid': row['GLOSSID']}
+    words[word_id] = word_json
+
+for row in csvreader:
+    process_row(row)
+
+eprint('Processing JSON...')
+input_json = json.load(open(args.jsonfile, 'r+'))
+
+columns = input_json['columns']
+boards = input_json['boards']
+
+# PREPROCESSING STAGE
+eprint('Preprocessing...')
+
+# In order to implement multisyllabic word reconstruction, two jobs to do:
+# * reconstruct every column already
+# * provide a reverse lookup table to know which syllable is in which column
+
+# Reconstructions of column
+reconstruction_of_column = {}
+# Column_of_syllable
+column_of_syllable = {}
+
+for column_id in columns:
+    # Easy task first: remember to populate column_of_syllable
+    for syllable_id in columns[column_id]['syllableIds']:
+        column_of_syllable[syllable_id] = column_id
+
+    # Now do the reconstructions
+    # TODO no further computation for reconstructions should happen here
+    # the linguist should be choosing among reconstructions in the Javascript interface
+    # But for now, in the interest of painless porting, we still need to guess the reconstruction again by the following rule:
+    # 1. Collect all reconstructions for each language
+    # 2. The intersection of all reconstructions is the most probable one
+    # 3. If there isn't any, try all pair-pair shared reconstructions
+    # 4. If there are more than one of them, take the one with least incompabilities
+    reconsts = {}
+    at_least_one = False
+    first_form = False
+
+    # if not columns[column_id]['syllableIds']:
+    #    continue
+
+    for syllable_id in columns[column_id]['syllableIds']:
+        word_id, _, n = syllable_id.rpartition('-')
+        n = int(n)
+        ipa = words[word_id]['syllables'][n]
+        doculect = words[word_id]['doculect']
+
+        if doculect in fsts:
+            the_syl = replace_diacritics(ipa)
+            rec = list(fsts[doculect].apply_up(the_syl))
+            if rec:
+                # only record reconstructions when something *is* reconstructed
+                at_least_one = True
+                if doculect not in reconsts:
+                    reconsts[doculect] = set(rec)
+                else:
+                    reconsts[doculect] = reconsts[doculect].union(set(rec))
+
+    strict = True
+
+    first_best = True
+    inferred_reconstructions = []
+    best = []
+    second = []
+
+    if at_least_one:
+        strict = True
+        inferred_reconstructions = list(set.intersection(*reconsts.values()))
+
+        if not inferred_reconstructions:
+            strict = False
+            # kinda lenient way of generating reconstructions
+            # try and make intersection of every pair of doculects
+            pairwise_intersections = [set.intersection(reconsts[a], reconsts[b])
+                    for a in reconsts for b in reconsts if a != b]
+            if pairwise_intersections:
+                inferred_reconstructions = list(set.union(*pairwise_intersections))
+            else:
+                inferred_reconstructions = []
+
+        best = inferred_reconstructions
+
+        if len(inferred_reconstructions) > 1:
+            # try to guess the best one(s) still
+            attestations = {}
+            for rec in inferred_reconstructions:
+                attestations[rec] = 0
+                for doculect in reconsts:
+                    if rec in reconsts[doculect]:
+                        attestations[rec] += 1
+
+            inferred_reconstructions.sort
+            inferred_reconstructions.sort(key = lambda rec: attestations[rec], reverse = True)
+
+            most_value = attestations[inferred_reconstructions[0]]
+
+            # partition into two for better display
+            best = list(filter((lambda r: attestations[r] == most_value), inferred_reconstructions))
+            second = list(filter((lambda r: attestations[r] != most_value), inferred_reconstructions))
+
+            first_best = len(best) == 1
+            
+            if second and most_value - attestations[second[0]] > 1:
+                inferred_reconstructions = best
+                second = []
+
+    if not best and not second:
+        second = inferred_reconstructions
+
+    reconstruction_of_column[column_id] = {"reconstructions": inferred_reconstructions, "first_best": first_best, "strict": strict, "best": best, "second": second}
+
+    # We can also prerender a bunch of stuff per column, too
+    # short reconstruction
+    short_reconstr = '???'
+    if inferred_reconstructions:
+        short_reconstr = "*" + inferred_reconstructions[0]
+        if len(inferred_reconstructions) > 1 and not first_best:
+            short_reconstr += '?'
+    reconstruction_of_column[column_id]["short_reconstr"] = short_reconstr
+
+    # short protogloss, bold if human-reconstructed, "??" otherwise
+    short_gloss = '???'
+    if 'protogloss' in columns[column_id]:
+        short_gloss = r'\textbf{%s}' % (columns[column_id]['protogloss'])
+    reconstruction_of_column[column_id]["short_gloss"] = short_gloss
+
+# Now, let's turn every word into etyma combinations
+etyma_info = {}
+for word_id in words:
+    word = words[word_id]
+    syllable_count = len(word["syllables"])
+
+    etyma = [] # ("column-21", "column-53")
+    # By way of pre_rendering
+    short_reconstr = [] # ("*ba", "*bu?")
+    short_gloss = [] # "\textbf{*head}-\textbf{*pillow}-??"
+
+    for i in range(0, syllable_count):
+        syllable_id = word_id + '-' + str(i)
+        column_id = column_of_syllable[syllable_id]
+        etyma.append(column_id)
+        short_reconstr.append(reconstruction_of_column[column_id]['short_reconstr'])
+        short_gloss.append(reconstruction_of_column[column_id]['short_gloss'])
+
+    etyma = tuple(etyma)
+    words[word_id]["etyma"] = etyma
+
+    if etyma not in etyma_info:
+        etyma_info[etyma] = {
+                "short_reconstr": '-'.join(short_reconstr),
+                "short_gloss": '-'.join(short_gloss)}
+
+# PRINTING STAGE
+eprint('Printing...')
+
+# First, sort the columns
+columns_sorted = sorted([col for board_id in boards for col in boards[board_id]['columnIds']])
+columns_sorted.sort(key = lambda column_id: reconstruction_of_column[column_id]["short_reconstr"])
+
+# printing column per column
+for column_id in columns_sorted:
+        # display column title
+        inferred_reconstructions = ['*' + w for w in reconstruction_of_column[column_id]["reconstructions"]]
+        best_reconstructions = ', '.join(['*' + w for w in reconstruction_of_column[column_id]["best"]])
+        second_reconstructions = ', '.join(['*' + w for w in reconstruction_of_column[column_id]["second"]])
+        if best_reconstructions and second_reconstructions:
+            second_reconstructions = ', ' + second_reconstructions
+        strict = reconstruction_of_column[column_id]["strict"]
+        print(' ', r'\item \textbf{%s}%s%s{\tiny %s}' % (best_reconstructions, second_reconstructions, (r'\,?\,' if not strict else ''), column_id))
+
+        # display manual proto-gloss
+        if 'protogloss' in columns[column_id]:
+            print(' ', r'\textbf{‘*%s’}' % (columns[column_id]['protogloss']))
+
+        # display refishing status
+        if 'refishingStatus' in columns[column_id]:
+            if columns[column_id]['refishingStatus'] == 'new':
+                print(' ', r'\png{goodfish}')
+            elif columns[column_id]['refishingStatus'] == 'deadfish':
+                print(' ', r'\png{deadfish}')
+
+        # sort attestations by etyma combinations
+        syllables_by_etyma = {}
+        for syllable_id in columns[column_id]['syllableIds']:
+            word_id, _, n = syllable_id.rpartition('-')
+            if words[word_id]["etyma"] not in syllables_by_etyma:
+                syllables_by_etyma[words[word_id]["etyma"]] = [syllable_id]
+            else:
+                syllables_by_etyma[words[word_id]["etyma"]].append(syllable_id)
+
+
+        # rule: singletons & doubletons first, then sort by numbers of sylls inside
+        etyma = list(syllables_by_etyma.keys())
+        etyma_sorted = []
+        if (column_id,) in etyma:
+            etyma_sorted = [(column_id,)]
+            etyma.remove((column_id,))
+        if (column_id,column_id) in etyma:
+            etyma_sorted = [(column_id,column_id)]
+            etyma.remove((column_id,column_id))
+        etyma.sort(key = lambda et: len(syllables_by_etyma[et]), reverse = True)
+        etyma_sorted.extend(etyma)
+
+        # display the etyma one by one
+        list_created = False
+        for etymon in etyma_sorted:
+            # if singleton, display directly under heading; otherwise, create a further list
+            if not etymon == (column_id,):
+                if not list_created:
+                    print('   ', r'\begin{list}{}{\leftmargin=1.5em \itemindent=-1.5em}')
+                    list_created = True
+                print(' ', r'\item {\footnotesize \textbf{%s} ‘%s’}' % (etyma_info[etymon]["short_reconstr"], etyma_info[etymon]["short_gloss"]))
+
+            # sort attestations by language then sense
+            syll_sorted = sorted(syllables_by_etyma[etymon])
+            syll_sorted.sort(key = lambda syl: print_language_name(words[syl.rpartition('-')[0]]['doculect']))
+            syll_sorted.sort(key = lambda syl: words[syl.rpartition('-')[0]]['gloss'])
+            syll_sorted.sort(key = lambda syl: len(words[syl.rpartition('-')[0]]['gloss']))
+            syll_sorted.sort(key = lambda syl: words[syl.rpartition('-')[0]]['doculect'] != "Old_Burmese")
+
+            # useful stuff to prevent duplicating forms
+            last_sense = ''
+            last_form = {}
+            last_senseonly = False
+
+            # display the attestations one by one
+            for syllable_id in syll_sorted:
+                word_id, _, n = syllable_id.rpartition('-')
+                n = int(n)
+                syllables = words[word_id]['syllables']
+                doculect = words[word_id]['doculect']
+                gloss = words[word_id]['gloss']
+
+                # Convert form to printable form, with marking
+                display_ipa = emphasize_syllable_raw(syllables, n, '\diasmall{%s}', '\dia{%s}')
+                language_name = print_language_name(doculect)
+
+                # output compatibility w/ current reconstruction
+                reconstruction_status = r'\ding{55}' # ばつ
+
+                if doculect in fsts:
+                    the_syl = replace_diacritics(syllables[n])
+                    reconst = list(fsts[doculect].apply_up(the_syl))
+                    reconst = ['*' + w for w in reconst]
+                else:
+                    reconst = []
+                    reconstruction_status = r'{\footnotesize ×}'
+
+                if doculect in fsts and not reconst:
+                    # even if there is a transducer, there is no available reconstruction
+                    if inferred_reconstructions:
+                        hypo_forms_list = [set(fsts[doculect].apply_down(s[1:])) for s in inferred_reconstructions]
+                        # if there is intersection, take it, otherwise union
+                        hypo_forms = set.intersection(*hypo_forms_list)
+                        if not hypo_forms:
+                            hypo_forms = set.union(*hypo_forms_list)
+                        hypo_forms = [replace_diacritics_down(s) for s in hypo_forms]
+                    else:
+                        # if the whole class is reconstructionless
+                        hypo_forms = ["HMMMMM..."]
+
+                    # generate hypothetical outcome
+                    reconstruction_status = r'\ding{55}{\footnotesize $\neq$ \dag\textbf{%s}}' % (', '.join(list(hypo_forms)))
+                elif reconst:
+                    # intersection between current & available reconstructions
+                    intersection = set(reconst).intersection(set(inferred_reconstructions))
+                    if intersection == set(inferred_reconstructions):
+                        # complete overlap: checkmark
+                        reconstruction_status = r'\ding{51}' # checkmark
+                    elif not intersection:
+                        # no overlap: output every possible reconstruction
+                        reconstruction_status = r'{\footnotesize \ding{55} $<$ \textbf{%s}}' % (', '.join(reconst))
+                    else:
+                        # choose one among several possibilities
+                        reconstruction_status = r'{\footnotesize \ding{51} $<$ \textbf{%s}}' % (', '.join(list(intersection)))
+
+                # Actual printing
+                if last_sense:
+                    # separator after the initial stuff
+                    print('        ', r'\hspace{1ex}')
+
+                if last_sense != gloss:
+                    # new concept
+                    print('        ', r"\hspace{1ex} $\diamond$~`%s'" % format_latex(gloss))
+                    last_senseonly = False
+
+                if doculect not in last_form or last_form[doculect] != ' '.join(syllables):
+                    print('        ', '%s %s%s' % (language_name, display_ipa, reconstruction_status))
+                    last_senseonly = False
+                else:
+                    print('        ', '%s' % (language_name))
+                    last_senseonly = True
+
+                last_sense = gloss
+                last_form[doculect] = ' '.join(syllables)
+                # print ('   ', syllable_id, words[word_id]['gloss'], words[word_id]['syllables'][n])
+
+        # Now, any list created should be closed
+        if list_created:
+            print('   ', r'\end{list}')
+            

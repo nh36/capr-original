@@ -1,0 +1,5 @@
+In this directory, I try to implement the refishing algorithm.
+Input stuff:
+source.tsv: the dictionary
+previous-board: previous board
+fst-for-refishing: new transducers

@@ -1,0 +1,374 @@
+#!/usr/bin/python
+# Compile the cognate assignment result (JSON) to the LaTeX source file of correspondence pattern (Doug-style)
+# Dependencies: Python ICU; Parsy
+# Usage: Unix-ish
+
+# Basic imports
+import sys
+import re
+import json
+import csv
+from merge_phonemes import merge_phonemes
+from functools import reduce
+from collections import Counter
+
+language_title = {'Old_Burmese': 'OBurm', 'Achang_Longchuan': 'Acha-LC', 'Xiandao': 'Acha-XD', 'Maru': 'Maru', 'Bola': 'Bola', 'Atsi': 'Atsi', 'Lashi': 'Lashi'}
+langs_under_study = ['Maru', 'Old_Burmese', 'Atsi']
+number_of_languages = len(langs_under_study)
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+# Replace unicode diacritics with ASCII equivalents for sending to the transducers
+UNICODE_MACRON_UNDER = " ̱ "[1]
+UNICODE_TILDE_OVER = " ̃"[1]
+def replace_diacritics(s):
+    return s.replace(UNICODE_MACRON_UNDER, '_').replace(UNICODE_TILDE_OVER, '~').replace('_~', '~_')
+
+# Convert a piece of text to its component syllables
+# If there is alrady "◦" or a space, use it to separate them
+# Otherwise, separate the tone letters other letters
+def syllabize(text):
+    split_result = re.split(r'([ ◦¹²³⁴⁵˩˨˧˦˥]+)', text)
+    l = len(split_result)
+
+    # There are two possibilities
+    # 'a◦b◦' → ['a', '◦', 'b', '◦', '']
+    # 'a◦b' → ['a', '◦', 'b']
+    # Both of them are odd, but should be treated differently
+    # At least, everything but the last can be done in the same way
+    # (5-1)/2 = 2
+
+    result = []
+    for i in range((l-1) // 2):
+        result.append(split_result[i*2] + split_result[i*2+1].strip('◦ '))
+    # If last non-zero, then copy to result
+    if split_result[l-1]:
+        result.append(split_result[l-1])
+
+    return result
+
+def emphasize_syllable_raw(syllables, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    l = len(syllables)
+    result = ''
+    for i in range(l):
+        if i == syllable_index:
+            result = result + (emphatic_formatting or '<%s>') % syllables[i]
+        else:
+            result = result + (usual_formatting or '%s') % syllables[i]
+    return result
+
+# emphasize_syllable("mi ma mu", 1) → "mi<ma>mu"
+def emphasize_syllable(text, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    return emphasize_syllable_raw(syllabize(text), syllable_index, usual_formatting, emphatic_formatting)
+
+# fetch_syllable("mi ma mu", 1) → "ma"
+def fetch_syllable(text, syllable_index):
+    syllables = syllabize(text)
+    return syllables[syllable_index]
+
+# Convert internal language name to printed name
+def print_language_name(name):
+    if name == 'Old_Burmese':
+        return 'OBur.'
+    else:
+        return name.replace('_', r'\_')
+
+from foma import FST
+fst_burmese = FST.load('../reconstruct/burmese.bin')
+fst_achang = FST.load('../reconstruct/ngochang.bin')
+fst_maru = FST.load('../reconstruct/maru.bin')
+fst_bola = FST.load('../reconstruct/bola.bin')
+fsts = {'Old_Burmese': fst_burmese, 'Achang_Longchuan': fst_achang, 'Maru': fst_maru, 'Bola': fst_bola}
+
+# Parse arguments with argparse
+import argparse
+parser = argparse.ArgumentParser(description='Compile the cognate assignment result (JSON) to the LaTeX source file of the printable dictionary.', add_help=True)
+parser.add_argument('jsonfile', metavar='json_file', help='JSON board file')
+parser.add_argument('csvfile', metavar='csv_file', help='Original file containing the lexical data')
+
+args = parser.parse_args()
+
+# read the word CSV
+# import fileinput
+csvreader = csv.DictReader(filter(lambda row: row.strip() and row[0]!='#', open(args.csvfile, 'r')), dialect='excel-tab')
+
+eprint('Processing TSV rows...')
+words = {}
+def process_row(row):
+    if row['ID'].startswith('#'):
+        # internal to lingpy
+        return
+
+    if row['CROSSIDS']:
+        crossids = row['CROSSIDS'].split(' ')
+    else:
+        eprint('SANITY: empty crossid: ', row['ID'])
+        return
+
+    word_id = 'word-' + row['ID']
+    syllables = syllabize(row['IPA'])
+    syllables_parsed = [merge_phonemes(str(sch), str(tk), 'i m r t', {'i': 'im', 'm':'m', 'r':'mnNc', 't':'t'}) for sch, tk in zip(row['STRUCTURE'].split(' + '), row['TOKENS'].split(' + '))]
+
+    word_json = {
+            'id':word_id,
+            'doculect': row['DOCULECT'],
+            'syllables': syllables,
+            'syllables_parsed': syllables_parsed,
+            'gloss': row['CONCEPT'],
+            'glossid': row['GLOSSID']}
+    words[word_id] = word_json
+
+for row in csvreader:
+    process_row(row)
+
+eprint('Processing JSON...')
+input_json = json.load(open(args.jsonfile, 'r+'))
+
+columns = input_json['columns']
+boards = input_json['boards']
+
+# list indexed by languages and initials of columns containing a certain initial in a certain language
+# column_index['i']['Old_Burmese']['p'] -> [...]
+# column_index = {}
+
+# column_index['i']['p:p:p'] -> [...]
+column_index = {pos:{} for pos in 'imrt'}
+
+for board_id in boards:
+    for column_id in boards[board_id]['columnIds']:
+        if not columns[column_id]['syllableIds']:
+            continue
+
+        # cnt[pos][doculect] → Counter of possibilities
+        cnt = {}
+        sylls = {}
+        senses = {}
+
+        for syllable_id in columns[column_id]['syllableIds']:
+            word_id, _, n = syllable_id.rpartition('-')
+            n = int(n)
+
+            ipa = words[word_id]['syllables'][n]
+            doculect = words[word_id]['doculect']
+            gloss = words[word_id]['gloss']
+            syllable_parsed = words[word_id]['syllables_parsed'][n]
+            syllable_fields = list(zip(syllable_parsed[0].split(' '), syllable_parsed[1].split(' ')))
+
+            for position, sound in syllable_fields:
+                if position not in cnt:
+                    cnt[position] = {}
+                    sylls[position] = {}
+                    senses[position] = {}
+                if doculect not in cnt[position]:
+                    cnt[position][doculect] = Counter()
+                    sylls[position][doculect] = {}
+                    senses[position][doculect] = {}
+                if sound not in sylls[position][doculect]:
+                    sylls[position][doculect][sound] = []
+                    senses[position][doculect][sound] = []
+                cnt[position][doculect][sound] += 1
+                sylls[position][doculect][sound].append(ipa)
+                senses[position][doculect][sound].append(gloss)
+
+        for position in cnt:
+            # generate the information needed for displaying a corr. chart
+            description = []
+            most_common_ipas = []
+            shared_senses = []
+
+            # Some flags that impact display
+            last_doculect_present = False
+            any_non_last_doculect_present = False
+
+            for doculect in langs_under_study:
+                if doculect in cnt[position]:
+                    if doculect == langs_under_study[-1]:
+                        last_doculect_present = True
+                    else:
+                        any_non_last_doculect_present = True
+
+                    most_common_sound = cnt[position][doculect].most_common()[0][0]
+                    most_common_ipa = Counter(sylls[position][doculect][most_common_sound]).most_common()[0][0]
+                    description.append(most_common_sound)
+                    most_common_ipas.append(most_common_ipa)
+                    shared_senses.extend(senses[position][doculect][most_common_sound])
+                else:
+                    description.append('-')
+                    most_common_ipas.append('--')
+            description = ':'.join(description)
+
+            most_common_gloss = '?'
+            if shared_senses:
+                most_common_gloss = Counter(shared_senses).most_common()[0][0]
+
+            column_info = {'column_id': column_id,
+                    'most_common_gloss': most_common_gloss,
+                    'most_common_ipas': most_common_ipas,
+                    'last_doculect_present': last_doculect_present,
+                    'any_non_last_doculect_present': any_non_last_doculect_present}
+
+            if description not in column_index[position]:
+                column_index[position][description] = []
+            column_index[position][description].append(column_info)
+
+latex_header = r"""\documentclass[11pt,a4paper]{memoir}
+
+\usepackage{graphicx}
+\usepackage{pgfkeys}
+\usepackage{etoolbox}
+\usepackage{pdfpages}
+\usepackage{refcount}
+\usepackage{xunicode}
+\usepackage{titletoc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{fontspec}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{xunicode}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{pifont}
+\usepackage{colortbl}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{endnotes}
+\usepackage{relsize}
+\usepackage{rotating}
+\usepackage[round,authoryear]{natbib}
+\usepackage{gb4e}
+
+\usetikzlibrary{tikzmark}
+
+\XeTeXlinebreaklocale ``zh''
+
+% Page settings
+%\settypeblocksize{160mm}{110mm}{*} % A5
+\settypeblocksize{213mm}{180mm}{*}
+\setlrmargins{*}{*}{1}
+\setulmargins{*}{*}{1}
+\checkandfixthelayout
+
+% Font setup
+\setmainfont[Mapping=tex-text]{Brill}
+\setsansfont[Mapping=tex-text, Scale=0.87]{DejaVu Sans}
+\setmonofont[Scale=0.773]{DejaVu Sans Mono}
+
+\newcommand{\zh}[1]{{\fontspec[BoldFont=SimHei, ItalicFont=Adobe Kaiti
+Std, Scale=0.84]{NSimSun}#1}}
+\newcommand{\wenyan}[1]{{\fontspec{WenyueType GutiFangsong (Noncommercial Use)}#1}}
+\newcommand{\superwen}[1]{{\fontspec[Scale=1.08]{舊活字明 Beta}#1}}
+
+
+\newcommand{\dia}[1]{{\protect\fontspec[Scale=0.91,FakeSlant=0.15,Mapping=tex-text]{Charis SIL}\textup{#1}}}
+\newcommand{\diabold}[1]{{\textbf{\protect\fontspec[Scale=0.91,FakeSlant=0.15,Mapping=tex-text]{Charis SIL}\textup{#1}}}}
+\newcommand{\diasmall}[1]{{\protect\fontspec[Scale=0.7,Mapping=tex-text]{Charis SIL}\textup{#1}}}
+\newcommand{\ipa}[1]{{\protect\fontspec[Scale=0.91,Mapping=tex-text]{Charis SIL}\textup{#1}}}
+
+
+% external png as character
+\newcommand{\png}[1]{\includegraphics[width=1.15em]{images/#1.png}}
+
+
+% Memoir settings
+\midsloppy
+\tightlists
+\nopartblankpage
+\openany
+
+% Style
+\headstyles{bringhurst}
+\setsecheadstyle{\normalfont\large\memRTLraggedright\textit}%
+\chapterstyle{dash}
+\setlength\beforechapskip{-\baselineskip}
+\nouppercaseheads % Pour pas que latex bogue
+
+\makepagestyle{mystyle}
+\makeevenhead{mystyle}{\thepage}{}{}
+\makeoddhead{mystyle}{}{}{\itshape\leftmark}
+\makeevenfoot{mystyle}{}{}{}
+\makeoddfoot{mystyle}{}{}{}
+\makepsmarks{mystyle}{%
+  \createmark{chapter}{left}{nonumber}{}{}}
+
+\pagestyle{mystyle}
+
+% Todos
+\definecolor{Doubtful}{rgb}{0,0.4,0.2}
+\definecolor{lightyellow}{rgb}{1,1,0.9}
+\newcommand{\todo}[1]{\textsf{\colorbox{lightyellow}{\textbf{*}#1\textbf{*}}}}
+\newcommand{\TODO}[1]{\marginpar{\textsf{\colorbox{lightyellow}{\textbf{*}}
+{\footnotesize #1}}}}
+\newcommand{\douteux}[1]{\tss{??}\textsf{\color{Doubtful}{#1}}}
+\sethlcolor{lightyellow}
+\newcommand{\OUT}[1]{\hl{$\star$ \protect\fontspec[Scale=0.70]{Droid Sans Fallback} #1}}
+
+\begin{document}
+"""
+
+latex_footer = """
+\end{document}
+"""
+
+text = ''
+latex = latex_header
+
+pos_name = {'i': 'Initial', 'm': 'Medial', 'r': 'Rime', 't': 'Tone'}
+
+for pos in column_index:
+    latex += r"\chapter{%s Correspondence}" % (pos_name[pos]) + '\n'
+    # print('=====', pos_name[pos], '=====')
+    for description in sorted(column_index[pos]):
+        if not column_index[pos][description] or not column_index[pos][description][0]['last_doculect_present'] or not column_index[pos][description][0]['any_non_last_doculect_present']:
+            continue
+
+        latex += r"\section*{%s: \dia{%s}}" % (pos_name[pos], description)
+        latex += '\n'
+
+        latex += r'\begin{longtabu} to \textwidth {X[1.75,l]%s}'  % ('X[1,c]' * number_of_languages)
+        latex += '\n'
+        latex += r'\hline' + '\n'
+        latex += ' & ' + ' & '.join([language_title[l] for l in langs_under_study]) + r' \\' + '\n'
+        latex += r'\hline' + '\n'
+        latex += r'\endhead' + '\n'
+        latex += r'\hline' + '\n'
+        latex += r'\endfoot' + '\n'
+
+        for column in column_index[pos][description]:
+            latex += column['most_common_gloss'] + ' & '
+            latex += ' & '.join([r'\diabold{%s}' % (ipa) for ipa in column['most_common_ipas']])
+            latex += r' \\' + '\n'
+
+            # print('\t'.join(column['most_common_ipas']), '     ', column['most_common_gloss'])
+
+
+            latex += '  '
+
+            for i in range(len(langs_under_study)):
+                doculect = langs_under_study[i]
+                rec = []
+                if doculect in fsts and column['most_common_ipas'][i] != '--':
+                    the_syl = replace_diacritics(column['most_common_ipas'][i])
+                    rec = list(fsts[doculect].apply_up(the_syl))
+
+                if rec:
+                    rec_str = ', '.join(['*' + w for w in rec])
+                    latex += ' & '
+                    latex += r'{\small \ipa{' + rec_str + '}}'
+                else:
+                    latex += ' & '
+
+            latex += r' \\'
+            latex += '\n'
+            # print('\t'.join(reconstructions))
+
+        latex += r'\end{longtabu}' + '\n'
+
+latex += latex_footer
+
+with open('Correspondence.tex', 'w') as f:
+    f.write(latex)

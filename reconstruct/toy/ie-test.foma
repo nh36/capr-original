@@ -1,0 +1,25 @@
+define IeV [o:o | e:e | i:i | u:u];
+define IeC [p:p | t:t | k:k | s:s];
+define Syllable [[IeC | 0] IeV];
+define Word Syllable+;
+
+define kePalatalization k e -> c e;
+define eo⇒a [e | o -> a];
+define IEtoSkt [Word .o. kePalatalization .o. eo⇒a];
+push IEtoSkt
+save stack skt.bin
+pop
+
+define V [a | e | i | o | u | y];
+define C [? - V];
+
+define s⇒h s -> h;
+define DeleteInternalH [h -> 0 || V _ V];
+define u⇒y u -> y;
+define AspirateInitialY [y -> h y || .#. _];
+define IEtoGrk [Word .o. s⇒h .o. DeleteInternalH .o. u⇒y .o. AspirateInitialY];
+push IEtoGrk
+save stack grk.bin
+pop
+
+quit

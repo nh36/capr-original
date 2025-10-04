@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{memoir}
+
+%\usepackage{xeCJK}
+\usepackage{titletoc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{pifont}
+\usepackage{xspace}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage[french]{babel}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{pifont}
+\usepackage{colortbl}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{endnotes}
+\usepackage{relsize}
+\usepackage{rotating}
+\usepackage[round,authoryear]{natbib}
+\usepackage{gb4e}
+
+\usetikzlibrary{tikzmark}
+
+\XeTeXlinebreaklocale ``zh''
+
+% Page settings
+%\settypeblocksize{160mm}{110mm}{*} % A5
+\settypeblocksize{213mm}{180mm}{*}
+\setlrmargins{*}{*}{1}
+\setulmargins{*}{*}{1}
+\checkandfixthelayout
+
+% Font setup
+\setmainfont[Mapping=tex-text]{Brill}
+\setsansfont[Mapping=tex-text, Scale=0.87]{DejaVu Sans}
+\setmonofont[Scale=0.773]{DejaVu Sans Mono}
+%\setCJKmainfont[Scale=0.84]{NSimSun}
+
+\newcommand{\zh}[1]{{\fontspec[BoldFont=SimHei, ItalicFont=Adobe Kaiti
+Std, Scale=0.84]{NSimSun}#1}}
+\newcommand{\wenyan}[1]{{\fontspec{WenyueType GutiFangsong (Noncommercial Use)}#1}}
+\newcommand{\superwen}[1]{{\fontspec[Scale=1.08]{舊活字明 Beta}#1}}
+
+
+\newcommand{\dia}[1]{{\protect\fontspec[Scale=0.91,FakeSlant=0.15,Mapping=tex-text]{Charis SIL}\textup{#1}}}
+\newcommand{\diabold}[1]{{\textbf{\protect\fontspec[Scale=0.91,FakeSlant=0.15,Mapping=tex-text]{Charis SIL}\textup{#1}}}}
+\newcommand{\diasmall}[1]{{\protect\fontspec[Scale=0.7,Mapping=tex-text]{Charis SIL}\textup{#1}}}
+
+
+% external png as character
+\newcommand{\png}[1]{\includegraphics[width=1.15em]{images/#1.png}}
+
+
+% Memoir settings
+\midsloppy
+\tightlists
+\nopartblankpage
+\openany
+
+% Todos
+\definecolor{Doubtful}{rgb}{0,0.4,0.2}
+\definecolor{lightyellow}{rgb}{1,1,0.9}
+\newcommand{\todo}[1]{\textsf{\colorbox{lightyellow}{\textbf{*}#1\textbf{*}}}}
+\newcommand{\TODO}[1]{\marginpar{\textsf{\colorbox{lightyellow}{\textbf{*}}
+{\footnotesize #1}}}}
+\newcommand{\douteux}[1]{\tss{??}\textsf{\color{Doubtful}{#1}}}
+\sethlcolor{lightyellow}
+\newcommand{\OUT}[1]{\hl{$\star$ \protect\fontspec[Scale=0.70]{Droid Sans Fallback} #1}}
+
+\begin{document}
+\setlength\columnsep{1.5cm}
+\begin{multicols}{2}
+  \begin{list}{}{\leftmargin=1.5em \itemindent=-1.5em}
+      \input{dico-2-data.tex}
+  \end{list}
+\end{multicols}
+
+\end{document}
+
+

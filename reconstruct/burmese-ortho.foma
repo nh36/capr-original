@@ -1,0 +1,257 @@
+#!/usr/local/bin/foma -f
+
+##########################################################
+## Burmese (Library of Congress): orthographical filter ##
+##########################################################
+
+# In order to treat discrepancies between the Burmese orthography, as well as
+# the Library of Congress romanization which closely follows it, and the actual
+# underlying book-phonology, several passes are required to rewrite the
+# original transcription to something closer to the transcription of Old
+# Burmese used in the dictionary.
+
+# First, an implementation of Library of Congress romanization
+
+# Burmese script distinguishes between a full variant ññ and a special variant
+# ñ, without any Old Burmese level importance
+define remove⋄ññ [{ññ} -> ñ];
+define InsertGlottalStop [0 -> ʼ // .#. _ [ a | e | i | o | u ] ];
+
+define WBLCSimpleInitial [
+   p:{p } |  {ph}:{ph } | b:{b } |  {bh}:{bh } | m:{m } |  {mh}:{m̥ } |
+   t:{t } |  {th}:{th } | d:{d } |  {dh}:{dh } | n:{n } |  {nh}:{n̥ } |
+   ṭ:{ʈ } |  {ṭh}:{ʈh } | ḍ:{ɖ } |  {ḍh}:{ɖh } | ṇ:{ɳ } |  {ṇh}:{ɳ̥ } |
+   k:{k } |  {kh}:{kh } | g:{g } |  {gh}:{gh } | ṅ:{ŋ } |  {ṅh}:{ŋ̊ } |
+   c:{tɕ } | {ch}:{tɕh } | j:{dʑ } | {jh}:{dʑh } | ñ:{ɲ } | {ñh}:{ɲ̥ } |
+   s:{s } ];
+
+define WBLCSimpleInitial⇒ [ WBLCSimpleInitial:{i } ];
+
+define WBLCInitial [
+   WBLCSimpleInitial |
+   r:{r } |  {rh}:{r̥ } |
+   l:{l } |  {lh}:{l̥ } |
+   {ly}:{lj } |  {lhy}:{l̥j } |
+   y:{j } |  {yh}:{j̥ } |
+   v:{w } |  {vh}:{w̥ } |
+   h:{h } |
+   ʼ:{ʔ } ];
+
+define WBLCInitial⇒ [ WBLCInitial:{i } ];
+
+# for rimes, some rewriting of the orthography
+define WBLCRhymeRewrite [ {ui} -> {ui0}, {ai} -> {aiḥ} || _ .#. ]
+  .o. [ {ṃ} -> {mʻ} ]
+  .o.
+  [ {a} -> {aʔ} , {āʺ} -> {aḥ} , {ā} -> {a0}
+   , {i} -> {iʔ} , {īʺ} -> {iḥ} , {ī} -> {i0}
+   , {u} -> {uʔ} , {ūʺ} -> {uḥ} , {ū} -> {u0}
+   , {eʹ} -> {eʔ} , {eʺ} -> {eḥ} , {e} -> {e0}
+   , {uiʹ} -> {uiʔ} , {uiʺ} -> {uiḥ} , {ui} -> {ui0}
+   , {aiʹ} -> {aiʔ} , {ai} -> {aiḥ} , {ayʻ} -> {ai0}
+   , {oʹ} -> {oʔ} , {o} -> {oḥ} , {oʻ} -> {o0}
+   , {mʻʹ} -> {mʔ} , {mʻʺ} -> {mḥ} , {mʻ} -> {m0}
+   , {ñʻʹ} -> {ñʔ} , {ñʻʺ} -> {ñḥ} , {ñʻ} -> {ñ0}
+   , {nʻʹ} -> {nʔ} , {nʻʺ} -> {nḥ} , {nʻ} -> {n0}
+   , {ṅʻʹ} -> {ṅʔ} , {ṅʻʺ} -> {ṅḥ} , {ṅʻ} -> {ṅ0}
+   , {pʻ} -> {p}
+   , {tʻ} -> {t}
+   , {cʻ} -> {c}
+   , {kʻ} -> {k}
+   || _ .#. ];
+
+define WBLCSimpleVowelRime [a:{a } | i:{i } | u:{u } | e:{e } | {ui}:{ə } | o:{o } | {va}:{wa } | {ve}:{we }];
+
+define WBLCSimpleVowelRime⇒ [ WBLCSimpleVowelRime:{n } ];
+
+define WBLCSonorantCodaRime [
+   {ai}:{a j } | 
+   {am}:{a m } | {an}:{a n } | {aṅ}:{a ŋ } | {añ}:{a ɲ } |
+   {im}:{i m } | {in}:{i n } |
+   {vai}:{wa j } |
+   {vam}:{wa m } | {van}:{wa n } | {vaṅ}:{wa ŋ } |
+   {uiṅ}:{ə ŋ } |
+   {un}:{u n } | {um}:{u m } |
+   {oṅ}:{o ŋ } ];
+
+define WBLCSonorantCodaRime⇒ [ WBLCSonorantCodaRime:{n c } ];
+
+define WBLCTonefulRime [ WBLCSimpleVowelRime | WBLCSonorantCodaRime ];
+
+define WBLCTonefulRime⇒ [ WBLCSimpleVowelRime⇒ | WBLCSonorantCodaRime⇒ ];
+
+define WBLCTone [{0}:{²²} | ʔ:{⁵³} | ḥ:{⁵⁵}];
+
+define WBLCTone⇒ [ WBLCTone:{t} ];
+
+define WBLCStopcodaRime [
+   {ak}:{a k } | {ap}:{a p } | {at}:{a t } | {ac}:{a c } |
+   {ip}:{i p } | {it}:{i t } |
+   {vap}:{wa p } |{vat}:{wa t } | {vak}:{wa k } |
+   {uik}:{ə k } |
+   {up}:{u p } | {ut}:{u t } |
+   {ok}:{o k }];
+
+define WBLCStopcodaRime⇒ [ WBLCStopcodaRime:{n c } ];
+
+define WBLCDefaultStopcodaTone [0:{⁴}];
+
+define WBLCRime [ [WBLCTonefulRime WBLCTone] |
+[ WBLCStopcodaRime WBLCDefaultStopcodaTone] ];
+
+define WBLCRime⇒ [
+   [WBLCTonefulRime⇒ WBLCTone⇒] |
+   WBLCStopcodaRime:{n c t} ];
+
+# LC puts "h" at the last position in a diacritics group
+define reorderMedials [{rh} -> {hr} , {rvh} -> {hrv} , {vh} -> {hv} , {yh} -> {hy} , {yvh} -> {hyv} || ? _ ] ;
+
+# -w- (LC "v") analysed as part of rhyme, so the only admitted medials are "r"
+# and "j"
+define WBLCMedial [ r:{r } | y:{j }];
+define WBLCMedial⇒ [ WBLCMedial:{m } ];
+
+define WBLCSyllableAfter [ WBLCSimpleInitial (WBLCMedial) WBLCRime | WBLCInitial WBLCRime ];
+define WBLCSyllableAfter⇒ [WBLCSimpleInitial⇒ (WBLCMedial⇒) WBLCRime⇒ |
+WBLCInitial⇒ WBLCRime⇒ ];
+
+define WBLCSyllable [[ WBLCRhymeRewrite .o. InsertGlottalStop .o. remove⋄ññ .o. reorderMedials] .o. WBLCSyllableAfter ];
+define WBLCSyllable⇒ [[ WBLCRhymeRewrite .o. InsertGlottalStop .o. remove⋄ññ .o. reorderMedials] .o. WBLCSyllableAfter⇒ ];
+
+clear
+push WBLCSyllable
+save stack wb-lc-ortho.bin
+
+clear
+push WBLCSyllable⇒
+save stack wb-lc-ortho-template.bin
+
+###########################################
+## Burmese (Luce): orthographical filter ##
+###########################################
+
+define WBLuceRewrite [ ŋ -> ṅ ];
+
+define WBLuceSimpleInitial [
+   p:{p } |  {p‘}:{ph } | b:{b } |  {b‘}:{bh } | m:{m } |  {mh}:{m̥ } |
+   t:{t } |  {t‘}:{th } | d:{d } |  {d‘}:{dh } | n:{n } |  {nh}:{n̥ } |
+   ṭ:{ʈ } |  {ṭ‘}:{ʈh } | ḍ:{ɖ } |  {ḍ‘}:{ɖh } | ṇ:{ɳ } |  {ṇh}:{ɳ̥ } |
+   k:{k } |  {k‘}:{kh } | g:{g } |  {g‘}:{gh } | ṅ:{ŋ } |  {ṅh}:{ŋ̊ } |
+   c:{tɕ } | {c‘}:{tɕh } | j:{dʑ } | {j‘}:{dʑh } | ñ:{ɲ } | {ñh}:{ɲ̥ } |
+   s:{s } ];
+
+define WBLuceSimpleInitial⇒ [ WBLuceSimpleInitial:{i } ];
+
+define WBLuceInitial [
+   WBLuceSimpleInitial |
+   r:{r } |  {rh}:{r̥ } |
+   l:{l } |  {lh}:{l̥ } |
+   {ly}:{lj } |  {lhy}:{l̥j } |
+   y:{j } |  {yh}:{j̥ } |
+   w:{w } |  {wh}:{w̥ } |
+   h:{h } |
+   ʼ:{ʔ } ];
+
+define WBLuceInitial⇒ [ WBLuceInitial:{i } ];
+
+# for rimes, some rewriting of the orthography
+define WBLuceRhymeRewrite [ {ṃ} -> {m}, {ṁ} -> {m}, {ñ-} -> {ñ} ]
+  .o.
+  [ {aʼ} -> {aʔ} , {ā:} -> {aḥ} , {ā³} -> {a0}
+   , {iʼ} -> {iʔ} , {ī:} -> {iḥ} , {ī³} -> {i0}
+   , {eʼ} -> {eʔ} , {e:} -> {eḥ} , {e³} -> {e0}
+   , {aiʼ} -> {aiʔ} , {ai:} -> {aiḥ} , {ay³} -> {ai0}
+   , {oʼ} -> {oʔ} , {o:} -> {oḥ} , {ō³} -> {o0}
+   , {uiʼ} -> {uiʔ} , {ui:} -> {uiḥ} , {ui³} -> {ui0}
+   , {uʼ} -> {uʔ} , {ū:} -> {uḥ} , {ū³} -> {u0}
+   , {mʼ} -> {mʔ} , {m:} -> {mḥ} , {m³} -> {m0}, {m} -> {m0}
+   , {ñʼ} -> {ñʔ} , {ñ:} -> {ñḥ} , {ñ³} -> {ñ0} , {ñ} -> {ñ0}
+   , {nʼ} -> {nʔ} , {n:} -> {nḥ} , {n³} -> {n0} , {n} -> {n0}
+   , {ṅʼ} -> {ṅʔ} , {ṅ:} -> {ṅḥ} , {ṅ³} -> {ṅ0} , {ṅ} -> {ṅ0}
+   || _ .#. ];
+
+define WBLuceSimpleVowelRime [a:{a } | i:{i } | u:{u } | e:{e } | {ui}:{ə } | o:{o } | {wa}:{wa } | {we}:{we }];
+
+define WBLuceSimpleVowelRime⇒ [ WBLuceSimpleVowelRime:{n } ];
+
+define WBLuceSonorantCodaRime [
+   {ai}:{a j } | 
+   {am}:{a m } | {an}:{a n } | {aṅ}:{a ŋ } | {añ}:{a ɲ } |
+   {im}:{i m } | {in}:{i n } |
+   {wai}:{wa j } |
+   {wam}:{wa m } | {wan}:{wa n } | {waṅ}:{wa ŋ } |
+   {uiṅ}:{ə ŋ } |
+   {un}:{u n } | {um}:{u m } |
+   {oṅ}:{o ŋ } ];
+
+define WBLuceSonorantCodaRime⇒ [ WBLuceSonorantCodaRime:{n c } ];
+
+define WBLuceTonefulRime [ WBLuceSimpleVowelRime | WBLuceSonorantCodaRime ];
+
+define WBLuceTonefulRime⇒ [ WBLuceSimpleVowelRime⇒ | WBLuceSonorantCodaRime⇒ ];
+
+define WBLuceTone [{0}:{²²} | ʔ:{⁵³} | ḥ:{⁵⁵}];
+
+define WBLuceTone⇒ [ WBLuceTone:{t} ];
+
+define WBLuceStopcodaRime [
+   {ak}:{a k } | {ap}:{a p } | {at}:{a t } | {ac}:{a c } |
+   {ip}:{i p } | {it}:{i t } |
+   {wap}:{wa p } |{wat}:{wa t } | {wak}:{wa k } |
+   {uik}:{ə k } |
+   {up}:{u p } | {ut}:{u t } |
+   {ok}:{o k }];
+
+define WBLuceStopcodaRime⇒ [ WBLuceStopcodaRime:{n c } ];
+
+define WBLuceDefaultStopcodaTone [0:{⁴}];
+
+define WBLuceRime [ [WBLuceTonefulRime WBLuceTone] |
+[ WBLuceStopcodaRime WBLuceDefaultStopcodaTone] ];
+
+define WBLuceRime⇒ [
+   [WBLuceTonefulRime⇒ WBLuceTone⇒] |
+   WBLuceStopcodaRime:{n c t} ];
+
+# -w- (LC "v") analysed as part of rhyme, so the only admitted medials are "r"
+# and "j"
+define WBLuceMedial [ r:{r } | y:{j }];
+define WBLuceMedial⇒ [ WBLuceMedial:{m } ];
+
+define WBLuceSyllableAfter [ WBLuceSimpleInitial (WBLuceMedial) WBLuceRime | WBLuceInitial WBLuceRime ];
+define WBLuceSyllableAfter⇒ [WBLuceSimpleInitial⇒ (WBLuceMedial⇒) WBLuceRime⇒ |
+WBLuceInitial⇒ WBLuceRime⇒ ];
+
+define WBLuceSyllable [[ WBLuceRewrite .o. WBLuceRhymeRewrite .o. InsertGlottalStop] .o. WBLuceSyllableAfter ];
+define WBLuceSyllable⇒ [[ WBLuceRewrite .o. WBLuceRhymeRewrite .o. InsertGlottalStop] .o. WBLuceSyllableAfter⇒ ];
+
+clear
+push WBLuceSyllable
+save stack wb-luce-ortho.bin
+
+clear
+push WBLuceSyllable⇒
+save stack wb-luce-ortho-template.bin
+
+
+############################################
+## Burmese (rime rewritten) to Old Burmese #
+############################################
+
+define rewriteAspiration [ ‘ -> h ];
+define removeVoicing [ b -> p, d -> t, g -> k, j -> c || .#. _];
+define removeGlottalStop [ ʼ -> 0 || .#. _ ];
+define v⇒w [ v -> w ];
+
+define rewriteRhyme [ {wa} -> {o₁}, {o} -> {o₂}, {ai} -> {ay}, {e} -> {iy},  {wam} -> {o₁m}, {wan} -> {o₁n}, {waṅ} -> {o₁ṅ}, {ui} -> {uiw}, {oṅ} -> {o₂ṅ} || _ [ ʔ | ḥ | {0} ] .#. ]
+.o. [{way} -> {o₁y}, {wiy} -> {uy} || _ [ ʔ | ḥ | {0} ] .#. ];
+
+define rewriteRhymeStopFinal [ {wap} -> {o₁p}, {wat} -> {o₁t}, {wak} -> {o₁k}, {ok} -> {o₂k} || _  .#. ];
+
+define rewriteTone [ {0} -> 0 || _ .#. ];
+
+define WBLucetoStdOB [ WBLuceRewrite .o. WBLuceRhymeRewrite .o. InsertGlottalStop] .o. rewriteAspiration .o. removeVoicing .o. removeGlottalStop .o. v⇒w .o. rewriteRhyme .o. rewriteRhymeStopFinal .o. rewriteTone;
+
+clear
+push WBLucetoStdOB
+save stack wb-luce-to-stdob.bin

@@ -1,0 +1,68 @@
+attested_reconstructions
+
+compile-lexicon变简单了
+然后最后的显示逻辑反而是要搬到react里面去 w
+
+1. 把这个json给输出出来
+
+目标：可以把拖来拖去，复现一下书版的algo
+形状：
+const initialData = {
+  words: { // 扫第一遍的时候就可以输出
+    'word-1992': {
+       id: 'word-1992',
+       doculect: 'Achang_Longchuan',
+       syllables: ['tʂă³¹', 'ʐam³⁵'],
+       gloss: 'lad / chap (young)',
+       glossid: '173'
+    }
+  },
+  syllables: { // 扫第一遍的时候就可以输出
+    'word-1992-1': { //这里能不能inherit wordId的数据？    
+       id: 'word-1992-1',
+       wordId: 'word-1992',
+       syllOrder: 1,
+       syllable: 'ʐam³⁵'
+       },
+  },
+  columns: { // 按照crossid把东西归拢起来就可以输出
+    'column-6048': {
+      id: 'column-6048',
+      syllableIds: ['word-1992-1'],
+    },
+  },
+  boards: { // 按照included-in-clean做出一些board出来
+    'board-1': {
+      id: 'board-1',
+      title: '*rim, *rum', //这个就是title，就是字典的那个大的title名
+      todo: 'todo', // todo, working, done 可以显示在最上面
+      columnIds: ['column-6048']
+    }
+  },
+  currentBoard: 'board-1',
+  // 收集所有出现的form，一塌刮子apply一遍
+  // 先up出来一个possible proto-form的表
+  // 再用这个表down
+  fstUp: {
+    'Old_Burmese':
+      {'so₁ḥ': ['soH', 'ʃoH', 'ʔsoH']},
+    'Maru': ...
+  },
+  fstDown: {
+    'Old_Burmese':
+      {'soH': 'so₁ḥ',
+      ...
+      },
+    'Maru': ...
+  },
+}
+
+2. 把tasks react app修改到能够显示单board
+
+3. 把字典的machinery搞进来
+
+4. 创建新column，删除空column
+
+5. 保存
+
+

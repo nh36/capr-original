@@ -1,0 +1,347 @@
+#!/usr/bin/python
+# Compile Burmish lexicon
+# Dependencies: Python ICU; Parsy
+# Usage: Unix-ish
+
+# Basic imports
+import sys
+import re
+import parsy
+import csv
+from functools import reduce
+from disjointset import DisjointSet
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+# Replace unicode diacritics with ASCII equivalents for sending to the transducers
+UNICODE_MACRON_UNDER = " ̱ "[1]
+UNICODE_TILDE_OVER = " ̃"[1]
+def replace_diacritics(s):
+    return s.replace(UNICODE_MACRON_UNDER, '_').replace(UNICODE_TILDE_OVER, '~').replace('_~', '~_')
+
+# Convert a piece of text to its component syllables
+# If there is alrady "◦" or a space, use it to separate them
+# Otherwise, separate the tone letters other letters
+def syllabize(text):
+    split_result = re.split(r'([ ◦¹²³⁴⁵]+)', text)
+    l = len(split_result)
+
+    # There are two possibilities
+    # 'a◦b◦' → ['a', '◦', 'b', '◦', '']
+    # 'a◦b' → ['a', '◦', 'b']
+    # Both of them are odd, but should be treated differently
+    # At least, everything but the last can be done in the same way
+    # (5-1)/2 = 2
+
+    result = []
+    for i in range((l-1) // 2):
+        result.append(split_result[i*2] + split_result[i*2+1].strip('◦ '))
+    # If last non-zero, then copy to result
+    if split_result[l-1]:
+        result.append(split_result[l-1])
+
+    return result
+
+# emphasize_syllable("mi ma mu", 1) → "mi<ma>mu"
+def emphasize_syllable(text, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    syllables = syllabize(text)
+    l = len(syllables)
+    result = ''
+    for i in range(l):
+        if i == syllable_index:
+            result = result + (emphatic_formatting or '<%s>') % syllables[i]
+        else:
+            result = result + (usual_formatting or '%s') % syllables[i]
+    return result
+
+# fetch_syllable("mi ma mu", 1) → "ma"
+def fetch_syllable(text, syllable_index):
+    syllables = syllabize(text)
+    return syllables[syllable_index]
+
+# Convert internal language name to printed name
+def print_language_name(name):
+    if name == 'Old_Burmese':
+        return 'OBur.'
+    else:
+        return name.replace('_', r'\_')
+
+from foma import FST
+fst_burmese = FST.load('../reconstruct/burmese.bin')
+fst_achang = FST.load('../reconstruct/ngochang.bin')
+fst_maru = FST.load('../reconstruct/maru.bin')
+fst_bola = FST.load('../reconstruct/bola.bin')
+fsts = {'Old_Burmese': fst_burmese, 'Achang_Longchuan': fst_achang, 'Maru': fst_maru, 'Bola': fst_bola}
+
+# Parse arguments with argparse
+import argparse
+parser = argparse.ArgumentParser(description='Compile a Burmish etymological lexicon database file into LaTeX.', add_help=True)
+parser.add_argument('verb', choices=['txt', 'pdf'], help='type to compile into')
+parser.add_argument('files', metavar='filename', nargs='*', help='files to be concatenated and sorted')
+parser.add_argument('--clean', action="store_true", default=False, help='output only articles with reliable reconstructions')
+
+args = parser.parse_args()
+
+txt = False
+pdf = False
+if args.verb == 'txt':
+    eprint("Text mode")
+    txt = True
+else:
+    eprint("LaTeX mode")
+    pdf = True
+
+# Use fileinput to imitate standard UNIX utility behaviour
+import fileinput
+csvreader = csv.DictReader(filter(lambda row: row.strip() and row[0]!='#', fileinput.input(files=args.files, mode='r')), dialect='excel-tab')
+
+# rootid/crossid correspondence
+rows_of_crossid = {} # dictionary of arrays of duples: syllable index, row
+protos_of_crossid = {} # dictionary of sets of duples: syllable index, row
+
+def process_row(row):
+    if row['ID'].startswith('#'):
+        # internal to lingpy
+        return
+
+    if row['CROSSIDS']:
+        crossids = row['CROSSIDS'].split(' ')
+    else:
+        eprint('SANITY: empty crossid: ', row['ID'])
+        return
+
+    syllables = len(crossids)
+
+    # Now we can loop on each syllable in the language
+    for syl in range(syllables):
+        crossid = crossids[syl]
+
+        # Put new information into crossid data
+        syl_row = (syl, row)
+        if not (crossid in rows_of_crossid):
+            rows_of_crossid[crossid] = [syl_row]
+        else:
+            rows_of_crossid[crossid].append(syl_row)
+
+eprint('Processing TSV rows...')
+for row in csvreader:
+    process_row(row)
+
+# Function: reorder_row_tuples
+# Reorder the specific rows that are belong to the same CrossID for correct display
+# For now, there are two things to do:
+# (1) Old Burmese → Rangoon → remaining languages
+# (2) sort by meaning
+def sort_row_tuples(row_tuples, reconstructed_sense):
+    # first step: sorting by languages
+    # 1) sort by languages alphabetically
+    row_tuples_sorted_by_languages = sorted(row_tuples, key = lambda x: x[1]['DOCULECT'])
+    # 2) raise the languages we want to raise
+    ob = [(syl, row) for (syl, row) in row_tuples_sorted_by_languages if row['DOCULECT'] == 'Old_Burmese']
+    rangoon = [(syl, row) for (syl, row) in row_tuples_sorted_by_languages if row['DOCULECT'] == 'Rangoon']
+    remaining = [(syl, row) for (syl, row) in row_tuples_sorted_by_languages if (row['DOCULECT'] != 'Old_Burmese' and row['DOCULECT'] != 'Rangoon')]
+    row_tuples_sorted_by_languages = ob + rangoon + remaining
+
+    # second step: sorting by senses
+    row_tuples_sorted_by_senses = sorted(row_tuples_sorted_by_languages, key = lambda x: x[1]['CONCEPT'])
+    return row_tuples_sorted_by_senses
+
+# First round: guess the reconstruction and sort/merge the items to be printed
+# sort keys for crossid's getting the things in alphabetical order
+reconstructions_of_crossid = {}
+strictness_of_crossid = {}
+
+first_crossid_of_reconstruction = {}
+sortkey_of_crossid = {}
+included_in_clean = set([])
+
+# ds holds the merging relationship of crossids
+ds = DisjointSet()
+
+for crossid in rows_of_crossid.keys():
+    # First, try to guess the reconstruction by the following rule:
+    # 1. Collect all reconstructions for each language
+    # 2. The intersection of all reconstructions is the most probable one
+    reconsts = {}
+    at_least_one = False
+    first_form = False
+    for (syl, row) in sort_row_tuples(rows_of_crossid[crossid], ''):
+        if not first_form:
+            first_form = fetch_syllable(row['IPA'], syl)
+        if row['DOCULECT'] in fsts:
+            the_syl = replace_diacritics(fetch_syllable(row['IPA'], syl))
+            rec = list(fsts[row['DOCULECT']].apply_up(the_syl))
+            if rec:
+                # only record reconstructions when something *is* reconstructed
+                at_least_one = True
+                if row['DOCULECT'] not in reconsts:
+                    reconsts[row['DOCULECT']] = set(rec)
+                else:
+                    reconsts[row['DOCULECT']] = reconsts[row['DOCULECT']].union(set(rec))
+
+    strict = True
+    crossid_reconstructions = []
+
+    if at_least_one:
+        strict = True
+        crossid_reconstructions = list(set.intersection(*reconsts.values()))
+
+        if not crossid_reconstructions:
+            strict = False
+            # kinda lenient way of generating reconstructions
+            # try and make intersection of every pair of doculects
+            pairwise_intersections = [set.intersection(reconsts[a], reconsts[b])
+                    for a in reconsts for b in reconsts if a != b]
+            if pairwise_intersections:
+                crossid_reconstructions = list(set.union(*pairwise_intersections))
+            else:
+                crossid_reconstructions = []
+
+        crossid_reconstructions = ['*' + w for w in crossid_reconstructions]
+
+    # save data from crossid
+    reconstructions_of_crossid[crossid] = crossid_reconstructions
+    strictness_of_crossid[crossid] = strict
+
+    if crossid_reconstructions:
+        sortkey_of_crossid[crossid] = (0, crossid_reconstructions[0])
+    else:
+        sortkey_of_crossid[crossid] = (1, str(first_form))
+
+    # merge with disjoint sets
+    ds.add(crossid, crossid)
+    for reconst in crossid_reconstructions:
+        if reconst not in reconstructions_of_crossid:
+            reconstructions_of_crossid[reconst] = crossid
+        else:
+            ds.add(reconstructions_of_crossid[reconst], crossid)
+
+    # Only output items when the reconstruction is reliable, i.e.
+    # reconstruction present and based on more than one language, are printed
+    # with the "--clean" flag
+    if crossid_reconstructions and len(reconsts) > 1:
+        included_in_clean.add(crossid)
+
+# Sort crossids according to reconstruction / form
+# taken from ds
+display_crossids = sorted(ds.group.keys(), key = lambda crossid: sortkey_of_crossid[crossid])
+
+# Second round: print the actual content from display_crossids
+for major_crossid in display_crossids:
+    # get crossids sharing the same reconstruction
+    crossids = ds.group[major_crossid]
+    display_crossids = ', '.join(map(str, crossids))
+
+    # get reconstructions and strictness
+    strict = all([strictness_of_crossid[crossid] for crossid in crossids])
+    clean = any([crossid in included_in_clean for crossid in crossids])
+
+    all_reconstructions = [set(reconstructions_of_crossid[crossid]) for crossid in crossids]
+    reconstructions = list(set.intersection(*all_reconstructions))
+
+    if not reconstructions:
+        strict = False
+        pairwise_intersections = [set.intersection(all_reconstructions[a], all_reconstructions[b])
+                for a in range(len(all_reconstructions))
+                for b in range(len(all_reconstructions))
+                if a != b]
+        if pairwise_intersections:
+           reconstructions = list(set.union(*pairwise_intersections))
+        else:
+            reconstructions = []
+
+    # If not included in "--clean", continue
+    if args.clean and not clean:
+        continue
+
+    # First level: print the rootid itself
+    if txt:
+        print('CROSSID:', display_crossids, '<', reconstructions)
+    elif pdf:
+        # New item
+        print(r'\item')
+        if reconstructions:
+            r = [r'\textbf{%s}' % w for w in reconstructions]
+            print(', '.join(r))
+            if not strict:
+                print('?')
+        else:
+            print(r'\textbf{?}')
+        print(' ', r'{\tiny crossid %s}' % display_crossids)
+        print(' ', r'\begin{list}{}{\leftmargin=1.5em \itemindent=-1.5em}')
+
+    # Then second loop: attested forms
+    last_sense = ''
+    first_line = True
+
+    for crossid in crossids:
+        if pdf:
+            print(' ', r'\item {\footnotesize \textbf{%s%s}}{\tiny %s}' % (', '.join(reconstructions_of_crossid[crossid]), (r'\,?\,' if not strictness_of_crossid[crossid] else ''), crossid))
+
+        for (syl, row) in sort_row_tuples(rows_of_crossid[crossid], ''):
+            if txt:
+                # Convert form to printable form, with marking
+                display_ipa = emphasize_syllable(row['IPA'], syl)
+                if row['DOCULECT'] in fsts:
+                    the_syl = replace_diacritics(fetch_syllable(row['IPA'], syl))
+                    reconst = list(fsts[row['DOCULECT']].apply_up(the_syl))
+                    reconst = ['*' + w for w in reconst]
+                else:
+                    reconst = []
+                if last_sense == row['CONCEPT']:
+                    # repeated concept: output same number of spaces
+                    print('        ', ' %s  (%s) %s < %s' % ((' ' * len(row['CONCEPT'])), row['DOCULECT'], display_ipa, reconst))
+                else:
+                    print('        ', '"%s" (%s) %s < %s' % (row['CONCEPT'], row['DOCULECT'], display_ipa, reconst))
+                last_sense = row['CONCEPT']
+            elif pdf:
+                # Convert form to printable form, with marking
+                display_ipa = emphasize_syllable(row['IPA'], syl, '\diasmall{%s}', '\dia{%s}')
+                language_name = print_language_name(row['DOCULECT'])
+
+                # output compatibility w/ current reconstruction
+                reconstruction_status = r'\ding{55}' # ばつ
+
+                if row['DOCULECT'] in fsts:
+                    the_syl = replace_diacritics(fetch_syllable(row['IPA'], syl))
+                    reconst = list(fsts[row['DOCULECT']].apply_up(the_syl))
+                    reconst = ['*' + w for w in reconst]
+                else:
+                    reconst = []
+                    reconstruction_status = r'{\footnotesize ×}'
+
+                if row['DOCULECT'] in fsts and not reconst:
+                    # even if there is a transducer, there is no available reconstruction
+                    hypo_forms_list = [set(fsts[row['DOCULECT']].apply_down(s[1:])) for s in reconstructions_of_crossid[crossid]]
+                    # if there is intersection, take it, otherwise union
+                    hypo_forms = set.intersection(*hypo_forms_list)
+                    if not hypo_forms:
+                        hypo_forms = set.union(*hypo_forms_list)
+
+                    # generate hypothetical outcome
+                    reconstruction_status = r'\ding{55}{\footnotesize $\neq$ \dag\textbf{%s}}' % (', '.join(list(hypo_forms)))
+                elif reconst:
+                    # intersection between current & available reconstructions
+                    intersection = set(reconst).intersection(set(reconstructions_of_crossid[crossid]))
+                    if intersection == set(reconstructions_of_crossid[crossid]):
+                        # complete overlap: checkmark
+                        reconstruction_status = r'\ding{51}' # checkmark
+                    elif not intersection:
+                        # no overlap: output every possible reconstruction
+                        reconstruction_status = r'{\footnotesize \ding{55} $<$ \textbf{%s}}' % (', '.join(reconst))
+                    else:
+                        # choose one among several possibilities
+                        reconstruction_status = r'{\footnotesize \ding{51} $<$ \textbf{%s}}' % (', '.join(list(intersection)))
+
+                if last_sense:
+                    # separator
+                    print(r'\hspace{1ex}')
+                if last_sense != row['CONCEPT']:
+                    # new concept
+                    print('        ', r"$\diamond$~`%s'" % row['CONCEPT'])
+                print('        ', '%s %s%s' % (language_name, display_ipa, reconstruction_status))
+                last_sense = row['CONCEPT']
+
+    if pdf:
+        print(' ', r'\end{list}')

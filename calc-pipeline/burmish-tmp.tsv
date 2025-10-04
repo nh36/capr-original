@@ -1,0 +1,1459 @@
+# Wordlist
+
+# DATA
+ID	DOCULECT	CONCEPT	GLOSSID	IPA	ALIGNMENT	CROSSIDS	TMP_STRUCTURE	TMP_TOKENS
+#
+6348	Maru	I [first person singular]	79	ŋɔ³¹	ŋ ɔ ³¹	1	i r t	ŋ ɔ ³¹
+6631	Achang_Longchuan	I [first person singular]	79	ŋɔ⁵⁵	ŋ ɔ ⁵⁵	1	i r t	ŋ ɔ ⁵⁵
+#
+6523	Achang_Longchuan	above	1	a³¹lum³¹	/ʔ a ³¹ + l u m ³¹	2 3	i r t + i r t	ʔ a ³¹ + l um ³¹
+6583	Maru	above	1	tʰɔʔ⁵⁵mɛ³¹	t ɔ ʔ ⁵⁵ + m ɛ ³¹	4 5	i r t + i r t	t ɔʔ ⁵⁵ + m ɛ ³¹
+#
+2	Achang_Longchuan	all	2	pʐa⁵⁵pʐa⁵⁵	p ʐ a ⁵⁵ + p ʐ a - ⁵⁵	6 7	i m r t + i m r t	pʐ ʐ ʐa ⁵⁵ + pʐ ʐ ʐa ⁵⁵
+10	Maru	all	2	pəŋ³¹ʃɔʔ⁵⁵	p ə ŋ ³¹ + ʃ - ɔ ʔ ⁵⁵	8 7	i r t + i r t	p əŋ ³¹ + ʃ ɔʔ ⁵⁵
+#
+9623	Achang_Longchuan	angry	3	tsit⁵⁵	ts i t ⁵⁵	9	i r t	ts it ⁵⁵
+11167	Maru	angry	3	na̱k⁵⁵ jo³¹	ˀn a k ⁵⁵ + /ʔ j o ³¹	10 11	i r t + i m r t	ˀn ak ⁵⁵ + ʔj j jo ³¹
+#
+11192	Achang_Longchuan	ask / question (v.)	4	ȵi³¹	ȵ i ³¹	12	i r t	ȵ i ³¹
+11195	Maru	ask / question (v.)	4	mjik⁵⁵	m j i k ⁵⁵	13	i m r t	mj j jik ⁵⁵
+#
+10536	Achang_Longchuan	assess / estimate (v.)	5	tak⁵⁵	t a k ⁵⁵	14	i r t	t ak ⁵⁵
+#
+129	Achang_Longchuan	bad	6	tɕa⁵⁵	tɕ a ⁵⁵	15	i r t	tɕ a ⁵⁵
+136	Maru	bad	6	kɔi³⁵	k ɔi ³⁵	16	i r t	k ɔi ³⁵
+#
+10218	Achang_Longchuan	bald	7	liŋ⁵⁵	l i ŋ ⁵⁵	17	i r t	l iŋ ⁵⁵
+11433	Maru	bald	7	tauŋ³⁵	t au ŋ ³⁵	18	i r t	t auŋ ³⁵
+#
+10823	Achang_Longchuan	bark (v.)	8	kʐap⁵⁵	k ʐ a p ⁵⁵	19	i m r t	kʐ ʐ ʐap ⁵⁵
+11328	Maru	bark (v.)	8	ɣɛʔ³¹	ɣ ɛ ʔ ³¹	20	i r t	ɣ ɛʔ ³¹
+#
+11001	Achang_Longchuan	bear (fruit) (v.)	9	ʂə³¹	ʂ ə ³¹	21	i r t	ʂ ə ³¹
+11004	Maru	bear (fruit) (v.)	9	ʃi³⁵	ʃ i ³⁵	21	i r t	ʃ i ³⁵
+#
+10585	Achang_Longchuan	beautiful	10	tɔm³⁵	t ɔ m ³⁵	22	i r t	t ɔm ³⁵
+10588	Maru	beautiful	10	jauŋ⁵⁵	/ʔ j au ŋ ⁵⁵	23	i m r t	ʔj j jauŋ ⁵⁵
+#
+6524	Achang_Longchuan	below, under	11	a³¹tʰe⁵¹	/ʔ a ³¹ + t e ⁵¹	24 25	i r t + i r t	ʔ a ³¹ + t e ⁵¹
+6584	Maru	below, under	11	ɔ³¹mɛ³¹	/ʔ ɔ ³¹ + m ɛ ³¹	24 26	i r t + i r t	ʔ ɔ ³¹ + m ɛ ³¹
+#
+310	Achang_Longchuan	big	12	kʐə³¹	k ʐ ə ³¹	28	i m r t	kʐ ʐ ʐə ³¹
+317	Maru	big	12	ɣə³⁵	ɣ ə ³⁵	29	i r t	ɣ ə ³⁵
+#
+11011	Achang_Longchuan	bitter	13	xɔ³¹	x ɔ ³¹	30	i r t	x ɔ ³¹
+11014	Maru	bitter	13	khɔ³⁵	kh ɔ ³⁵	30	i r t	kh ɔ ³⁵
+#
+367	Achang_Longchuan	black	14	lɔk⁵⁵	l ɔ k ⁵⁵	31	i r t	l ɔk ⁵⁵
+374	Maru	black	14	nɔʔ³¹	n ɔ ʔ ³¹	32	i r t	n ɔʔ ³¹
+#
+11376	Achang_Longchuan	blind, be (v.)	15	tset⁵⁵	ts e t ⁵⁵	33	i r t	ts et ⁵⁵
+11379	Maru	blind, be (v.)	15	tʃik⁵⁵	tʃ i k ⁵⁵	34	i r t	tʃ ik ⁵⁵
+#
+10634	Achang_Longchuan	bloated, feel (of the stomach) (v.)	16	phuʔ³¹	pʰ u ʔ ³¹	35	i r t	pʰ uʔ ³¹
+10692	Maru	bloated, feel (of the stomach) (v.)	16	ta̱ŋ³⁵	ˀt a ŋ ³⁵	36	i r t	ˀt aŋ ³⁵
+#
+9960	Maru	blue	17	ŋjuk³¹	ŋ j u k ³¹	38	i m r t	ŋj j juk ³¹
+11491	Achang_Longchuan	blue	17	sɔm³¹	s ɔ m ³¹	37	i r t	s ɔm ³¹
+#
+11065	Achang_Longchuan	borrow (money) (v.)	18	m̥ɔ³¹	m̥ ɔ ³¹	39	i r t	m̥ ɔ ³¹
+11159	Maru	borrow (money) (v.)	18	tʃi̱k⁵⁵	ˀtʃ i k ⁵⁵	40	i r t	ˀtʃ ik ⁵⁵
+#
+11531	Achang_Longchuan	bright	19	səŋ³¹	s ə ŋ ³¹	41	i r t	s əŋ ³¹
+11534	Maru	bright	19	lɛŋ³⁵	l ɛ ŋ ³⁵	42	i r t	l ɛŋ ³⁵
+#
+9687	Achang_Longchuan	broken, be (bowls) (v.)	20	kʐop⁵⁵	k ʐ o p ⁵⁵	43	i m r t	kʐ ʐ ʐop ⁵⁵
+10453	Maru	broken, be (bowls) (v.)	20	kjøʔ³¹	k j ø ʔ ³¹	43	i m r t	kj j jøʔ ³¹
+#
+10355	Maru	bunch (of vegetables)	21	khəŋ³⁵	kh ə ŋ ³⁵	45	i r t	kh əŋ ³⁵
+11298	Achang_Longchuan	bunch (of vegetables)	21	pan⁵⁵	p a n ⁵⁵	44	i r t	p an ⁵⁵
+#
+9931	Maru	called, be / named (v.)	22	jɔ̃³¹	/ʔ j ɔ̃ ∼ ³¹	47	i m r t	ʔj j jɔ̃∼ ³¹
+10947	Achang_Longchuan	called, be / named (v.)	22	kʐə⁵⁵	k ʐ ə ⁵⁵	46	i m r t	kʐ ʐ ʐə ⁵⁵
+#
+10266	Achang_Longchuan	chat (v.)	23	pə³¹xua³⁵kʐai⁵⁵	p ə ³¹ + x u a ³⁵ + k ʐ ai ⁵⁵	48 49 50	i r t + i m r t + i m r t	p ə ³¹ + xu u ua ³⁵ + kʐ ʐ ʐai ⁵⁵
+10269	Maru	chat (v.)	23	pə̆⁵⁵məŋ³¹	p ə̆ ⁵⁵ + m ə ŋ ³¹	48 51	i r t + i r t	p ə̆ ⁵⁵ + m əŋ ³¹
+#
+10655	Achang_Longchuan	chisel / bore (a hole) (v.)	24	thoŋ³¹	tʰ o ŋ ³¹	53	i r t	tʰ oŋ ³¹
+10658	Maru	chisel / bore (a hole) (v.)	24	kja̱uŋ³⁵	ˀk j au ŋ ³⁵	54	i m r t	ˀkj j jauŋ ³⁵
+#
+9896	Achang_Longchuan	chop / cut (meat) (v.)	25	tuak³⁵	t u a k ³⁵	55	i m r t	tu u uak ³⁵
+9899	Maru	chop / cut (meat) (v.)	25	tʃɛʔ³¹	tʃ ɛ ʔ ³¹	56	i r t	tʃ ɛʔ ³¹
+#
+10198	Achang_Longchuan	cloudy, be (sky) / overcast (v.)	26	mau³¹tʂau³⁵	m au - ³¹ + tʂ au - ³⁵	57 58	i r t + i r t	m au ³¹ + tʂ au ³⁵
+10201	Maru	cloudy, be (sky) / overcast (v.)	26	muk⁵⁵tap³¹	m u k ⁵⁵ + t a p ³¹	57 58	i r t + i r t	m uk ⁵⁵ + t ap ³¹
+#
+672	Achang_Longchuan	cold (of temperature)	27	kʐuat⁵⁵	k ʐ ua t ⁵⁵	59	i m r t	kʐ ʐ ʐuat ⁵⁵
+677	Maru	cold (of temperature)	27	kjɔʔ³¹	k j ɔ ʔ ³¹	59	i m r t	kj j jɔʔ ³¹
+#
+9981	Maru	collapse / cave in / fall down (v.)	28	kjøʔ³¹	k j ø ʔ ³¹	61	i m r t	kj j jøʔ ³¹
+10104	Achang_Longchuan	collapse / cave in / fall down (v.)	28	ȵɔp⁵⁵	ȵ ɔ p ⁵⁵	60	i r t	ȵ ɔp ⁵⁵
+#
+11471	Achang_Longchuan	compensate (v.)	29	tɕhap⁵⁵	tɕʰ a p ⁵⁵	62	i r t	tɕʰ ap ⁵⁵
+11474	Maru	compensate (v.)	29	tshɛʔ⁵⁵	tsh ɛ ʔ ⁵⁵	62	i r t	tsh ɛʔ ⁵⁵
+#
+3334	Achang_Longchuan	correct (right)	30	tsɿ⁵⁵	ts ɿ ⁵⁵	63	i r t	ts ɿ ⁵⁵
+3343	Maru	correct (right)	30	tʃɔ³¹	tʃ ɔ ³¹	64	i r t	tʃ ɔ ³¹
+#
+11245	Achang_Longchuan	cover (the mouth) (v.)	31	ət³⁵	/ʔ ə t ³⁵	65	i r t	ʔ ət ³⁵
+11248	Maru	cover (the mouth) (v.)	31	tshuk⁵⁵	tsh u k ⁵⁵	66	i r t	tsh uk ⁵⁵
+#
+11228	Achang_Longchuan	crawl (of people) (v.)	32	to³¹	t o ³¹	67	i r t	t o ³¹
+11231	Maru	crawl (of people) (v.)	32	tu³⁵	t u ³⁵	67	i r t	t u ³⁵
+#
+10638	Achang_Longchuan	crow (of cocks) (v.)	33	thun⁵⁵	tʰ u n ⁵⁵	68	i r t	tʰ un ⁵⁵
+10641	Maru	crow (of cocks) (v.)	33	tu̱m³¹	ˀt u m ³¹	68	i r t	ˀt um ³¹
+#
+10784	Achang_Longchuan	cut (meat) (v.)	34	xa³¹	x a ³¹	69	i r t	x a ³¹
+10787	Maru	cut (meat) (v.)	34	la̱i³⁵	ˀl ai ³⁵	70	i r t	ˀl ai ³⁵
+#
+9663	Maru	damaged, be (house) / cave in (v.)	35	ɣum³¹	ɣ u m ³¹	72	i r t	ɣ um ³¹
+10292	Achang_Longchuan	damaged, be (house) / cave in (v.)	35	kʐop⁵⁵	k ʐ o p ⁵⁵	71	i m r t	kʐ ʐ ʐop ⁵⁵
+#
+6142	Achang_Longchuan	dark	36	ɕin⁵⁵	ɕ i n ⁵⁵	73	i r t	ɕ in ⁵⁵
+6201	Maru	dark	36	nɔʔ³¹	n ɔ ʔ ³¹	74	i r t	n ɔʔ ³¹
+#
+10383	Achang_Longchuan	deaf, be (v.)	37	kəŋ³¹	k ə ŋ ³¹	75	i r t	k əŋ ³¹
+10386	Maru	deaf, be (v.)	37	tʃik⁵⁵	tʃ i k ⁵⁵	76	i r t	tʃ ik ⁵⁵
+#
+10176	Achang_Longchuan	deep	38	lək⁵⁵	l ə k ⁵⁵	77	i r t	l ək ⁵⁵
+10673	Maru	deep	38	nɔʔ³¹	n ɔ ʔ ³¹	78	i r t	n ɔʔ ³¹
+#
+10806	Achang_Longchuan	difficult	39	ko³¹	k o ³¹	79	i r t	k o ³¹
+10809	Maru	difficult	39	ɣuk⁵⁵	ɣ u k ⁵⁵	80	i r t	ɣ uk ⁵⁵
+#
+936	Achang_Longchuan	dirty	40	ək³⁵	/ʔ ə k ³⁵	81	i r t	ʔ ək ³⁵
+943	Maru	dirty	40	la̱u³⁵	ˀl au ³⁵	82	i r t	ˀl au ³⁵
+#
+10312	Achang_Longchuan	divide / share (things) (v.)	41	miaŋ³⁵	m i a ŋ ³⁵	83	i m r t	mi i iaŋ ³⁵
+10315	Maru	divide / share (things) (v.)	41	kɛ̃³¹	k ɛ̃ ∼ ³¹	84	i r t	k ɛ̃∼ ³¹
+#
+9660	Achang_Longchuan	do / make (v.)	42	xot⁵⁵	x o t ⁵⁵	85	i r t	x ot ⁵⁵
+10302	Maru	do / make (v.)	42	ka̱t⁵⁵	ˀk a t ⁵⁵	85	i r t	ˀk at ⁵⁵
+#
+9608	Maru	drunk	43	jik³¹	/ʔ j i k ³¹	87	i m r t	ʔj j jik ³¹
+10049	Achang_Longchuan	drunk	43	et⁵⁵	/ʔ e t ⁵⁵	86	i r t	ʔ et ⁵⁵
+#
+1037	Achang_Longchuan	dry	44	səʔ⁵⁵	s ə ʔ ⁵⁵	88	i r t	s əʔ ⁵⁵
+1044	Maru	dry	44	fai⁵⁵	f ai ⁵⁵	89	i r t	f ai ⁵⁵
+#
+9668	Achang_Longchuan	dull	45	təm³⁵	t ə m ³⁵	90	i r t	t əm ³⁵
+9671	Maru	dull	45	tam³⁵	t a m ³⁵	90	i r t	t am ³⁵
+#
+6144	Achang_Longchuan	early	46	nɔʔ⁵⁵	n ɔ ʔ ⁵⁵	91	i r t	n ɔʔ ⁵⁵
+6202	Maru	early	46	nɔʔ⁵⁵	n ɔ ʔ ⁵⁵	91	i r t	n ɔʔ ⁵⁵
+#
+10845	Achang_Longchuan	easy	47	ŋai⁵⁵	ŋ ai ⁵⁵	92	i r t	ŋ ai ⁵⁵
+10848	Maru	easy	47	lɔi³¹	l ɔi ³¹	93	i r t	l ɔi ³¹
+#
+1150	Achang_Longchuan	eight	48	ɕet⁵⁵	ɕ e t ⁵⁵	94	i r t	ɕ et ⁵⁵
+1157	Maru	eight	48	ʃɛʔ⁵⁵	ʃ ɛ ʔ ⁵⁵	94	i r t	ʃ ɛʔ ⁵⁵
+#
+11205	Achang_Longchuan	enter (a house) (v.)	49	ɔŋ⁵⁵	/ʔ ɔ ŋ ⁵⁵	95	i r t	ʔ ɔŋ ⁵⁵
+11318	Maru	enter (a house) (v.)	49	vɔ̃³¹	v ɔ̃ ∼ ³¹	95	i r t	v ɔ̃∼ ³¹
+#
+11577	Maru	exchange (v.)	50	tha⁵⁵	th a ⁵⁵	96	i r t	th a ⁵⁵
+#
+11548	Achang_Longchuan	expand / swell (v.)	51	pə³¹	p ə - ³¹	97	i r t	p ə ³¹
+11551	Maru	expand / swell (v.)	51	pauŋ³⁵	p au ŋ ³⁵	97	i r t	p auŋ ³⁵
+#
+11477	Achang_Longchuan	fall (rain) (v.)	52	ʐo⁵⁵	ʐ o ⁵⁵	98	i r t	ʐ o ⁵⁵
+11480	Maru	fall (rain) (v.)	52	vu³¹	v u ³¹	99	i r t	v u ³¹
+#
+1241	Achang_Longchuan	far	53	ve³¹	v e ³¹	100	i r t	v e ³¹
+1248	Maru	far	53	va³⁵	v a ³⁵	101	i r t	v a ³⁵
+#
+9549	Achang_Longchuan	fast	54	mʐap⁵⁵	m ʐ a p ⁵⁵	102	i m r t	mʐ ʐ ʐap ⁵⁵
+9552	Maru	fast	54	xəŋ³¹	x ə ŋ ³¹	103	i r t	x əŋ ³¹
+#
+9766	Achang_Longchuan	fat (of person)	55	pʐau³¹	p ʐ au ³¹	104	i m r t	pʐ ʐ ʐau ³¹
+9769	Maru	fat (of person)	55	tshau³¹	tsh au ³¹	105	i r t	tsh au ³¹
+#
+10012	Achang_Longchuan	fetch / draw (water) (v.)	56	xam⁵⁵	x a m ⁵⁵	106	i r t	x am ⁵⁵
+10569	Maru	fetch / draw (water) (v.)	56	ɣək³¹khɛ̃³¹	ɣ ə k ³¹ + kh ɛ̃ ∼ ³¹	107 106	i r t + i r t	ɣ ək ³¹ + kh ɛ̃∼ ³¹
+#
+10857	Achang_Longchuan	few	57	nəŋ³¹	n ə ŋ ³¹	108	i r t	n əŋ ³¹
+11523	Maru	few	57	ʃau³¹	ʃ au ³¹	109	i r t	ʃ au ³¹
+#
+10767	Achang_Longchuan	fight / vie for (v.)	58	tsən³¹	ts ə n ³¹	110	i r t	ts ən ³¹
+11166	Maru	fight / vie for (v.)	58	la̱t⁵⁵	ˀl a t ⁵⁵	111	i r t	ˀl at ⁵⁵
+#
+6182	Maru	firewood	59	tʰɔ̃³⁵	t - ɔ̃ ∼ ³⁵	112	i r t	t ɔ̃∼ ³⁵
+6428	Achang_Longchuan	firewood	59	tʰuaŋ³¹	t u a ŋ ³¹	112	i m r t	tu u uaŋ ³¹
+#
+1421	Achang_Longchuan	five	60	ŋɔ³¹	ŋ ɔ ³¹	113	i r t	ŋ ɔ ³¹
+1428	Maru	five	60	ŋɔ⁵⁵	ŋ ɔ ⁵⁵	113	i r t	ŋ ɔ ⁵⁵
+#
+10930	Achang_Longchuan	flat (shallow)	61	phʐap⁵⁵	pʰ ʐ a p ⁵⁵	114	i m r t	pʰʐ ʐ ʐap ⁵⁵
+#
+11081	Achang_Longchuan	forget (v.)	62	ȵi³⁵	ȵ i ³⁵	115	i r t	ȵ i ³⁵
+11084	Maru	forget (v.)	62	tɔ⁵⁵mji̱k⁵⁵	t ɔ ⁵⁵ + ˀm j i k ⁵⁵	116 117	i r t + i m r t	t ɔ ⁵⁵ + ˀmj j jik ⁵⁵
+#
+1531	Achang_Longchuan	four	63	mi³¹	m i ³¹	118	i r t	m i ³¹
+1538	Maru	four	63	pjik³¹	p j i k ³¹	119	i m r t	pj j jik ³¹
+#
+10866	Achang_Longchuan	fragrant	64	up⁵⁵	/ʔ u p ⁵⁵	120	i r t	ʔ up ⁵⁵
+10869	Maru	fragrant	64	xɔm³⁵	x ɔ m ³⁵	121	i r t	x ɔm ³⁵
+#
+1581	Achang_Longchuan	full	65	pʐəŋ³⁵	p ʐ ə ŋ ³⁵	122	i m r t	pʐ ʐ ʐəŋ ³⁵
+1590	Maru	full	65	pjaŋ⁵⁵	p j a ŋ ⁵⁵	122	i m r t	pj j jaŋ ⁵⁵
+#
+9908	Achang_Longchuan	gnaw / nibble (v.)	66	kʐat⁵⁵	k ʐ a t ⁵⁵	123	i m r t	kʐ ʐ ʐat ⁵⁵
+9911	Maru	gnaw / nibble (v.)	66	khai³⁵	kh ai ³⁵	124	i r t	kh ai ³⁵
+#
+1653	Achang_Longchuan	good	67	tɕi⁵⁵	tɕ i ⁵⁵	125	i r t	tɕ i ⁵⁵
+1660	Maru	good	67	kai³¹	k ai ³¹	125	i r t	k ai ³¹
+#
+9885	Achang_Longchuan	grain (of rice)	68	lum³¹	l u m ³¹	126	i r t	l um ³¹
+11120	Maru	grain (of rice)	68	tʃhɛʔ⁵⁵	tʃh ɛ ʔ ⁵⁵	127	i r t	tʃh ɛʔ ⁵⁵
+#
+1684	Achang_Longchuan	green	69	ȵau⁵⁵	ȵ - au - ⁵⁵	128	i r t	ȵ au ⁵⁵
+1691	Maru	green	69	ŋjuk³¹	ŋ j u k ³¹	128	i m r t	ŋj j juk ³¹
+#
+6156	Achang_Longchuan	hard	70	kʐak⁵⁵	k ʐ a k ⁵⁵	129	i m r t	kʐ ʐ ʐak ⁵⁵
+6210	Maru	hard	70	ɣɔ̃³¹	ɣ ɔ̃ ∼ ³¹	130	i r t	ɣ ɔ̃∼ ³¹
+#
+6160	Maru	he or she [third person singular]	71	jɔ̃³⁵	/ʔ j ɔ̃ ∼ ³⁵	132	i m r t	ʔj j jɔ̃∼ ³⁵
+6635	Achang_Longchuan	he or she [third person singular]	71	ȵ̥aŋ³¹	ȵ̥ a ŋ ³¹	131	i r t	ȵ̥ aŋ ³¹
+#
+1841	Achang_Longchuan	heavy	72	li³¹	l i ³¹	133	i r t	l i ³¹
+1848	Maru	heavy	72	la³⁵	l a ³⁵	133	i r t	l a ³⁵
+#
+1853	Achang_Longchuan	here	73	xai⁵⁵thɔʔ⁵⁵	x ai ⁵⁵ + tʰ ɔ ʔ ⁵⁵	134 135	i r t + i r t	x ai ⁵⁵ + tʰ ɔʔ ⁵⁵
+1861	Maru	here	73	tʃhɛ̆³¹mɛ³¹	tʃh ɛ̆ ³¹ + m ɛ ³¹	136 137	i r t + i r t	tʃh ɛ̆ ³¹ + m ɛ ³¹
+#
+4242	Achang_Longchuan	high / tall	74	m̥ʐaŋ⁵⁵	m̥ ʐ a ŋ ⁵⁵	138	i m r t	m̥ʐ ʐ ʐaŋ ⁵⁵
+4249	Maru	high / tall	74	mjɔ̃³¹	m j ɔ̃ ∼ ³¹	138	i m r t	mj j jɔ̃∼ ³¹
+#
+6135	Achang_Longchuan	horizontal	75	xaŋ³¹	x a ŋ ³¹	139	i r t	x aŋ ³¹
+6195	Maru	horizontal	75	pji̱³¹	ˀp j i ³¹	140	i m r t	ˀpj j ji ³¹
+#
+6172	Achang_Longchuan	hot	76	pu⁵⁵	p u ⁵⁵	141	i r t	p u ⁵⁵
+6220	Maru	hot	76	lauŋ³¹	l au ŋ ³¹	142	i r t	l auŋ ³¹
+#
+2048	Achang_Longchuan	hundred	77	pak³⁵	p a k ³⁵	143	i r t	p ak ³⁵
+2058	Maru	hundred	77	jɔ³¹	/ʔ j ɔ ³¹	144	i m r t	ʔj j jɔ ³¹
+#
+9953	Achang_Longchuan	hungry	78	ʂut⁵⁵	ʂ u t ⁵⁵	145	i r t	ʂ ut ⁵⁵
+9956	Maru	hungry	78	møʔ³¹	m ø ʔ ³¹	146	i r t	m øʔ ³¹
+#
+11275	Achang_Longchuan	inhale (v.)	80	tʂop⁵⁵	tʂ o p ⁵⁵	147	i r t	tʂ op ⁵⁵
+11278	Maru	inhale (v.)	80	ʃɛ³¹	ʃ ɛ ³¹	148	i r t	ʃ ɛ ³¹
+#
+10796	Maru	injure / hurt (the arm) (v.)	81	tɛ̃³¹ tɛʔ³¹	t ɛ̃ ∼ ³¹ + t ɛ ʔ ³¹	150 151	i r t + i r t	t ɛ̃∼ ³¹ + t ɛʔ ³¹
+11216	Achang_Longchuan	injure / hurt (the arm) (v.)	81	xa³¹	x a ³¹	149	i r t	x a ³¹
+#
+6515	Achang_Longchuan	inside	82	a³¹xau⁵⁵	/ʔ a ³¹ + x au - ⁵⁵	152 153	i r t + i r t	ʔ a ³¹ + x au ⁵⁵
+6575	Maru	inside	82	a³¹kʰuk³¹	/ʔ a ³¹ + k u k ³¹	152 153	i r t + i r t	ʔ a ³¹ + k uk ³¹
+#
+6145	Achang_Longchuan	late	83	l̥ɔ³¹	l̥ ɔ ³¹	154	i r t	l̥ ɔ ³¹
+6203	Maru	late	83	kjam³¹	k j a m ³¹	155	i m r t	kj j jam ³¹
+#
+10431	Achang_Longchuan	leak (v.)	84	ʑau⁵⁵	ʑ au ⁵⁵	156	i r t	ʑ au ⁵⁵
+10434	Maru	leak (v.)	84	juk³¹	/ʔ j u k ³¹	157	i m r t	ʔj j juk ³¹
+#
+9916	Achang_Longchuan	learn (v.)	85	ʑəŋ³¹	ʑ ə ŋ ³¹	158	i r t	ʑ əŋ ³¹
+9919	Maru	learn (v.)	85	mɔ̱ʔ⁵⁵	ˀm ɔ ʔ ⁵⁵	159	i r t	ˀm ɔʔ ⁵⁵
+#
+2299	Achang_Longchuan	left	86	lɔʔ³¹nam³¹pa³¹	l ɔ ʔ ³¹ + n a m ³¹ + p a ³¹	160 161 162	i r t + i r t + i r t	l ɔʔ ³¹ + n am ³¹ + p a ³¹
+2308	Maru	left	86	lɔʔ³¹ka̱uŋ³⁵	l ɔ ʔ ³¹ + ˀk au ŋ ³⁵	160 163	i r t + i r t	l ɔʔ ³¹ + ˀk auŋ ³⁵
+#
+2393	Achang_Longchuan	light (of weight)	87	ʑaŋ⁵⁵	ʑ a ŋ ⁵⁵	165	i r t	ʑ aŋ ⁵⁵
+2397	Maru	light (of weight)	87	sum³⁵	s u m ³⁵	165	i r t	s um ³⁵
+#
+11364	Achang_Longchuan	line up (v.)	88	phaiʔ³¹	pʰ ai ʔ ³¹	166	i r t	pʰ aiʔ ³¹
+11367	Maru	line up (v.)	88	phai³¹	ph ai - ³¹	166	i r t	ph ai ³¹
+#
+2444	Achang_Longchuan	long	89	səŋ⁵⁵	s ə ŋ ⁵⁵	167	i r t	s əŋ ⁵⁵
+2453	Maru	long	89	xaŋ³¹	x a ŋ ³¹	167	i r t	x aŋ ³¹
+#
+9601	Achang_Longchuan	look like / resemble (v.)	90	tu⁵⁵	t u - ⁵⁵	168	i r t	t u ⁵⁵
+9604	Maru	look like / resemble (v.)	90	tøʔ³¹	t ø ʔ ³¹	168	i r t	t øʔ ³¹
+#
+11284	Achang_Longchuan	lower (the head) (v.)	91	ŋop³⁵	ŋ o p ³⁵	169	i r t	ŋ op ³⁵
+11287	Maru	lower (the head) (v.)	91	ŋa̱n³⁵	ˀŋ a n ³⁵	170	i r t	ˀŋ an ³⁵
+#
+11441	Achang_Longchuan	make (tea) (v.)	92	ʂun⁵⁵	ʂ u n ⁵⁵	171	i r t	ʂ un ⁵⁵
+#
+11264	Achang_Longchuan	make / cause (v.)	93	si⁵⁵	s i ⁵⁵	172	i r t	s i ⁵⁵
+11267	Maru	make / cause (v.)	93	nɔ̱̃³¹	ˀn ɔ̃ ∼ ³¹	173	i r t	ˀn ɔ̃∼ ³¹
+#
+2504	Achang_Longchuan	many	94	ȵɔ³¹	ȵ ɔ ³¹	174	i r t	ȵ ɔ ³¹
+2513	Maru	many	94	mjɔ³⁵	m j ɔ ³⁵	175	i m r t	mj j jɔ ³⁵
+#
+11039	Achang_Longchuan	marry (v.)	95	tsaŋ³¹i³¹ʂa⁵⁵	ts a ŋ ³¹ + /ʔ i - ³¹ + ʂ a ⁵⁵	176 177 178	i r t + i r t + i r t	ts aŋ ³¹ + ʔ i ³¹ + ʂ a ⁵⁵
+11042	Maru	marry (v.)	95	mji³⁵fɔ̃⁵⁵	m j i ³⁵ + f ɔ̃ ∼ ⁵⁵	179 177	i m r t + i r t	mj j ji ³⁵ + f ɔ̃∼ ⁵⁵
+#
+6510	Achang_Longchuan	middle	96	a³¹kuŋ⁵⁵	/ʔ a ³¹ + k u ŋ ⁵⁵	152 181	i r t + i r t	ʔ a ³¹ + k uŋ ⁵⁵
+6571	Maru	middle	96	a³¹kauŋ³⁵	/ʔ a ³¹ + k au ŋ ³⁵	152 181	i r t + i r t	ʔ a ³¹ + k auŋ ³⁵
+#
+6317	Maru	morning	97	nɛʔ³¹sum³¹	n ɛ ʔ ³¹ + s - u m ³¹	184 183	i r t + i r t	n ɛʔ ³¹ + s um ³¹
+6534	Achang_Longchuan	morning	97	ni³¹ʐua³¹	n i ³¹ + ʐ u a - ³¹	182 183	i r t + i m r t	n i ³¹ + ʐu u ua ³¹
+#
+2741	Achang_Longchuan	narrow	98	ȵ̥ap⁵⁵	ȵ̥ a p ⁵⁵	185	i r t	ȵ̥ ap ⁵⁵
+2745	Maru	narrow	98	tʃɛ̱ʔ⁵⁵	ˀtʃ ɛ ʔ ⁵⁵	186	i r t	ˀtʃ ɛʔ ⁵⁵
+#
+2774	Achang_Longchuan	near	99	ne³¹	n e ³¹	187	i r t	n e ³¹
+2777	Maru	near	99	tʃɔ̃³⁵	tʃ ɔ̃ ∼ ³⁵	188	i r t	tʃ ɔ̃∼ ³⁵
+#
+2810	Achang_Longchuan	new	100	ʂək⁵⁵	ʂ ə k ⁵⁵	189	i r t	ʂ ək ⁵⁵
+2818	Maru	new	100	sa̱k⁵⁵	ˀs a k ⁵⁵	189	i r t	ˀs ak ⁵⁵
+#
+2842	Achang_Longchuan	nine	101	kau³¹	k au - ³¹	190	i r t	k au ³¹
+2849	Maru	nine	101	kuk³¹	k u k ³¹	190	i r t	k uk ³¹
+#
+6535	Achang_Longchuan	noon	102	ni³¹kuŋ⁵⁵	n i ³¹ + k u ŋ ⁵⁵	191 181	i r t + i r t	n i ³¹ + k uŋ ⁵⁵
+6598	Maru	noon	102	na⁵⁵kauŋ³⁵	n a ⁵⁵ + k au ŋ ³⁵	191 181	i r t + i r t	n a ⁵⁵ + k auŋ ³⁵
+#
+10516	Achang_Longchuan	old (aged)	103	muaŋ³¹	m u a ŋ ³¹	193	i m r t	mu u uaŋ ³¹
+10519	Maru	old (aged)	103	mɔ̃³⁵	m - ɔ̃ ∼ ³⁵	193	i r t	m ɔ̃∼ ³⁵
+#
+2880	Achang_Longchuan	old (of person)	104	muaŋ³¹	m u a ŋ ³¹	193	i m r t	mu u uaŋ ³¹
+2889	Maru	old (of person)	104	mɔ̃³⁵	m - ɔ̃ ∼ ³⁵	193	i r t	m ɔ̃∼ ³⁵
+#
+10150	Achang_Longchuan	old, be (v.)	105	muaŋ³¹	m u a ŋ ³¹	193	i m r t	mu u uaŋ ³¹
+10153	Maru	old, be (v.)	105	mɔ̃³⁵	m - ɔ̃ ∼ ³⁵	193	i r t	m ɔ̃∼ ³⁵
+#
+2937	Achang_Longchuan	one	106	ta³¹	t a ³¹	196	i r t	t a ³¹
+2946	Maru	one	106	ta³¹	t a ³¹	196	i r t	t a ³¹
+#
+6215	Maru	outside	107	və̆³¹kauŋ³⁵	v ə̆ ³¹ + k au ŋ ³⁵	197 199	i r t + i r t	v ə̆ ³¹ + k auŋ ³⁵
+6514	Achang_Longchuan	outside	107	a³¹nɔk⁵⁵	/ʔ a ³¹ + n ɔ k ⁵⁵	197 198	i r t + i r t	ʔ a ³¹ + n ɔk ⁵⁵
+#
+9688	Achang_Longchuan	pare / peel with a knife (v.)	108	pha³¹	pʰ a ³¹	201	i r t	pʰ a ³¹
+10458	Maru	pare / peel with a knife (v.)	108	tshum³¹	tsh u m ³¹	202	i r t	tsh um ³¹
+#
+10444	Achang_Longchuan	paste / stick / glue (v.)	109	thap³⁵	tʰ a p ³⁵	203	i r t	tʰ ap ³⁵
+11421	Maru	paste / stick / glue (v.)	109	tɛ̱ʔ⁵⁵	ˀt ɛ ʔ ⁵⁵	203	i r t	ˀt ɛʔ ⁵⁵
+#
+10781	Achang_Longchuan	piece (of egg)	110	lum³¹	l u m ³¹	204	i r t	l um ³¹
+11178	Maru	piece (of egg)	110	tʃhɛʔ⁵⁵	tʃh ɛ ʔ ⁵⁵	205	i r t	tʃh ɛʔ ⁵⁵
+#
+10020	Achang_Longchuan	prize / pry (v.)	111	ŋ̊əŋ³¹	ŋ̊ ə ŋ ³¹	206	i r t	ŋ̊ əŋ ³¹
+10023	Maru	prize / pry (v.)	111	kak³¹	k a k ³¹	207	i r t	k ak ³¹
+#
+10122	Achang_Longchuan	punish (v.)	112	tshek⁵⁵	tsʰ e k ⁵⁵	208	i r t	tsʰ ek ⁵⁵
+10125	Maru	punish (v.)	112	fa³¹	f a ³¹	209	i r t	f a ³¹
+#
+10090	Achang_Longchuan	raise (chickens) (v.)	113	leŋ³¹	l e ŋ ³¹	210	i r t	l eŋ ³¹
+10093	Maru	raise (chickens) (v.)	113	tsɔ̱³⁵	ˀts ɔ ³⁵	211	i r t	ˀts ɔ ³⁵
+#
+3281	Achang_Longchuan	red	114	na⁵⁵	n a ⁵⁵	212	i r t	n a ⁵⁵
+3291	Maru	red	114	nɛ³¹	n ɛ ³¹	212	i r t	n ɛ ³¹
+#
+10204	Achang_Longchuan	rely / lean on (v.)	115	khau³⁵	kʰ au ³⁵	213	i r t	kʰ au ³⁵
+10207	Maru	rely / lean on (v.)	115	lam³¹	l a m ³¹	214	i r t	l am ³¹
+#
+9719	Achang_Longchuan	repay (a debt) (v.)	116	tɕhap⁵⁵	tɕʰ a p ⁵⁵	62	i r t	tɕʰ ap ⁵⁵
+9722	Maru	repay (a debt) (v.)	116	tshɛʔ⁵⁵	tsh ɛ ʔ ⁵⁵	62	i r t	tsh ɛʔ ⁵⁵
+#
+6512	Achang_Longchuan	right	117	lɔʔ³¹ʑɔ⁵⁵pa³¹	l ɔ ʔ ³¹ + ʑ - ɔ ⁵⁵ + p a ³¹	160 217 218	i r t + i r t + i r t	l ɔʔ ³¹ + ʑ ɔ ⁵⁵ + p a ³¹
+6572	Maru	right	117	lɔʔ³¹jɔ³¹	l ɔ ʔ ³¹ + /ʔ j ɔ ³¹	160 217	i r t + i m r t	l ɔʔ ³¹ + ʔj j jɔ ³¹
+#
+10611	Achang_Longchuan	ripe	118	ŋ̊eŋ³⁵	ŋ̊ e ŋ ³⁵	219	i r t	ŋ̊ eŋ ³⁵
+11501	Maru	ripe	118	ma̱ŋ⁵⁵	ˀm a ŋ ⁵⁵	220	i r t	ˀm aŋ ⁵⁵
+#
+10359	Achang_Longchuan	roll (v.)	119	liŋ³⁵	l i ŋ ³⁵	221	i r t	l iŋ ³⁵
+11359	Maru	roll (v.)	119	laŋ⁵⁵kum³¹	l a ŋ ⁵⁵ + k u m ³¹	221 222	i r t + i r t	l aŋ ⁵⁵ + k um ³¹
+#
+10541	Achang_Longchuan	rot (v.)	120	ɕu³⁵	ɕ u ³⁵	224	i r t	ɕ u ³⁵
+10544	Maru	rot (v.)	120	pap³¹	p a p ³¹	225	i r t	p ap ³¹
+#
+6128	Achang_Longchuan	round	121	lum³¹	l u m ³¹	226	i r t	l um ³¹
+6188	Maru	round	121	laŋ⁵⁵	l a ŋ ⁵⁵	226	i r t	l aŋ ⁵⁵
+#
+6180	Achang_Longchuan	salty	122	xɔ³¹	x ɔ ³¹	227	i r t	x ɔ ³¹
+6232	Maru	salty	122	kʰɔ³⁵	k ɔ ³⁵	227	i r t	k ɔ ³⁵
+#
+3605	Achang_Longchuan	seven	123	ȵit⁵⁵	ȵ i t ⁵⁵	228	i r t	ȵ it ⁵⁵
+3614	Maru	seven	123	na̱t⁵⁵	ˀn a t ⁵⁵	228	i r t	ˀn at ⁵⁵
+#
+10414	Achang_Longchuan	sew (up) (v.)	124	xʐop⁵⁵	x ʐ o p ⁵⁵	229	i m r t	xʐ ʐ ʐop ⁵⁵
+10417	Maru	sew (up) (v.)	124	khjap⁵⁵	kh j a p ⁵⁵	229	i m r t	khj j jap ⁵⁵
+#
+11140	Achang_Longchuan	shake / quake (v.)	125	than³⁵	tʰ a n ³⁵	230	i r t	tʰ an ³⁵
+11143	Maru	shake / quake (v.)	125	nan⁵⁵	n a n ⁵⁵	231	i r t	n an ⁵⁵
+#
+10702	Achang_Longchuan	shallow	126	tɕheʔ⁵⁵	tɕʰ e ʔ ⁵⁵	232	i r t	tɕʰ eʔ ⁵⁵
+10705	Maru	shallow	126	mə̆³¹nɔʔ³¹	m ə̆ ³¹ + n ɔ ʔ ³¹	233 234	i r t + i r t	m ə̆ ³¹ + n ɔʔ ³¹
+#
+3649	Achang_Longchuan	sharp	127	thɔʔ⁵⁵	tʰ ɔ ʔ ⁵⁵	235	i r t	tʰ ɔʔ ⁵⁵
+3660	Maru	sharp	127	thɔʔ⁵⁵	th ɔ ʔ ⁵⁵	235	i r t	th ɔʔ ⁵⁵
+#
+10015	Maru	sheet (classifier for paper)	128	khjɛʔ⁵⁵	kh j ɛ ʔ ⁵⁵	237	i m r t	khj j jɛʔ ⁵⁵
+10722	Achang_Longchuan	sheet (classifier for paper)	128	tuŋ³¹	t u ŋ ³¹	236	i r t	t uŋ ³¹
+#
+3699	Achang_Longchuan	short	129	ʑɔŋ³¹	ʑ ɔ ŋ ³¹	238	i r t	ʑ ɔŋ ³¹
+3703	Maru	short	129	laŋ⁵⁵	l a ŋ ⁵⁵	239	i r t	l aŋ ⁵⁵
+#
+9902	Achang_Longchuan	shrivel up / wither (v.)	130	ȵ̥au³¹	ȵ̥ au ³¹	240	i r t	ȵ̥ au ³¹
+11119	Maru	shrivel up / wither (v.)	130	ʃu̱k⁵⁵	ˀʃ u k ⁵⁵	241	i r t	ˀʃ uk ⁵⁵
+#
+6316	Achang_Longchuan	shy	131	ȵɔʔ³¹sɔʔ⁵⁵	ȵ ɔ ʔ ³¹ + s ɔ ʔ ⁵⁵	242 243	i r t + i r t	ȵ ɔʔ ³¹ + s ɔʔ ⁵⁵
+6506	Maru	shy	131	xɔʔ⁵⁵	x ɔ ʔ ⁵⁵	243	i r t	x ɔʔ ⁵⁵
+#
+3752	Achang_Longchuan	six	132	xʐoʔ⁵⁵	x ʐ o ʔ ⁵⁵	244	i m r t	xʐ ʐ ʐoʔ ⁵⁵
+3761	Maru	six	132	khjauk⁵⁵	kh j au k ⁵⁵	245	i m r t	khj j jauk ⁵⁵
+#
+9573	Achang_Longchuan	slow	133	ȵen³¹	ȵ e n ³¹	246	i r t	ȵ en ³¹
+9575	Maru	slow	133	tsɔ⁵⁵	ts ɔ ⁵⁵	247	i r t	ts ɔ ⁵⁵
+#
+3821	Achang_Longchuan	small	134	ȵi⁵⁵	ȵ i ⁵⁵	248	i r t	ȵ i ⁵⁵
+3828	Maru	small	134	ŋai³¹	ŋ ai ³¹	248	i r t	ŋ ai ³¹
+#
+3867	Achang_Longchuan	smooth	135	neʔ³⁵	n e ʔ ³⁵	249	i r t	n eʔ ³⁵
+3873	Maru	smooth	135	tʃa̱t⁵⁵	ˀtʃ a t ⁵⁵	250	i r t	ˀtʃ at ⁵⁵
+#
+9842	Achang_Longchuan	snap / break (a stick) (v.)	136	khʐau³¹	kʰ ʐ au - ³¹	251	i m r t	kʰʐ ʐ ʐau ³¹
+9845	Maru	snap / break (a stick) (v.)	136	khjuk⁵⁵	kh j u k ⁵⁵	251	i m r t	khj j juk ⁵⁵
+#
+3908	Achang_Longchuan	soft	137	ȵɔt⁵⁵	ȵ ɔ t ⁵⁵	252	i r t	ȵ ɔt ⁵⁵
+3915	Maru	soft	137	nɛ̱̃⁵⁵	ˀn ɛ̃ ∼ ⁵⁵	253	i r t	ˀn ɛ̃∼ ⁵⁵
+#
+10961	Achang_Longchuan	sour	138	mʐək⁵⁵	m ʐ ə k ⁵⁵	254	i m r t	mʐ ʐ ʐək ⁵⁵
+10964	Maru	sour	138	tʃi̱ŋ³¹	ˀtʃ i ŋ ³¹	255	i r t	ˀtʃ iŋ ³¹
+#
+9777	Achang_Longchuan	speak (v.)	139	kʐai⁵⁵	k ʐ ai ⁵⁵	256	i m r t	kʐ ʐ ʐai ⁵⁵
+9780	Maru	speak (v.)	139	ta̱⁵⁵	ˀt a ⁵⁵	257	i r t	ˀt a ⁵⁵
+9802	Maru	speak (v.)	139	tʃa̱u³¹	ˀtʃ au ³¹	257	i r t	ˀtʃ au ³¹
+#
+11031	Achang_Longchuan	spicy	140	tshek⁵⁵	tsʰ e k ⁵⁵	258	i r t	tsʰ ek ⁵⁵
+11034	Maru	spicy	140	phjak⁵⁵	ph j a k ⁵⁵	259	i m r t	phj j jak ⁵⁵
+#
+9578	Achang_Longchuan	splash / sprinkle (v.)	141	kʐən³¹	k ʐ ə n ³¹	260	i m r t	kʐ ʐ ʐən ³¹
+9581	Maru	splash / sprinkle (v.)	141	fɛ̱ʔ⁵⁵	ˀf ɛ ʔ ⁵⁵	261	i r t	ˀf ɛʔ ⁵⁵
+#
+10469	Achang_Longchuan	sprinkle / spray (v.)	142	kʐən³¹	k ʐ ə n ³¹	262	i m r t	kʐ ʐ ʐən ³¹
+10472	Maru	sprinkle / spray (v.)	142	pjat²¹	p j a t ²¹	263	i m r t	pj j jat ²¹
+#
+4112	Achang_Longchuan	straight	143	tan³¹	t a n ³¹	264	i r t	t an ³¹
+4119	Maru	straight	143	ŋiɔ̃⁵⁵	ŋ i ɔ̃ ∼ ⁵⁵	265	i m r t	ŋi i iɔ̃∼ ⁵⁵
+#
+9750	Achang_Longchuan	suck (v.)	144	tʂɔp⁵⁵	tʂ ɔ p ⁵⁵	266	i r t	tʂ ɔp ⁵⁵
+10466	Maru	suck (v.)	144	tʃa̱p⁵⁵	ˀtʃ a p ⁵⁵	266	i r t	ˀtʃ ap ⁵⁵
+#
+9875	Achang_Longchuan	sweat	145	a³¹xə³⁵	/ʔ a ³¹ + x - ə ³⁵	267 268	i r t + i r t	ʔ a ³¹ + x ə ³⁵
+9877	Maru	sweat	145	pau³¹kjø³⁵	p au ³¹ + k j ø ³⁵	269 268	i r t + i m r t	p au ³¹ + kj j jø ³⁵
+#
+10357	Achang_Longchuan	sweet	146	uai³¹	/ʔ u ai ³¹	270	i m r t	ʔu u uai ³¹
+10693	Maru	sweet	146	tʃhuk³¹	tʃh u k ³¹	271	i r t	tʃh uk ³¹
+#
+10285	Achang_Longchuan	tall (stature)	147	m̥ʐaŋ⁵⁵	m̥ ʐ a ŋ ⁵⁵	138	i m r t	m̥ʐ ʐ ʐaŋ ⁵⁵
+10361	Maru	tall (stature)	147	mjɔ̃³¹	m j ɔ̃ ∼ ³¹	138	i m r t	mj j jɔ̃∼ ³¹
+#
+11454	Achang_Longchuan	tasty / delicious	148	tɕhau⁵⁵	tɕʰ au ⁵⁵	273	i r t	tɕʰ au ⁵⁵
+11457	Maru	tasty / delicious	148	mjɔ̱ʔ⁵⁵	ˀm j ɔ ʔ ⁵⁵	274	i m r t	ˀmj j jɔʔ ⁵⁵
+#
+10619	Achang_Longchuan	teach (v.)	149	m̥ɔʔ³⁵	m̥ ɔ ʔ ³⁵	275	i r t	m̥ ɔʔ ³⁵
+10622	Maru	teach (v.)	149	mɔ̱ʔ⁵⁵	ˀm ɔ ʔ ⁵⁵	275	i r t	ˀm ɔʔ ⁵⁵
+#
+4255	Achang_Longchuan	ten	150	tɕhe⁵⁵	tɕʰ e ⁵⁵	276	i r t	tɕʰ e ⁵⁵
+4264	Maru	ten	150	tshɛ³¹	tsh ɛ ³¹	276	i r t	tsh ɛ ³¹
+#
+4290	Achang_Longchuan	that	151	the⁵⁵	tʰ e ⁵⁵	277	i r t	tʰ e ⁵⁵
+4293	Maru	that	151	thø³¹	th ø ³¹	277	i r t	th ø ³¹
+#
+11173	Achang_Longchuan	the animal oil	152	oʔ⁵⁵tɕho⁵⁵	/ʔ o ʔ ⁵⁵ + tɕʰ o ⁵⁵	278 279	i r t + i r t	ʔ oʔ ⁵⁵ + tɕʰ o ⁵⁵
+11176	Maru	the animal oil	152	tshau³¹	tsh au ³¹	280	i r t	tsh au ³¹
+#
+22	Achang_Longchuan	the ant	153	tɕhi⁵⁵man⁵⁵	tɕʰ i ⁵⁵ + m a n ⁵⁵	281 282	i r t + i r t	tɕʰ i ⁵⁵ + m an ⁵⁵
+29	Maru	the ant	153	phə̆³¹ɣuk³¹	ph ə̆ ³¹ + ɣ u k ³¹	283 284	i r t + i r t	ph ə̆ ³¹ + ɣ uk ³¹
+#
+10593	Achang_Longchuan	the arm	154	lɔʔ⁵⁵san⁵⁵	l ɔ ʔ ⁵⁵ + s a n ⁵⁵	285 286	i r t + i r t	l ɔʔ ⁵⁵ + s an ⁵⁵
+10596	Maru	the arm	154	lɔʔ³¹pau³⁵	l ɔ ʔ ³¹ + p au ³⁵	285 287	i r t + i r t	l ɔʔ ³¹ + p au ³⁵
+#
+6193	Achang_Longchuan	the armpit	155	kă³¹liŋ³⁵ʈʂʰuaʔ⁵⁵	k ă ³¹ + l i ŋ ³⁵ + ʂ ua ʔ ⁵⁵	289 290 291	i r t + i r t + i r t	k ă ³¹ + l iŋ ³⁵ + ʂ uaʔ ⁵⁵
+6394	Maru	the armpit	155	lɔʔ³¹tʃhɛʔ⁵⁵	l ɔ ʔ ³¹ + tʃh ɛ ʔ ⁵⁵	292 293	i r t + i r t	l ɔʔ ³¹ + tʃh ɛʔ ⁵⁵
+#
+9991	Achang_Longchuan	the arrow	156	m̥ʐua³¹	m̥ u a ³¹	294	i m r t	m̥u u ua ³¹
+9994	Maru	the arrow	156	la³⁵mjɔk³¹	l a ³⁵ + m j ɔ k ³¹	295 296	i r t + i m r t	l a ³⁵ + mj j jɔk ³¹
+#
+9564	Achang_Longchuan	the ash	157	nă³¹ʐap³⁵	n - ă ³¹ + ʐ a p ³⁵	297 298	i r t + i r t	n ă ³¹ + ʐ ap ³⁵
+9567	Maru	the ash	157	njĭ³⁵map⁵⁵	n j ĭ ³⁵ + m a p ⁵⁵	297 298	i m r t + i r t	nj j jĭ ³⁵ + m ap ⁵⁵
+#
+11219	Achang_Longchuan	the axe	158	u³¹tɕɔŋ³¹	/ʔ u ³¹ + tɕ ɔ ŋ ³¹	299 300	i r t + i r t	ʔ u ³¹ + tɕ ɔŋ ³¹
+11416	Maru	the axe	158	və̆⁵⁵tsauŋ³¹	v ə̆ ⁵⁵ + ts au ŋ ³¹	301 300	i r t + i r t	v ə̆ ⁵⁵ + ts auŋ ³¹
+#
+141	Achang_Longchuan	the bamboo	159	o³¹	/ʔ o ³¹	302	i r t	ʔ o ³¹
+148	Maru	the bamboo	159	vɔ³⁵	v ɔ ³⁵	302	i r t	v ɔ ³⁵
+#
+9964	Achang_Longchuan	the banana	160	kuiʔ³¹	k u i ʔ ³¹	303	i m r t	ku u uiʔ ³¹
+9967	Maru	the banana	160	ŋɔʔ³¹mjauk³¹	ŋ ɔ ʔ ³¹ + m j au k ³¹	304 305	i r t + i m r t	ŋ ɔʔ ³¹ + mj j jauk ³¹
+#
+10506	Achang_Longchuan	the bat	162	uaŋ⁵⁵liaŋ³¹	/ʔ u a ŋ ⁵⁵ + l i a ŋ ³¹	306 307	i m r t + i m r t	ʔu u uaŋ ⁵⁵ + li i iaŋ ³¹
+10509	Maru	the bat	162	phɔʔ⁵⁵xək⁵⁵	ph ɔ ʔ ⁵⁵ + x ə k ⁵⁵	308 309	i r t + i r t	ph ɔʔ ⁵⁵ + x ək ⁵⁵
+#
+10726	Achang_Longchuan	the bean	163	kă³¹tsheʔ³¹	k ă ³¹ + tsʰ e ʔ ³¹	310 311	i r t + i r t	k ă ³¹ + tsʰ eʔ ³¹
+10729	Maru	the bean	163	nauk³¹	n au k ³¹	312	i r t	n auk ³¹
+#
+10360	Achang_Longchuan	the bear	164	ɔm⁵⁵	/ʔ ɔ m ⁵⁵	313	i r t	ʔ ɔm ⁵⁵
+10401	Maru	the bear	164	vɛ̃³¹	v ɛ̃ ∼ ³¹	313	i r t	v ɛ̃∼ ³¹
+#
+10130	Achang_Longchuan	the beard	165	ȵ̥ot⁵⁵mui³¹	ȵ̥ o t ⁵⁵ + m u i ³¹	314 315	i r t + i m r t	ȵ̥ ot ⁵⁵ + mu u ui ³¹
+10133	Maru	the beard	165	na̱t⁵⁵mɔi³¹	ˀn a t ⁵⁵ + m - ɔi ³¹	314 315	i r t + i r t	ˀn at ⁵⁵ + m ɔi ³¹
+#
+11222	Achang_Longchuan	the bed	166	ku³⁵	k u ³⁵	316	i r t	k u ³⁵
+#
+10791	Maru	the bee	167	ʃɔ̆³⁵mji³¹	ʃ ɔ̆ ³⁵ + m j i ³¹	319 320	i r t + i m r t	ʃ ɔ̆ ³⁵ + mj j ji ³¹
+11196	Achang_Longchuan	the bee	167	tɕhi³¹ȵaŋ³⁵	tɕʰ i ³¹ + ȵ a ŋ ³⁵	317 318	i r t + i r t	tɕʰ i ³¹ + ȵ aŋ ³⁵
+#
+10538	Achang_Longchuan	the bell	168	tɕhu⁵⁵	tɕʰ u ⁵⁵	321	i r t	tɕʰ u ⁵⁵
+10629	Maru	the bell	168	tʃu̱³¹	ˀtʃ u ³¹	321	i r t	ˀtʃ u ³¹
+#
+302	Maru	the belly	169	vẽ³⁵tuk³¹	v ẽ ∼ ³⁵ + t u k ³¹	322 323	i r t + i r t	v ẽ∼ ³⁵ + t uk ³¹
+#
+325	Achang_Longchuan	the bird	170	m̥ɔʔ⁵⁵	m̥ ɔ ʔ ⁵⁵	324	i r t	m̥ ɔʔ ⁵⁵
+332	Maru	the bird	170	ŋɔ̱ʔ⁵⁵	ˀŋ ɔ ʔ ⁵⁵	324	i r t	ˀŋ ɔʔ ⁵⁵
+#
+10249	Achang_Longchuan	the bird nest	171	m̥ɔʔ⁵⁵sut⁵⁵	m̥ ɔ ʔ ⁵⁵ + s u t ⁵⁵	324 326	i r t + i r t	m̥ ɔʔ ⁵⁵ + s ut ⁵⁵
+10252	Maru	the bird nest	171	ŋɔ̱ʔ⁵⁵sat⁵⁵	ˀŋ ɔ ʔ ⁵⁵ + s a t ⁵⁵	324 326	i r t + i r t	ˀŋ ɔʔ ⁵⁵ + s at ⁵⁵
+#
+11108	Achang_Longchuan	the blind person	172	ȵɔʔ⁵⁵tset⁵⁵	ȵ - ɔ ʔ ⁵⁵ + ts e t ⁵⁵	327 328	i r t + i r t	ȵ ɔʔ ⁵⁵ + ts et ⁵⁵
+11111	Maru	the blind person	172	mjɔʔ³¹tʃik³¹	m j ɔ ʔ ³¹ + tʃ i k ³¹	327 328	i m r t + i r t	mj j jɔʔ ³¹ + tʃ ik ³¹
+#
+389	Maru	the blood	173	sa³⁵	s a ³⁵	329	i r t	s a ³⁵
+#
+10003	Achang_Longchuan	the boat	174	xə⁵⁵	x ə ⁵⁵	330	i r t	x ə ⁵⁵
+10025	Maru	the boat	174	la̱³¹	ˀl a ³¹	331	i r t	ˀl a ³¹
+#
+1726	Achang_Longchuan	the body hair (hair or fur)	175	a³¹mui³¹	/ʔ a ³¹ + m u i - ³¹	332 333	i r t + i m r t	ʔ a ³¹ + mu u ui ³¹
+1735	Maru	the body hair (hair or fur)	175	ʃɔ̆³⁵muk⁵⁵	ʃ ɔ̆ ³⁵ + m - u k ⁵⁵	334 333	i r t + i r t	ʃ ɔ̆ ³⁵ + m uk ⁵⁵
+#
+493	Maru	the bone	176	ʃŏ³⁵ɣuk⁵⁵	ʃ ŏ ³⁵ + ɣ u k ⁵⁵	335 336	i r t + i r t	ʃ ŏ ³⁵ + ɣ uk ⁵⁵
+#
+9968	Achang_Longchuan	the bow (for arrow)	177	kaŋ³⁵	k a ŋ ³⁵	337	i r t	k aŋ ³⁵
+9971	Maru	the bow (for arrow)	177	la³⁵	l a ³⁵	338	i r t	l a ³⁵
+#
+11383	Achang_Longchuan	the brains	178	u³¹nuʔ³¹	/ʔ u ³¹ + n u ʔ ³¹	339 340	i r t + i r t	ʔ u ³¹ + n uʔ ³¹
+11386	Maru	the brains	178	a̱u³⁵nauk³¹	ˀ/ʔ au ³⁵ + n au k ³¹	339 340	i r t + i r t	ʔ au ³⁵ + n auk ³¹
+#
+526	Achang_Longchuan	the branch	179	ʂək⁵⁵kʐaŋ⁵⁵	ʂ ə k ⁵⁵ + k ʐ a ŋ ⁵⁵	189 342	i r t + i m r t	ʂ ək ⁵⁵ + kʐ ʐ ʐaŋ ⁵⁵
+533	Maru	the branch	179	sa̱k⁵⁵kɔ̱ʔ⁵⁵	ˀs a k ⁵⁵ + ˀk ɔ ʔ ⁵⁵	189 343	i r t + i r t	ˀs ak ⁵⁵ + ˀk ɔʔ ⁵⁵
+#
+551	Maru	the breast (female)	180	nuk⁵⁵	n u k ⁵⁵	345	i r t	n uk ⁵⁵
+#
+10678	Achang_Longchuan	the brick	181	tʂuan³¹	tʂ u a n ³¹	346	i m r t	tʂu u uan ³¹
+10681	Maru	the brick	181	tʃɔn³⁵	tʃ - ɔ n ³⁵	346	i r t	tʃ ɔn ³⁵
+#
+10829	Achang_Longchuan	the bridge	182	tɕam⁵⁵	tɕ a m ⁵⁵	347	i r t	tɕ am ⁵⁵
+10841	Maru	the bridge	182	tsɛ̃³¹	ts ɛ̃ ∼ ³¹	347	i r t	ts ɛ̃∼ ³¹
+#
+11603	Achang_Longchuan	the bud	183	kan³¹tam⁵¹təm³¹	k a n ³¹ + t a m ⁵¹ + t ə m ³¹	348 349 350	i r t + i r t + i r t	k an ³¹ + t am ⁵¹ + t əm ³¹
+11606	Maru	the bud	183	pəŋ³⁵tʃa̱m³¹	p ə ŋ ³⁵ + ˀtʃ a m ³¹	348 349	i r t + i r t	p əŋ ³⁵ + ˀtʃ am ³¹
+#
+10455	Maru	the buffalo	184	nŭŋ³⁵lɔi³⁵	n ŭ ŋ ³⁵ + l ɔi ³⁵	350 351	i r t + i r t	n ŭŋ ³⁵ + l ɔi ³⁵
+11434	Achang_Longchuan	the buffalo	184	n̥o³¹	n̥ o - ³¹	350	i r t	n̥ o ³¹
+#
+11312	Achang_Longchuan	the butterfly	185	phă³¹ʐam³⁵tʂam⁵⁵	pʰ ă ³¹ + ʐ a m ³⁵ + tʂ a m ⁵⁵	353 354 355	i r t + i r t + i r t	pʰ ă ³¹ + ʐ am ³⁵ + tʂ am ⁵⁵
+11315	Maru	the butterfly	185	phə̆³¹lɛ̱̃³¹	ph ə̆ ³¹ + ˀl ɛ̃ ∼ ³¹	353 354	i r t + i r t	ph ə̆ ³¹ + ˀl ɛ̃∼ ³¹
+#
+10423	Achang_Longchuan	the buttocks	186	tɕhi³¹tuŋ³¹	tɕʰ i ³¹ + t u ŋ ³¹	356 357	i r t + i r t	tɕʰ i ³¹ + t uŋ ³¹
+10426	Maru	the buttocks	186	tʃhauʔ⁵⁵pau³¹	tʃh au ʔ ⁵⁵ + p au ³¹	358 359	i r t + i r t	tʃh auʔ ⁵⁵ + p au ³¹
+#
+10358	Maru	the cave	187	tuŋ³⁵	t u ŋ ³⁵	360	i r t	t uŋ ³⁵
+10666	Achang_Longchuan	the cave	187	tɔŋ³¹	t ɔ ŋ ³¹	360	i r t	t ɔŋ ³¹
+#
+11295	Achang_Longchuan	the cheek	188	pha³¹kap³⁵	pʰ a ³¹ + k a p ³⁵	361 362	i r t + i r t	pʰ a ³¹ + k ap ³⁵
+#
+9591	Achang_Longchuan	the chicken	189	kʐuaʔ⁵⁵	k ʐ ua ʔ ⁵⁵	363	i m r t	kʐ ʐ ʐuaʔ ⁵⁵
+11425	Maru	the chicken	189	ɣɔʔ³¹	ɣ - ɔ ʔ ³¹	363	i r t	ɣ ɔʔ ³¹
+#
+627	Achang_Longchuan	the child (young human)	190	tsă³¹oi³¹	ts ă ³¹ + /ʔ oi - ³¹	364 365	i r t + i r t	ts ă ³¹ + ʔ oi ³¹
+633	Maru	the child (young human)	190	tsɔ̆³⁵ʃɔ̃³¹	ts ɔ̆ ³⁵ + ʃ ɔ̃ ∼ ³¹	364 365	i r t + i r t	ts ɔ̆ ³⁵ + ʃ ɔ̃∼ ³¹
+#
+10167	Achang_Longchuan	the chin	191	pha³¹kəŋ³⁵	pʰ a ³¹ + k ə ŋ ³⁵	366 367	i r t + i r t	pʰ a ³¹ + k əŋ ³⁵
+10170	Maru	the chin	191	ɛ̃³¹thɔ̃³¹	/ʔ ɛ̃ ∼ ³¹ + th ɔ̃ ∼ ³¹	368 367	i r t + i r t	ʔ ɛ̃∼ ³¹ + th ɔ̃∼ ³¹
+#
+9986	Achang_Longchuan	the claw	192	tɕhi⁵⁵phʐai⁵⁵	tɕʰ i ⁵⁵ + pʰ ʐ ai - ⁵⁵	369 370	i r t + i m r t	tɕʰ i ⁵⁵ + pʰʐ ʐ ʐai ⁵⁵
+11290	Maru	the claw	192	khjik⁵⁵saŋ³⁵	kh j i k ⁵⁵ + s - a ŋ ³⁵	371 370	i m r t + i r t	khj j jik ⁵⁵ + s aŋ ³⁵
+#
+9680	Achang_Longchuan	the clothes	193	tse³¹	ts e ³¹	372	i r t	ts e ³¹
+#
+660	Achang_Longchuan	the cloud	194	xan³¹tɕin³¹	x a n ³¹ + tɕ i n ³¹	373 374	i r t + i r t	x an ³¹ + tɕ in ³¹
+667	Maru	the cloud	194	tʃa̱m³¹thɔi³⁵	ˀtʃ a m ³¹ + th ɔi - ³⁵	375 374	i r t + i r t	ˀtʃ am ³¹ + th ɔi ³⁵
+#
+11021	Achang_Longchuan	the cooked rice	196	tɕɔ⁵⁵	tɕ ɔ ⁵⁵	376	i r t	tɕ ɔ ⁵⁵
+11024	Maru	the cooked rice	196	tsɔ³¹	ts ɔ ³¹	376	i r t	ts ɔ ³¹
+#
+10059	Achang_Longchuan	the corpse	197	ʂɿ⁵⁵mʐuaŋ⁵⁵	ʂ ɿ ⁵⁵ + m u a ŋ ⁵⁵	377 378	i r t + i m r t	ʂ ɿ ⁵⁵ + mu u uaŋ ⁵⁵
+10062	Maru	the corpse	197	mɔ̃³¹	m ɔ̃ ∼ ³¹	379	i r t	m ɔ̃∼ ³¹
+#
+10601	Achang_Longchuan	the cow	198	n̥o³¹tseŋ³⁵	n̥ o - ³¹ + ts e ŋ ³⁵	380 381	i r t + i r t	n̥ o ³¹ + ts eŋ ³⁵
+10604	Maru	the cow	198	nŭŋ³⁵tsaŋ³¹	n ŭ ŋ ³⁵ + ts a ŋ ³¹	380 381	i r t + i r t	n ŭŋ ³⁵ + ts aŋ ³¹
+#
+10004	Achang_Longchuan	the crow	199	kă³¹lam³¹	k ă ³¹ + l a m ³¹	382 383	i r t + i r t	k ă ³¹ + l am ³¹
+10013	Maru	the crow	199	kəʔ³¹nɔʔ³¹	k ə ʔ ³¹ + n ɔ ʔ ³¹	384 385	i r t + i r t	k əʔ ³¹ + n ɔʔ ³¹
+#
+10425	Maru	the dance	200	mə̆³¹khɔn⁵⁵kɔ⁵⁵	m ə̆ ³¹ + kh ɔ n ⁵⁵ + k ɔ ⁵⁵	386 387 388	i r t + i r t + i r t	m ə̆ ³¹ + kh ɔn ⁵⁵ + k ɔ ⁵⁵
+#
+6256	Achang_Longchuan	the daughter	201	ʦaŋ³¹ʑi³¹	/ʔ a ŋ ³¹ + ʑ i ³¹	389 390	i r t + i r t	ʔ aŋ ³¹ + ʑ i ³¹
+6257	Maru	the daughter	201	ʦo	/ʔ o - -	389	i r	ʔ o
+6320	Maru	the daughter	201	mji³⁵ɣɛ³⁵ʦɔ³⁵	m j i ³⁵ + ɣ ɛ ³⁵ + /ʔ ɔ - ³⁵	391 390 389	i m r t + i r t + i r t	mj j ji ³⁵ + ɣ ɛ ³⁵ + ʔ ɔ ³⁵
+#
+10800	Achang_Longchuan	the day	202	niʔ³¹	n i ʔ ³¹	393	i r t	n iʔ ³¹
+10803	Maru	the day	202	na⁵⁵	n a - ⁵⁵	393	i r t	n a ⁵⁵
+#
+9982	Maru	the deer	203	tshɛʔ⁵⁵	tsh ɛ ʔ ⁵⁵	396	i r t	tsh ɛʔ ⁵⁵
+10105	Achang_Longchuan	the deer	203	tɕhet⁵⁵kʐə³¹	tɕʰ e t ⁵⁵ + k ʐ ə ³¹	394 395	i r t + i m r t	tɕʰ et ⁵⁵ + kʐ ʐ ʐə ³¹
+#
+6212	Maru	the dew	204	ŋa̱ŋ³¹	ˀŋ a ŋ ³¹	398	i r t	ˀŋ aŋ ³¹
+6268	Achang_Longchuan	the dew	204	ʦhe³¹	/ʔ e ³¹	397	i r t	ʔ e ³¹
+#
+955	Achang_Longchuan	the dog	205	xui³¹	x u i ³¹	399	i m r t	xu u ui ³¹
+962	Maru	the dog	205	lə̆³¹kha³⁵	l ə̆ ³¹ + kh a ³⁵	400 401	i r t + i r t	l ə̆ ³¹ + kh a ³⁵
+#
+10874	Achang_Longchuan	the door	206	pɑ̆³¹tu³⁵	p ɑ̆ ³¹ + t u ³⁵	402 403	i r t + i r t	p ɑ̆ ³¹ + t u ³⁵
+10877	Maru	the door	206	kham³⁵	kh a m ³⁵	404	i r t	kh am ³⁵
+#
+980	Achang_Longchuan	the dream	207	it⁵⁵mɔʔ⁵⁵	/ʔ - i t ⁵⁵ + m ɔ ʔ ⁵⁵	405 406	i r t + i r t	ʔ it ⁵⁵ + m ɔʔ ⁵⁵
+984	Maru	the dream	207	ja̱p³¹mɔʔ³¹	ˀ/ʔ j a p ³¹ + m ɔ ʔ ³¹	405 406	i m r t + i r t	ʔj j jap ³¹ + m ɔʔ ³¹
+#
+9536	Maru	the drum	208	tsaŋ³¹pauŋ³⁵	ts a ŋ ³¹ + p au ŋ ³⁵	407 408	i r t + i r t	ts aŋ ³¹ + p auŋ ³⁵
+11393	Achang_Longchuan	the drum	208	tɕeŋ⁵⁵	tɕ e ŋ ⁵⁵	407	i r t	tɕ eŋ ⁵⁵
+#
+9629	Achang_Longchuan	the duck	209	pi³¹	p i ³¹	410	i r t	p i ³¹
+9632	Maru	the duck	209	pjɛ̱t⁵⁵	ˀp j ɛ t ⁵⁵	411	i m r t	ˀpj j jɛt ⁵⁵
+#
+1089	Achang_Longchuan	the dust	210	ȵ̥on⁵⁵mɔk³⁵	ȵ̥ o n ⁵⁵ + m ɔ k ³⁵	412 413	i r t + i r t	ȵ̥ on ⁵⁵ + m ɔk ³⁵
+1094	Maru	the dust	210	phɔ̆i³⁵lu̱k³¹	ph ɔ̆i ³⁵ + ˀl u k ³¹	414 415	i r t + i r t	ph ɔ̆i ³⁵ + ˀl uk ³¹
+#
+1097	Achang_Longchuan	the ear	211	ni³¹tʂhua³¹	n i ³¹ + tʂʰ u a ³¹	416 417	i r t + i m r t	n i ³¹ + tʂʰu u ua ³¹
+1111	Maru	the ear	211	nə̆³¹khjɛʔ⁵⁵	n ə̆ ³¹ + kh j ɛ ʔ ⁵⁵	416 418	i r t + i m r t	n ə̆ ³¹ + khj j jɛʔ ⁵⁵
+#
+3919	Achang_Longchuan	the earth (soil)	212	mi⁵⁵	m - i - ⁵⁵	420	i r t	m i ⁵⁵
+3923	Maru	the earth (soil)	212	mjik³¹tsa̱i³⁵	m j i k ³¹ + ˀts ai ³⁵	420 421	i m r t + i r t	mj j jik ³¹ + ˀts ai ³⁵
+#
+6406	Maru	the earthworm	213	vɔʔ³¹tɔi³¹	v ɔ ʔ ³¹ + t ɔi ³¹	424 425	i r t + i r t	v ɔʔ ³¹ + t ɔi ³¹
+6638	Achang_Longchuan	the earthworm	213	ta⁵⁵	t a ⁵⁵	423	i r t	t a ⁵⁵
+#
+9675	Maru	the east	214	pa³¹thuk⁵⁵ʃat⁵⁵	p - a ³¹ + th u k ⁵⁵ + ʃ a t ⁵⁵	426 427 429	i r t + i r t + i r t	p a ³¹ + th uk ⁵⁵ + ʃ at ⁵⁵
+10373	Achang_Longchuan	the east	214	pui⁵⁵thoʔ⁵⁵pa³¹	p u i ⁵⁵ + tʰ o ʔ ⁵⁵ + p a ³¹	426 427 428	i m r t + i r t + i r t	pu u ui ⁵⁵ + tʰ oʔ ⁵⁵ + p a ³¹
+#
+1144	Maru	the egg	215	a̱u⁵⁵	ˀ/ʔ au ⁵⁵	432	i r t	ʔ au ⁵⁵
+#
+10229	Achang_Longchuan	the elbow	216	loʔ⁵⁵suak³⁵	l o ʔ ⁵⁵ + s u a k ³⁵	433 434	i r t + i m r t	l oʔ ⁵⁵ + su u uak ³⁵
+10234	Maru	the elbow	216	lɔʔ³¹mat⁵⁵thauŋ³⁵thɔ̃³¹	l ɔ ʔ ³¹ + m a t ⁵⁵ + th au ŋ ³⁵ + th ɔ̃ ∼ ³¹	433 435 436 437	i r t + i r t + i r t + i r t	l ɔʔ ³¹ + m at ⁵⁵ + th auŋ ³⁵ + th ɔ̃∼ ³¹
+#
+9795	Achang_Longchuan	the excrement	217	tɕhi³¹	tɕʰ i ³¹	439	i r t	tɕʰ i ³¹
+9798	Maru	the excrement	217	khjik⁵⁵	kh j i k ⁵⁵	440	i m r t	khj j jik ⁵⁵
+#
+1184	Maru	the eye	218	mjɔʔ³¹tʃik⁵⁵	m j ɔ ʔ ³¹ + tʃ i k ⁵⁵	441 442	i m r t + i r t	mj j jɔʔ ³¹ + tʃ ik ⁵⁵
+#
+9966	Achang_Longchuan	the eyebrow	219	ȵɔʔ⁵⁵mui³¹	ȵ - ɔ ʔ ⁵⁵ + m u i - ³¹	327 444	i r t + i m r t	ȵ ɔʔ ⁵⁵ + mu u ui ³¹
+11570	Maru	the eyebrow	219	mjɔʔ³¹ma̱uŋ⁵⁵	m j ɔ ʔ ³¹ + ˀm - au ŋ ⁵⁵	327 444	i m r t + i r t	mj j jɔʔ ³¹ + ˀm auŋ ⁵⁵
+#
+10052	Maru	the face	220	mjɔʔ³¹khuŋ³⁵	m j ɔ ʔ ³¹ + kh u ŋ ³⁵	327 447	i m r t + i r t	mj j jɔʔ ³¹ + kh uŋ ³⁵
+10607	Achang_Longchuan	the face	220	ȵɔʔ⁵⁵mui³¹	ȵ - ɔ ʔ ⁵⁵ + m u i ³¹	327 446	i r t + i m r t	ȵ ɔʔ ⁵⁵ + mu u ui ³¹
+#
+1273	Achang_Longchuan	the father	221	teʔ⁵⁵	t e ʔ ⁵⁵	449	i r t	t eʔ ⁵⁵
+1281	Maru	the father	221	a⁵⁵phɔ⁵⁵	/ʔ a ⁵⁵ + ph ɔ ⁵⁵	450 451	i r t + i r t	ʔ a ⁵⁵ + ph ɔ ⁵⁵
+#
+1298	Achang_Longchuan	the feather	222	a³¹mui³¹	/ʔ a ³¹ + m u i - ³¹	452 333	i r t + i m r t	ʔ a ³¹ + mu u ui ³¹
+1305	Maru	the feather	222	ʃɔ̆³⁵muk⁵⁵	ʃ ɔ̆ ³⁵ + m - u k ⁵⁵	454 333	i r t + i r t	ʃ ɔ̆ ³⁵ + m uk ⁵⁵
+#
+10697	Achang_Longchuan	the finger	223	lɔʔ⁵⁵ȵ̥au³¹	l ɔ ʔ ⁵⁵ + ȵ̥ - au - ³¹	285 456	i r t + i r t	l ɔʔ ⁵⁵ + ȵ̥ au ³¹
+10933	Maru	the finger	223	lɔʔ³¹ŋju̱k⁵⁵	l ɔ ʔ ³¹ + ˀŋ j u k ⁵⁵	285 456	i r t + i m r t	l ɔʔ ³¹ + ˀŋj j juk ⁵⁵
+#
+1394	Achang_Longchuan	the fire	224	poi³¹	p oi ³¹	457	i r t	p oi ³¹
+1401	Maru	the fire	224	mji³⁵	m j i ³⁵	458	i m r t	mj j ji ³⁵
+#
+1407	Achang_Longchuan	the fish	225	ŋa³¹ʂua³¹	ŋ a ³¹ + ʂ u a ³¹	459 460	i r t + i m r t	ŋ a ³¹ + ʂu u ua ³¹
+1415	Maru	the fish	225	ŋə̆³¹tsɔ³¹	ŋ ə̆ ³¹ + ts - ɔ ³¹	459 460	i r t + i r t	ŋ ə̆ ³¹ + ts ɔ ³¹
+#
+6340	Achang_Longchuan	the flea	226	l̥i³¹	l̥ i ³¹	461	i r t	l̥ i ³¹
+6399	Maru	the flea	226	kʰə̆³¹la̱³⁵	k ə̆ ³¹ + ˀl a ³⁵	462 461	i r t + i r t	k ə̆ ³¹ + ˀl a ³⁵
+#
+9592	Achang_Longchuan	the flesh	227	ʂua³¹	ʂ u a ³¹	463	i m r t	ʂu u ua ³¹
+9598	Maru	the flesh	227	ʃɔ³⁵	ʃ - ɔ ³⁵	463	i r t	ʃ ɔ ³⁵
+#
+1456	Achang_Longchuan	the flower	228	kăn⁵⁵tam³¹	k ă n ⁵⁵ + t a m ³¹	464 465	i r t + i r t	k ăn ⁵⁵ + t am ³¹
+1463	Maru	the flower	228	pəŋ³⁵	p ə ŋ ³⁵	466	i r t	p əŋ ³⁵
+#
+10968	Achang_Longchuan	the fly	229	phɔp⁵⁵	pʰ ɔ p ⁵⁵	467	i r t	pʰ ɔp ⁵⁵
+10971	Maru	the fly	229	jɔ̃³¹khauŋ³⁵	/ʔ j ɔ̃ ∼ ³¹ + kh au ŋ ³⁵	468 469	i m r t + i r t	ʔj j jɔ̃∼ ³¹ + kh auŋ ³⁵
+#
+1483	Achang_Longchuan	the fog	230	mau³¹tum⁵⁵	m au ³¹ + t u m ⁵⁵	470 471	i r t + i r t	m au ³¹ + t um ⁵⁵
+1490	Maru	the fog	230	tʃam³¹thɔi³⁵	tʃ a m ³¹ + th ɔi - ³⁵	472 471	i r t + i r t	tʃ am ³¹ + th ɔi ³⁵
+#
+6254	Maru	the foot	231	kʰjik³¹	k j i k ³¹	473	i m r t	kj j jik ³¹
+6420	Achang_Longchuan	the foot	231	ʨʰi⁵⁵	/ʔ i - ⁵⁵	472	i r t	ʔ i ⁵⁵
+#
+9936	Achang_Longchuan	the forehead	232	ŋă³¹tha³⁵	ŋ ă ³¹ + tʰ a ³⁵	474 475	i r t + i r t	ŋ ă ³¹ + tʰ a ³⁵
+9939	Maru	the forehead	232	ŋa³⁵lɔ̃³¹	ŋ a ³⁵ + l ɔ̃ ∼ ³¹	474 476	i r t + i r t	ŋ a ³⁵ + l ɔ̃∼ ³¹
+#
+1515	Maru	the forest	233	sa̱k⁵⁵jɔ³¹	ˀs a k ⁵⁵ + /ʔ j ɔ ³¹	478 479	i r t + i m r t	ˀs ak ⁵⁵ + ʔj j jɔ ³¹
+#
+11074	Achang_Longchuan	the friend	235	tʂo⁵⁵saʔ³¹	tʂ o ⁵⁵ + s a ʔ ³¹	480 481	i r t + i r t	tʂ o ⁵⁵ + s aʔ ³¹
+11077	Maru	the friend	235	pjiŋ³¹tʃhɔ̃³⁵	p j i ŋ ³¹ + tʃh ɔ̃ ∼ ³⁵	482 483	i m r t + i r t	pj j jiŋ ³¹ + tʃh ɔ̃∼ ³⁵
+#
+1555	Achang_Longchuan	the frog	236	phɔ³¹	pʰ ɔ ³¹	484	i r t	pʰ ɔ ³¹
+1562	Maru	the frog	236	pɔ̱³⁵	ˀp ɔ ³⁵	484	i r t	ˀp ɔ ³⁵
+#
+6513	Achang_Longchuan	the front (front side)	237	ȵɔʔ⁵⁵siʔ³¹	ȵ ɔ ʔ ⁵⁵ + s i ʔ ³¹	485 486	i r t + i r t	ȵ ɔʔ ⁵⁵ + s iʔ ³¹
+6573	Maru	the front (front side)	237	xak⁵⁵	x a k ⁵⁵	487	i r t	x ak ⁵⁵
+#
+6153	Achang_Longchuan	the frost	238	ŋ̊an⁵⁵	ŋ̊ a n ⁵⁵	488	i r t	ŋ̊ an ⁵⁵
+6211	Maru	the frost	238	ŋa̱ŋ³¹	ˀŋ a ŋ ³¹	488	i r t	ˀŋ aŋ ³¹
+#
+1569	Achang_Longchuan	the fruit	239	ʂə³¹	ʂ ə ³¹	21	i r t	ʂ ə ³¹
+1576	Maru	the fruit	239	ʃi³⁵	ʃ i ³⁵	21	i r t	ʃ i ³⁵
+#
+10549	Achang_Longchuan	the garlic	240	kă³¹sun³⁵	k ă ³¹ + s u n ³⁵	490 491	i r t + i r t	k ă ³¹ + s un ³⁵
+10552	Maru	the garlic	240	la³¹	l a ³¹	492	i r t	l a ³¹
+11662	Maru	the garlic	240	sɔn³⁵	s ɔ n ³⁵	491	i r t	s ɔn ³⁵
+#
+10773	Achang_Longchuan	the ghost	241	ʂɿ⁵⁵pʐua⁵⁵	ʂ ɿ ⁵⁵ + p u a ⁵⁵	493 494	i r t + i m r t	ʂ ɿ ⁵⁵ + pu u ua ⁵⁵
+10776	Maru	the ghost	241	ø³¹	/ʔ ø ³¹	495	i r t	ʔ ø ³¹
+#
+10577	Achang_Longchuan	the ginger	242	tɕhaŋ³¹	tɕʰ a ŋ ³¹	496	i r t	tɕʰ aŋ ³¹
+10580	Maru	the ginger	242	tʃhɔ̃³⁵	tʃh ɔ̃ ∼ ³⁵	496	i r t	tʃh ɔ̃∼ ³⁵
+#
+6288	Achang_Longchuan	the goat	243	paʔ⁵⁵	p a ʔ ⁵⁵	497	i r t	p aʔ ⁵⁵
+6352	Maru	the goat	243	tʃhat⁵⁵pɛ̱ʔ⁵⁵	tʃh a t ⁵⁵ + ˀp ɛ ʔ ⁵⁵	498 497	i r t + i r t	tʃh at ⁵⁵ + ˀp ɛʔ ⁵⁵
+#
+10317	Achang_Longchuan	the gold	244	se⁵⁵	s e ⁵⁵	499	i r t	s e ⁵⁵
+11339	Maru	the gold	244	xaŋ³¹	x a ŋ ³¹	500	i r t	x aŋ ³¹
+#
+9645	Achang_Longchuan	the grandson	245	mi³¹tsɔ³¹	m i ³¹ + ts ɔ ³¹	501 502	i r t + i r t	m i ³¹ + ts ɔ ³¹
+9648	Maru	the grandson	245	mjik³¹	m j i k ³¹	503	i m r t	mj j jik ³¹
+#
+1667	Achang_Longchuan	the grass	246	sa⁵⁵	s a ⁵⁵	504	i r t	s a ⁵⁵
+1675	Maru	the grass	246	ma̱ŋ³⁵	ˀm a ŋ ³⁵	505	i r t	ˀm aŋ ³⁵
+#
+11542	Achang_Longchuan	the gums	247	tɕoi⁵⁵ʂua³¹	tɕ oi ⁵⁵ + ʂ u a ³¹	506 507	i r t + i m r t	tɕ oi ⁵⁵ + ʂu u ua ³¹
+11545	Maru	the gums	247	ŋan³¹	ŋ a n ³¹	508	i r t	ŋ an ³¹
+#
+6130	Maru	the hail	248	lak³¹ɣu³¹	l a k ³¹ + ɣ u ³¹	509 510	i r t + i r t	l ak ³¹ + ɣ u ³¹
+6152	Achang_Longchuan	the hail	248	l̥i³¹ʐo⁵⁵	l̥ i - ³¹ + ʐ o ⁵⁵	509 510	i r t + i r t	l̥ i ³¹ + ʐ o ⁵⁵
+#
+1714	Achang_Longchuan	the hair (of the head)	249	u³¹mui³¹	/ʔ u ³¹ + m u i ³¹	511 512	i r t + i m r t	ʔ u ³¹ + mu u ui ³¹
+1722	Maru	the hair (of the head)	249	tshɛ̃³¹	tsh ɛ̃ ∼ ³¹	513	i r t	tsh ɛ̃∼ ³¹
+#
+10918	Achang_Longchuan	the half	250	paʔ⁵⁵	p a ʔ ⁵⁵	514	i r t	p aʔ ⁵⁵
+11576	Maru	the half	250	pan³⁵	p a n ³⁵	515	i r t	p an ³⁵
+#
+1752	Maru	the hand	251	lɔʔ³¹	l ɔ ʔ ³¹	516	i r t	l ɔʔ ³¹
+#
+9889	Achang_Longchuan	the hat	252	u³¹suŋ³¹	/ʔ u ³¹ + s u ŋ ³¹	517 518	i r t + i r t	ʔ u ³¹ + s uŋ ³¹
+9891	Maru	the hat	252	mauk³¹kja̱p⁵⁵	m au k ³¹ + ˀk j a p ⁵⁵	519 520	i r t + i m r t	m auk ³¹ + ˀkj j jap ⁵⁵
+#
+1773	Achang_Longchuan	the head	253	ni³¹kuaŋ³¹	n i ³¹ + k u a ŋ ³¹	521 522	i r t + i m r t	n i ³¹ + ku u uaŋ ³¹
+1784	Maru	the head	253	au³⁵lam³⁵	/ʔ au ³⁵ + l a m ³⁵	523 524	i r t + i r t	ʔ au ³⁵ + l am ³⁵
+#
+1819	Achang_Longchuan	the heart	254	ȵ̥a⁵⁵lum³¹	ȵ̥ a - ⁵⁵ + l u m ³¹	525 526	i r t + i r t	ȵ̥ a ⁵⁵ + l um ³¹
+1833	Maru	the heart	254	na̱k⁵⁵lam³⁵	ˀn a k ⁵⁵ + l a m ³⁵	525 526	i r t + i r t	ˀn ak ⁵⁵ + l am ³⁵
+#
+6282	Achang_Longchuan	the hoof	255	ʨʰi⁵⁵xo⁵⁵	/ʔ i ⁵⁵ + x o ⁵⁵	527 528	i r t + i r t	ʔ i ⁵⁵ + x o ⁵⁵
+6405	Maru	the hoof	255	kʰjuk⁵⁵saŋ³⁵	k j u k ⁵⁵ + s a ŋ ³⁵	529 530	i m r t + i r t	kj j juk ⁵⁵ + s aŋ ³⁵
+#
+1990	Maru	the horn (keratinized skin)	256	khjuk³¹	kh j u k ³¹	531	i m r t	khj j juk ³¹
+#
+10708	Maru	the horn (woodwind)	257	pjĭ⁵⁵khjɛ³¹	p j ĭ ⁵⁵ + kh j ɛ ³¹	532 533	i m r t + i m r t	pj j jĭ ⁵⁵ + khj j jɛ ³¹
+10734	Achang_Longchuan	the horn (woodwind)	257	pe³¹xe³¹	p - e ³¹ + x - e ³¹	532 533	i r t + i r t	p e ³¹ + x e ³¹
+#
+1996	Achang_Longchuan	the horse	258	m̥ʐaŋ³¹	m̥ ʐ a ŋ ³¹	534	i m r t	m̥ʐ ʐ ʐaŋ ³¹
+2003	Maru	the horse	258	mjɔ̃³⁵	m j ɔ̃ ∼ ³⁵	534	i m r t	mj j jɔ̃∼ ³⁵
+#
+2010	Achang_Longchuan	the house	259	in⁵⁵	/ʔ - i n ⁵⁵	535	i r t	ʔ in ⁵⁵
+2017	Maru	the house	259	ja̱m³¹	ˀ/ʔ j a m ³¹	535	i m r t	ʔj j jam ³¹
+#
+2075	Achang_Longchuan	the husband	260	ȵi³¹ŋau⁵⁵	ȵ i ³¹ + ŋ au ⁵⁵	536 537	i r t + i r t	ȵ i ³¹ + ŋ au ⁵⁵
+2082	Maru	the husband	260	lɔ̃³¹	l ɔ̃ ∼ ³¹	538	i r t	l ɔ̃∼ ³¹
+#
+2089	Achang_Longchuan	the ice	261	kət³⁵	k ə t ³⁵	539	i r t	k ət ³⁵
+#
+10816	Achang_Longchuan	the insect	262	pau³¹	p au - ³¹	540	i r t	p au ³¹
+10819	Maru	the insect	262	puk⁵⁵	p u k ⁵⁵	540	i r t	p uk ⁵⁵
+#
+9733	Achang_Longchuan	the intestines	263	a³¹u⁵⁵	/ʔ a ³¹ + /ʔ u - ⁵⁵	541 542	i r t + i r t	ʔ a ³¹ + ʔ u ⁵⁵
+10719	Maru	the intestines	263	a̱◦u³¹	ˀ/ʔ a - - + /ʔ u - ³¹	543 542	i r + i r t	ʔ a + ʔ u ³¹
+#
+9653	Achang_Longchuan	the kidney	264	nam³¹lim⁵⁵	n a m ³¹ + l i m ⁵⁵	542 543	i r t + i r t	n am ³¹ + l im ⁵⁵
+#
+2197	Achang_Longchuan	the knee	265	tɕhi⁵⁵ȵɔʔ⁵⁵	tɕʰ i ⁵⁵ + ȵ ɔ ʔ ⁵⁵	544 545	i r t + i r t	tɕʰ i ⁵⁵ + ȵ ɔʔ ⁵⁵
+2207	Maru	the knee	265	pa̱t⁵⁵lauk³¹	ˀp a t ⁵⁵ + l au k ³¹	546 547	i r t + i r t	ˀp at ⁵⁵ + l auk ³¹
+#
+9758	Achang_Longchuan	the knife	266	mʐau³¹	m ʐ au ³¹	548	i m r t	mʐ ʐ ʐau ³¹
+9761	Maru	the knife	266	ʃɛ̃³¹	ʃ ɛ̃ ∼ ³¹	549	i r t	ʃ ɛ̃∼ ³¹
+#
+9811	Achang_Longchuan	the ladle	267	kak³⁵	k a k ³⁵	550	i r t	k ak ³⁵
+9814	Maru	the ladle	267	ʃɔ³¹	ʃ ɔ ³¹	551	i r t	ʃ ɔ ³¹
+#
+2231	Achang_Longchuan	the lake	268	n̥ɔŋ³⁵	n̥ ɔ ŋ ³⁵	552	i r t	n̥ ɔŋ ³⁵
+2237	Maru	the lake	268	nɔ̱ŋ⁵⁵	ˀn ɔ ŋ ⁵⁵	552	i r t	ˀn ɔŋ ⁵⁵
+#
+2266	Achang_Longchuan	the leaf	269	a³¹xʐoʔ⁵⁵	/ʔ a ³¹ + x ʐ o ʔ ⁵⁵	553 554	i r t + i m r t	ʔ a ³¹ + xʐ ʐ ʐoʔ ⁵⁵
+2273	Maru	the leaf	269	phɔʔ⁵⁵	ph ɔ ʔ ⁵⁵	555	i r t	ph ɔʔ ⁵⁵
+8236	Achang_Longchuan	the leaf	269	a³¹◦xʐoʔ⁵⁵	/ʔ a ³¹ + x ʐ o ʔ ⁵⁵	553 554	i r t + i m r t	ʔ a ³¹ + xʐ ʐ ʐoʔ ⁵⁵
+8730	Maru	the leaf	269	phɔʔ⁵⁵	ph ɔ ʔ ⁵⁵	555	i r t	ph ɔʔ ⁵⁵
+8731	Maru	the leaf	269	fɔʔ⁵⁵	f ɔ ʔ ⁵⁵	555	i r t	f ɔʔ ⁵⁵
+#
+10895	Maru	the leech	270	xa̱p⁵⁵	ˀx a p ⁵⁵	557	i r t	ˀx ap ⁵⁵
+10985	Achang_Longchuan	the leech	270	tak⁵⁵	t a k ⁵⁵	556	i r t	t ak ⁵⁵
+11129	Achang_Longchuan	the leech	270	nuʔ⁵⁵	n u ʔ ⁵⁵	558	i r t	n uʔ ⁵⁵
+11151	Maru	the leech	270	tɔŋ³¹pjɛn³¹	t ɔ ŋ ³¹ + p j ɛ n ³¹	559 560	i r t + i m r t	t ɔŋ ³¹ + pj j jɛn ³¹
+#
+10524	Achang_Longchuan	the leg	271	tɕhi⁵⁵	tɕʰ i ⁵⁵	561	i r t	tɕʰ i ⁵⁵
+10527	Maru	the leg	271	khjik³¹	kh j i k ³¹	562	i m r t	khj j jik ³¹
+#
+6189	Achang_Longchuan	the lip (the lips)	272	ȵ̥ot⁵⁵tuŋ⁵⁵	ȵ̥ o t ⁵⁵ + t u ŋ ⁵⁵	314 564	i r t + i r t	ȵ̥ ot ⁵⁵ + t uŋ ⁵⁵
+6367	Maru	the lip (the lips)	272	na̱t⁵⁵ka̱uk⁵⁵	ˀn a t ⁵⁵ + ˀk au k ⁵⁵	314 565	i r t + i r t	ˀn at ⁵⁵ + ˀk auk ⁵⁵
+#
+2420	Achang_Longchuan	the liver	273	a³¹ʂəŋ³¹	/ʔ a ³¹ + ʂ ə ŋ ³¹	567 568	i r t + i r t	ʔ a ³¹ + ʂ əŋ ³¹
+2434	Maru	the liver	273	saŋ³⁵	s a ŋ ³⁵	568	i r t	s aŋ ³⁵
+#
+2468	Achang_Longchuan	the louse	274	ʂan³¹	ʂ a n ³¹	569	i r t	ʂ an ³¹
+2476	Maru	the louse	274	ʃiŋ³⁵	ʃ i ŋ ³⁵	569	i r t	ʃ iŋ ³⁵
+#
+6217	Achang_Longchuan	the lung	275	a³¹ʨʰot⁵³	/ʔ a ³¹ + /ʔ o t	570 571	i r t + i r	ʔ a ³¹ + ʔ ot
+6277	Maru	the lung	275	ʦa̱t⁵⁵	ˀ/ʔ a t ⁵⁵	572	i r t	ʔ at ⁵⁵
+#
+2489	Achang_Longchuan	the man (male human)	276	i³¹tɕi⁵⁵	/ʔ i ³¹ + tɕ i ⁵⁵	573 125	i r t + i r t	ʔ i ³¹ + tɕ i ⁵⁵
+2498	Maru	the man (male human)	276	jauk³¹kai³¹	/ʔ j au k ³¹ + k ai ³¹	575 125	i m r t + i r t	ʔj j jauk ³¹ + k ai ³¹
+#
+2534	Achang_Longchuan	the meat	277	ʂua³¹	ʂ u a ³¹	463	i m r t	ʂu u ua ³¹
+2538	Maru	the meat	277	ʃɔ³⁵	ʃ - ɔ ³⁵	463	i r t	ʃ ɔ ³⁵
+#
+11497	Maru	the medicine	278	tʃhik⁵⁵	tʃh i k ⁵⁵	578	i r t	tʃh ik ⁵⁵
+11587	Achang_Longchuan	the medicine	278	ȵ̥ɔ³¹	ȵ̥ ɔ ³¹	577	i r t	ȵ̥ ɔ ³¹
+#
+10335	Achang_Longchuan	the milk	279	n̥o³¹ȵau³⁵	n̥ o ³¹ + ȵ au - ³⁵	579 580	i r t + i r t	n̥ o ³¹ + ȵ au ³⁵
+10338	Maru	the milk	279	nŭŋ³⁵nuk⁵⁵	n ŭ ŋ ³⁵ + n u k ⁵⁵	581 580	i r t + i r t	n ŭŋ ³⁵ + n uk ⁵⁵
+#
+10366	Maru	the millet	280	tsɛ̱ʔ⁵⁵	ˀts ɛ ʔ ⁵⁵	580	i r t	ˀts ɛʔ ⁵⁵
+#
+11089	Achang_Longchuan	the mole	281	phai³⁵	pʰ ai - ³⁵	581	i r t	pʰ ai ³⁵
+#
+9861	Maru	the monkey	282	mjauk³¹	m j au k ³¹	583	i m r t	mj j jauk ³¹
+11428	Achang_Longchuan	the monkey	282	ȵuʔ⁵⁵	ȵ u ʔ ⁵⁵	582	i r t	ȵ uʔ ⁵⁵
+#
+2602	Achang_Longchuan	the moon	283	phă³¹lɔʔ³¹	pʰ ă ³¹ + l ɔ ʔ ³¹	584 585	i r t + i r t	pʰ ă ³¹ + l ɔʔ ³¹
+2610	Maru	the moon	283	lɔ̱⁵⁵	ˀl ɔ - ⁵⁵	585	i r t	ˀl ɔ ⁵⁵
+#
+9711	Achang_Longchuan	the mortar	284	tɕnam³¹tɔŋ³¹	tɕ n a m ³¹ + t ɔ ŋ ³¹	586 587	i m r t + i r t	tɕn n nam ³¹ + t ɔŋ ³¹
+9714	Maru	the mortar	284	tshum³⁵thauŋ³¹	tsh - u m ³⁵ + th au ŋ ³¹	586 587	i r t + i r t	tsh um ³⁵ + th auŋ ³¹
+#
+6161	Maru	the mosquito	285	kjɔ̱̃³¹	ˀk j ɔ̃ ∼ ³¹	589	i m r t	ˀkj j jɔ̃∼ ³¹
+6338	Achang_Longchuan	the mosquito	285	pʰɔp⁵⁵	p ɔ p ⁵⁵	588	i r t	p ɔp ⁵⁵
+#
+2627	Achang_Longchuan	the mother	286	mauʔ⁵¹	m au ʔ ⁵¹	590	i r t	m auʔ ⁵¹
+2635	Maru	the mother	286	a⁵⁵mji̱⁵⁵	/ʔ a ⁵⁵ + ˀm j i ⁵⁵	591 592	i r t + i m r t	ʔ a ⁵⁵ + ˀmj j ji ⁵⁵
+#
+2641	Achang_Longchuan	the mountain	287	pum⁵⁵	p u m ⁵⁵	593	i r t	p um ⁵⁵
+2650	Maru	the mountain	287	pam³¹	p a m ³¹	593	i r t	p am ³¹
+#
+6185	Achang_Longchuan	the mouse or rat	288	kʐoʔ⁵⁵	k ʐ o ʔ ⁵⁵	594	i m r t	kʐ ʐ ʐoʔ ⁵⁵
+6566	Maru	the mouse or rat	288	ɣuk³¹nɔʔ³¹	ɣ u k ³¹ + n ɔ ʔ ³¹	595 596	i r t + i r t	ɣ uk ³¹ + n ɔʔ ³¹
+#
+2662	Achang_Longchuan	the mouth	289	ȵ̥ot⁵³	ȵ̥ o t -	597	i r	ȵ̥ ot
+2671	Maru	the mouth	289	na̱t⁵⁵	ˀn a t ⁵⁵	597	i r t	ˀn at ⁵⁵
+#
+6225	Maru	the mud	290	mjik³¹ʦa̱i³⁵	m j i k ³¹ + ˀ/ʔ ai ³⁵	600 601	i m r t + i r t	mj j jik ³¹ + ʔ ai ³⁵
+6424	Achang_Longchuan	the mud	290	ȵ̥on⁵⁵pen³¹	ȵ̥ o n ⁵⁵ + p e n ³¹	598 599	i r t + i r t	ȵ̥ on ⁵⁵ + p en ³¹
+#
+9904	Achang_Longchuan	the mushroom	291	mau⁵⁵	m au - ⁵⁵	602	i r t	m au ⁵⁵
+11045	Maru	the mushroom	291	muk³¹	m u k ³¹	602	i r t	m uk ³¹
+#
+2692	Achang_Longchuan	the nail (fingernail or claw)	292	lɔʔ⁵⁵ʂəŋ³¹	l ɔ ʔ ⁵⁵ + ʂ ə ŋ ³¹	285 568	i r t + i r t	l ɔʔ ⁵⁵ + ʂ əŋ ³¹
+2699	Maru	the nail (fingernail or claw)	292	lɔʔ³¹saŋ³⁵	l ɔ ʔ ³¹ + s a ŋ ³⁵	285 568	i r t + i r t	l ɔʔ ³¹ + s aŋ ³⁵
+#
+2716	Achang_Longchuan	the name	293	a³¹ȵiŋ⁵⁵	/ʔ a ³¹ + ȵ i ŋ ⁵⁵	605 606	i r t + i r t	ʔ a ³¹ + ȵ iŋ ⁵⁵
+2723	Maru	the name	293	maŋ³¹	m a ŋ ³¹	607	i r t	m aŋ ³¹
+#
+10374	Achang_Longchuan	the navel	294	tɕhi³¹tɔt⁵⁵	tɕʰ i ³¹ + t ɔ t ⁵⁵	608 609	i r t + i r t	tɕʰ i ³¹ + t ɔt ⁵⁵
+10377	Maru	the navel	294	tʃhɔʔ⁵⁵	tʃh ɔ ʔ ⁵⁵	610	i r t	tʃh ɔʔ ⁵⁵
+#
+2781	Achang_Longchuan	the neck	295	laŋ³¹tsəŋ³¹	l a ŋ ³¹ + ts ə ŋ ³¹	611 612	i r t + i r t	l aŋ ³¹ + ts əŋ ³¹
+2792	Maru	the neck	295	laŋ³¹tsaŋ³⁵	l a ŋ ³¹ + ts a ŋ ³⁵	611 612	i r t + i r t	l aŋ ³¹ + ts aŋ ³⁵
+#
+2798	Achang_Longchuan	the needle (for sewing)	296	ap⁵⁵	/ʔ a p ⁵⁵	613	i r t	ʔ ap ⁵⁵
+2805	Maru	the needle (for sewing)	296	ŋɛ̱ʔ⁵⁵	ˀŋ ɛ ʔ ⁵⁵	614	i r t	ˀŋ ɛʔ ⁵⁵
+#
+6335	Achang_Longchuan	the nit	297	ʂan³¹uʔ³¹	ʂ a n ³¹ + /ʔ u ʔ ³¹	569 616	i r t + i r t	ʂ an ³¹ + ʔ uʔ ³¹
+6401	Maru	the nit	297	ʃiŋ³⁵a̱u⁵⁵	ʃ i ŋ ³⁵ + ˀ/ʔ au - ⁵⁵	569 616	i r t + i r t	ʃ iŋ ³⁵ + ʔ au ⁵⁵
+#
+9771	Achang_Longchuan	the north	298	pəʔ³¹	p ə ʔ ³¹	617	i r t	p əʔ ³¹
+#
+2854	Achang_Longchuan	the nose	299	ȵ̥ɔŋ⁵⁵	ȵ̥ ɔ ŋ ⁵⁵	618	i r t	ȵ̥ ɔŋ ⁵⁵
+2866	Maru	the nose	299	nɔ̱³¹	ˀn ɔ - ³¹	618	i r t	ˀn ɔ ³¹
+#
+2964	Achang_Longchuan	the otter	300	sam⁵⁵	s a m ⁵⁵	619	i r t	s am ⁵⁵
+2971	Maru	the otter	300	xɛ̃³¹	x ɛ̃ ∼ ³¹	619	i r t	x ɛ̃∼ ³¹
+#
+10663	Maru	the peanut	301	mjik³¹nauk³¹	m j i k ³¹ + n au k ³¹	622 623	i m r t + i r t	mj j jik ³¹ + n auk ³¹
+10856	Achang_Longchuan	the peanut	301	thu⁵⁵lin⁵⁵	tʰ u ⁵⁵ + l i n ⁵⁵	620 621	i r t + i r t	tʰ u ⁵⁵ + l in ⁵⁵
+#
+9751	Achang_Longchuan	the pestle	302	a³¹suʔ⁵⁵	/ʔ a ³¹ + s u ʔ ⁵⁵	624 625	i r t + i r t	ʔ a ³¹ + s uʔ ⁵⁵
+9754	Maru	the pestle	302	tʃhum³⁵thauŋ³¹lɔʔ³¹	tʃh u m ³⁵ + th au ŋ ³¹ + l ɔ ʔ ³¹	626 627 628	i r t + i r t + i r t	tʃh um ³⁵ + th auŋ ³¹ + l ɔʔ ³¹
+#
+3025	Achang_Longchuan	the pig	303	oʔ⁵⁵	/ʔ o ʔ ⁵⁵	629	i r t	ʔ oʔ ⁵⁵
+3032	Maru	the pig	303	vɔʔ³¹	v ɔ ʔ ³¹	629	i r t	v ɔʔ ³¹
+#
+9619	Maru	the pine	304	thaŋ⁵⁵xu³¹	th a ŋ ⁵⁵ + x u ³¹	631 632	i r t + i r t	th aŋ ⁵⁵ + x u ³¹
+10393	Achang_Longchuan	the pine	304	piak³¹tseŋ⁵⁵	p i a k ³¹ + ts e ŋ ⁵⁵	630 631	i m r t + i r t	pi i iak ³¹ + ts eŋ ⁵⁵
+#
+4085	Achang_Longchuan	the pit (stone of fruit)	305	a³¹tsiʔ³¹	/ʔ a ³¹ + ts i ʔ ³¹	634 635	i r t + i r t	ʔ a ³¹ + ts iʔ ³¹
+#
+11462	Achang_Longchuan	the plow	306	thən³⁵	tʰ ə n ³⁵	636	i r t	tʰ ən ³⁵
+11465	Maru	the plow	306	li³¹	l i ³¹	637	i r t	l i ³¹
+#
+10084	Maru	the poison	307	mui³⁵	m u i ³⁵	639	i m r t	mu u ui ³⁵
+10797	Achang_Longchuan	the poison	307	kuaŋ⁵¹	k u a ŋ ⁵¹	638	i m r t	ku u uaŋ ⁵¹
+#
+9997	Achang_Longchuan	the pus	308	pʐəŋ⁵⁵	p ʐ ə ŋ ⁵⁵	640	i m r t	pʐ ʐ ʐəŋ ⁵⁵
+10000	Maru	the pus	308	pjaŋ³¹kjɔ̱ʔ⁵⁵	p j a ŋ ³¹ + ˀk j ɔ ʔ ⁵⁵	640 641	i m r t + i m r t	pj j jaŋ ³¹ + ˀkj j jɔʔ ⁵⁵
+#
+11512	Achang_Longchuan	the rabbit	309	pʐaŋ⁵⁵tai⁵⁵	p ʐ a ŋ ⁵⁵ + t ai ⁵⁵	643 644	i m r t + i r t	pʐ ʐ ʐaŋ ⁵⁵ + t ai ⁵⁵
+11515	Maru	the rabbit	309	pa̱ŋ³⁵ ta̱i⁵⁵	ˀp - a ŋ ³⁵ + ˀt ai ⁵⁵	643 644	i r t + i r t	ˀp aŋ ³⁵ + ˀt ai ⁵⁵
+#
+3236	Achang_Longchuan	the rain	310	mau³¹ʐo⁵⁵	m au - ³¹ + ʐ o ⁵⁵	57 646	i r t + i r t	m au ³¹ + ʐ o ⁵⁵
+3248	Maru	the rain	310	muk⁵⁵	m u k ⁵⁵	57	i r t	m uk ⁵⁵
+#
+6151	Achang_Longchuan	the rainbow	311	xɔŋ⁵¹ȵin³¹nam³¹	x ɔ ŋ ⁵¹ + ȵ i n ³¹ + n - a m ³¹	647 648 649	i r t + i r t + i r t	x ɔŋ ⁵¹ + ȵ in ³¹ + n am ³¹
+6209	Maru	the rainbow	311	ɣɔʔ³¹kaŋ³⁵saŋ³¹ŋjɔ̃³¹	ɣ ɔ ʔ ³¹ + k a ŋ ³⁵ + s a ŋ ³¹ + ŋ j ɔ̃ ∼ ³¹	650 648 651 649	i r t + i r t + i r t + i m r t	ɣ ɔʔ ³¹ + k aŋ ³⁵ + s aŋ ³¹ + ŋj j jɔ̃∼ ³¹
+#
+10502	Maru	the rib	312	nɛ³¹tʃhɛ̃³⁵ɣuk⁵⁵	n ɛ ³¹ + tʃh ɛ̃ ∼ ³⁵ + ɣ u k ⁵⁵	656 655 657	i r t + i r t + i r t	n ɛ ³¹ + tʃh ɛ̃∼ ³⁵ + ɣ uk ⁵⁵
+11451	Achang_Longchuan	the rib	312	luk³¹khaŋ³¹tʂham⁵¹	l u k ³¹ + kʰ a ŋ ³¹ + tʂʰ a m ⁵¹	653 654 655	i r t + i r t + i r t	l uk ³¹ + kʰ aŋ ³¹ + tʂʰ am ⁵¹
+#
+3310	Achang_Longchuan	the rice plant	313	tshen⁵⁵	tsʰ e n ⁵⁵	657	i r t	tsʰ en ⁵⁵
+3314	Maru	the rice plant	313	tʃhiŋ³¹	tʃh i ŋ ³¹	657	i r t	tʃh iŋ ³¹
+#
+3365	Achang_Longchuan	the river	314	tʂhă⁵⁵ʐoŋ³¹	tʂʰ ă ⁵⁵ + ʐ o ŋ ³¹	658 659	i r t + i r t	tʂʰ ă ⁵⁵ + ʐ oŋ ³¹
+3374	Maru	the river	314	ɣək³¹lɔ̃³¹	ɣ ə k ³¹ + l ɔ̃ ∼ ³¹	660 659	i r t + i r t	ɣ ək ³¹ + l ɔ̃∼ ³¹
+#
+3387	Achang_Longchuan	the road	315	xa⁵⁵mʐua³¹	x a ⁵⁵ + m u a ³¹	661 662	i r t + i m r t	x a ⁵⁵ + mu u ua ³¹
+3395	Maru	the road	315	khjɔ³¹	kh j ɔ ³¹	663	i m r t	khj j jɔ ³¹
+#
+10348	Achang_Longchuan	the roof	316	in⁵⁵tɕaŋ⁵⁵	/ʔ - i n ⁵⁵ + tɕ a ŋ ⁵⁵	535 665	i r t + i r t	ʔ in ⁵⁵ + tɕ aŋ ⁵⁵
+10351	Maru	the roof	316	ja̱m³¹khauŋ³¹	ˀ/ʔ j a m ³¹ + kh au ŋ ³¹	535 665	i m r t + i r t	ʔj j jam ³¹ + kh auŋ ³¹
+#
+3401	Achang_Longchuan	the root	317	mʐuat⁵⁵	m ʐ ua t ⁵⁵	666	i m r t	mʐ ʐ ʐuat ⁵⁵
+3410	Maru	the root	317	pa̱n³¹	ˀp a n ³¹	667	i r t	ˀp an ³¹
+#
+3416	Achang_Longchuan	the rope	318	toi³¹	t oi ³¹	668	i r t	t oi ³¹
+3425	Maru	the rope	318	tɔ̱i³⁵	ˀt ɔi ³⁵	668	i r t	ˀt ɔi ³⁵
+#
+9801	Maru	the saliva	319	ɣui⁵⁵	ɣ u i ⁵⁵	671	i m r t	ɣu u ui ⁵⁵
+10127	Achang_Longchuan	the saliva	319	a³¹ʐuiʔ³¹	/ʔ a ³¹ + ʐ u i ʔ ³¹	669 670	i r t + i m r t	ʔ a ³¹ + ʐu u uiʔ ³¹
+#
+3476	Achang_Longchuan	the salt	320	tɕhɔ³¹	tɕʰ ɔ ³¹	672	i r t	tɕʰ ɔ ³¹
+3485	Maru	the salt	320	tshɔ³⁵	tsh ɔ ³⁵	672	i r t	tsh ɔ ³⁵
+#
+3491	Achang_Longchuan	the sand	321	să³¹le⁵⁵	s ă ³¹ + l e ⁵⁵	673 674	i r t + i r t	s ă ³¹ + l e ⁵⁵
+3500	Maru	the sand	321	ma³¹ʃɔ³¹	m a ³¹ + ʃ ɔ ³¹	675 676	i r t + i r t	m a ³¹ + ʃ ɔ ³¹
+#
+11181	Achang_Longchuan	the scar	322	ʐuai⁵⁵	ʐ u ai ⁵⁵	677	i m r t	ʐu u uai ⁵⁵
+11184	Maru	the scar	322	tɛ̃³¹khu³¹	t ɛ̃ ∼ ³¹ + kh u ³¹	678 679	i r t + i r t	t ɛ̃∼ ³¹ + kh u ³¹
+#
+3533	Achang_Longchuan	the sea	323	nam³¹tɕu³¹	n a m ³¹ + tɕ u ³¹	680 681	i r t + i r t	n am ³¹ + tɕ u ³¹
+#
+3574	Achang_Longchuan	the seed	324	a³¹ȵau³¹	/ʔ a ³¹ + ȵ au ³¹	682 683	i r t + i r t	ʔ a ³¹ + ȵ au ³¹
+3583	Maru	the seed	324	mjuk⁵⁵	m j u k ⁵⁵	684	i m r t	mj j juk ⁵⁵
+#
+11614	Achang_Longchuan	the shadow	325	a³¹ʐit⁵⁵	/ʔ a ³¹ + ʐ i t ⁵⁵	685 686	i r t + i r t	ʔ a ³¹ + ʐ it ⁵⁵
+11617	Maru	the shadow	325	ɣap³¹tsɔ³⁵	ɣ a p ³¹ + ts ɔ ³⁵	687 688	i r t + i r t	ɣ ap ³¹ + ts ɔ ³⁵
+#
+6287	Achang_Longchuan	the sheep	326	paʔ⁵⁵	p a ʔ ⁵⁵	497	i r t	p aʔ ⁵⁵
+6351	Maru	the sheep	326	tʃhat⁵⁵pɛ̱ʔ⁵⁵	tʃh a t ⁵⁵ + ˀp ɛ ʔ ⁵⁵	690 497	i r t + i r t	tʃh at ⁵⁵ + ˀp ɛʔ ⁵⁵
+#
+10007	Achang_Longchuan	the shoe	327	kap³¹tin⁵⁵	k a p ³¹ + t i n ⁵⁵	691 692	i r t + i r t	k ap ³¹ + t in ⁵⁵
+10009	Maru	the shoe	327	khjik³¹tsa̱uŋ³⁵	kh j i k ³¹ + ˀts au ŋ ³⁵	693 692	i m r t + i r t	khj j jik ³¹ + ˀts auŋ ³⁵
+#
+6192	Achang_Longchuan	the shoulder	328	xuŋ³¹pau³¹	x u ŋ ³¹ + p au ³¹	694 695	i r t + i r t	x uŋ ³¹ + p au ³¹
+6250	Maru	the shoulder	328	lɔʔ³¹saŋ³¹	l ɔ ʔ ³¹ + s a ŋ ³¹	696 697	i r t + i r t	l ɔʔ ³¹ + s aŋ ³¹
+#
+6470	Achang_Longchuan	the sickle	329	ʐit⁵⁵mɔʔ³¹	ʐ i t ⁵⁵ + m ɔ ʔ ³¹	698 699	i r t + i r t	ʐ it ⁵⁵ + m ɔʔ ³¹
+6525	Maru	the sickle	329	ʃɛ̃³¹ŋø̱³⁵	ʃ ɛ̃ ∼ ³¹ + ˀŋ ø - ³⁵	700 699	i r t + i r t	ʃ ɛ̃∼ ³¹ + ˀŋ ø ³⁵
+#
+10076	Maru	the silver	330	ŋɔi³¹	ŋ - ɔi ³¹	701	i r t	ŋ ɔi ³¹
+11569	Achang_Longchuan	the silver	330	ŋui⁵⁵	ŋ u i ⁵⁵	701	i m r t	ŋu u ui ⁵⁵
+#
+6208	Achang_Longchuan	the skin	331	a³¹ʐɿ⁵⁵	/ʔ a ³¹ + ʐ ɿ ⁵⁵	702 703	i r t + i r t	ʔ a ³¹ + ʐ ɿ ⁵⁵
+6263	Maru	the skin	331	ʃɔ̆³⁵jam⁵⁵	ʃ ɔ̆ ³⁵ + /ʔ j a m ⁵⁵	704 705	i r t + i m r t	ʃ ɔ̆ ³⁵ + ʔj j jam ⁵⁵
+#
+3790	Achang_Longchuan	the sky	332	mau³¹	m au - ³¹	57	i r t	m au ³¹
+3797	Maru	the sky	332	muk⁵⁵	m u k ⁵⁵	57	i r t	m uk ⁵⁵
+#
+3853	Achang_Longchuan	the smoke	333	ni³¹xau³¹	n i ³¹ + x au - ³¹	707 708	i r t + i r t	n i ³¹ + x au ³¹
+3862	Maru	the smoke	333	mji²¹khuk⁵⁵	m j i ²¹ + kh u k ⁵⁵	709 708	i m r t + i r t	mj j ji ²¹ + kh uk ⁵⁵
+#
+11346	Maru	the snail	334	nŭŋ³⁵pɛʔ³¹	n ŭ ŋ ³⁵ + p ɛ ʔ ³¹	710 711	i r t + i r t	n ŭŋ ³⁵ + p ɛʔ ³¹
+#
+3879	Achang_Longchuan	the snake	335	mʐui⁵⁵	m u i ⁵⁵	712	i m r t	mu u ui ⁵⁵
+3888	Maru	the snake	335	lɔ̃³¹mɔi³¹	l ɔ̃ ∼ ³¹ + m ɔi ³¹	713 714	i r t + i r t	l ɔ̃∼ ³¹ + m ɔi ³¹
+#
+9944	Achang_Longchuan	the snot	336	n̥ap⁵⁵	n̥ a p ⁵⁵	715	i r t	n̥ ap ⁵⁵
+9947	Maru	the snot	336	nɛ̱ʔ⁵⁵	ˀn ɛ ʔ ⁵⁵	715	i r t	ˀn ɛʔ ⁵⁵
+#
+3901	Achang_Longchuan	the snow	337	xan³¹ʑai⁵⁵	x a n ³¹ + ʑ ai ⁵⁵	716 717	i r t + i r t	x an ³¹ + ʑ ai ⁵⁵
+#
+3933	Achang_Longchuan	the son	338	tsɔ³¹lo³¹	ts ɔ ³¹ + l o ³¹	718 719	i r t + i r t	ts ɔ ³¹ + l o ³¹
+3942	Maru	the son	338	tso	ts o -	718	i r	ts o
+#
+9612	Achang_Longchuan	the son-in-law	339	tsɔ³¹mɔʔ³¹	ts ɔ ³¹ + m ɔ ʔ ³¹	720 721	i r t + i r t	ts ɔ ³¹ + m ɔʔ ³¹
+9615	Maru	the son-in-law	339	tsɔ̆³⁵mɔʔ³¹	ts ɔ̆ ³⁵ + m ɔ ʔ ³¹	720 721	i r t + i r t	ts ɔ̆ ³⁵ + m ɔʔ ³¹
+#
+10396	Achang_Longchuan	the song	340	siaŋ³⁵	s i a ŋ ³⁵	722	i m r t	si i iaŋ ³⁵
+10399	Maru	the song	340	mə̆³¹khɔn⁵⁵	m ə̆ ³¹ + kh ɔ n ⁵⁵	723 724	i r t + i r t	m ə̆ ³¹ + kh ɔn ⁵⁵
+#
+9700	Achang_Longchuan	the south	341	nan³¹	n a n ³¹	725	i r t	n an ³¹
+#
+6325	Achang_Longchuan	the sparrow	342	ʦi⁵⁵ʈʂuak⁵⁵	/ʔ i ⁵⁵ + ʂ u a k ⁵⁵	726 727	i r t + i m r t	ʔ i ⁵⁵ + ʂu u uak ⁵⁵
+6619	Maru	the sparrow	342	tʃɔ̆³¹kʰjɔ̃⁵⁵	tʃ ɔ̆ ³¹ + k j ɔ̃ ∼ ⁵⁵	728 729	i r t + i m r t	tʃ ɔ̆ ³¹ + kj j jɔ̃∼ ⁵⁵
+#
+6166	Maru	the spider	343	pʰjɔ̆³¹kɔ̃³⁵	p j ɔ̆ ³¹ + k ɔ̃ ∼ ³⁵	733 731	i m r t + i r t	pj j jɔ̆ ³¹ + k ɔ̃∼ ³⁵
+6339	Achang_Longchuan	the spider	343	kuŋ³¹kai³⁵ʑai⁵⁵	k u ŋ ³¹ + k ai - ³⁵ + ʑ ai ⁵⁵	730 731 732	i r t + i r t + i r t	k uŋ ³¹ + k ai ³⁵ + ʑ ai ⁵⁵
+#
+10813	Achang_Longchuan	the spirit (evil) / demon	344	kin³¹kʐai³⁵	k i n ³¹ + k ʐ ai ³⁵	734 735	i r t + i m r t	k in ³¹ + kʐ ʐ ʐai ³⁵
+#
+10883	Achang_Longchuan	the square or squared	345	tseŋ³¹	ts e ŋ ³¹	736	i r t	ts eŋ ³¹
+#
+4052	Achang_Longchuan	the star	346	khʐə⁵⁵	kʰ ʐ ə ⁵⁵	737	i m r t	kʰʐ ʐ ʐə ⁵⁵
+4061	Maru	the star	346	kji̱³¹	ˀk j i ³¹	737	i m r t	ˀkj j ji ³¹
+#
+6455	Achang_Longchuan	the stick	347	tam⁵⁵	t a m ⁵⁵	738	i r t	t am ⁵⁵
+6505	Maru	the stick	347	və̆⁵⁵sɛ³⁵	v ə̆ ⁵⁵ + s ɛ ³⁵	739 740	i r t + i r t	v ə̆ ⁵⁵ + s ɛ ³⁵
+#
+11095	Achang_Longchuan	the stone	349	laŋ³¹kɔʔ⁵⁵	l a ŋ ³¹ + k ɔ ʔ ⁵⁵	741 742	i r t + i r t	l aŋ ³¹ + k ɔʔ ⁵⁵
+11098	Maru	the stone	349	lauk³¹tsaŋ³¹	l au k ³¹ + ts a ŋ ³¹	743 744	i r t + i r t	l auk ³¹ + ts aŋ ³¹
+#
+4094	Maru	the stone (a piece of)	350	tʃik⁵⁵	tʃ i k ⁵⁵	745	i r t	tʃ ik ⁵⁵
+#
+9924	Achang_Longchuan	the summer	351	tsan⁵⁵	ts a n ⁵⁵	746	i r t	ts an ⁵⁵
+9927	Maru	the summer	351	tsəŋ³¹	ts ə ŋ ³¹	746	i r t	ts əŋ ³¹
+#
+4138	Achang_Longchuan	the sun	352	ni³¹mɔ³¹	n i ³¹ + m ɔ ³¹	747 748	i r t + i r t	n i ³¹ + m ɔ ³¹
+4150	Maru	the sun	352	pa³¹	p a ³¹	749	i r t	p a ³¹
+#
+4220	Achang_Longchuan	the tail	353	tɕhi³¹ȵaŋ³⁵	tɕʰ i ³¹ + ȵ a ŋ ³⁵	750 751	i r t + i r t	tɕʰ i ³¹ + ȵ aŋ ³⁵
+4234	Maru	the tail	353	ʃɔ̆³⁵mji³¹	ʃ ɔ̆ ³⁵ + m j i ³¹	752 753	i r t + i m r t	ʃ ɔ̆ ³⁵ + mj j ji ³¹
+#
+11520	Achang_Longchuan	the taste (something)	354	mi³¹	m i ³¹	754	i r t	m i ³¹
+11566	Maru	the taste (something)	354	tʃhaŋ³¹	tʃh a ŋ ³¹	755	i r t	tʃh aŋ ³¹
+#
+11332	Achang_Longchuan	the tendon (sinew)	355	a³¹kʐə³¹	/ʔ a ³¹ + k ʐ ə ³¹	756 757	i r t + i m r t	ʔ a ³¹ + kʐ ʐ ʐə ³¹
+11335	Maru	the tendon (sinew)	355	ʃɔ̃³⁵kji³¹	ʃ ɔ̃ ∼ ³⁵ + k j i ³¹	758 757	i r t + i m r t	ʃ ɔ̃∼ ³⁵ + kj j ji ³¹
+#
+10955	Achang_Longchuan	the testicles	356	ȵ̥i³¹tsiʔ³¹	ȵ̥ - i ³¹ + ts i ʔ ³¹	759 760	i r t + i r t	ȵ̥ i ³¹ + ts iʔ ³¹
+10958	Maru	the testicles	356	nji̱³⁵tʃi̱k⁵⁵	ˀn j i ³⁵ + ˀtʃ i k ⁵⁵	759 760	i m r t + i r t	ˀnj j ji ³⁵ + ˀtʃ ik ⁵⁵
+#
+6198	Achang_Longchuan	the thigh	357	ʨʰi⁵⁵san⁵⁵	/ʔ i ⁵⁵ + s a n ⁵⁵	761 762	i r t + i r t	ʔ i ⁵⁵ + s an ⁵⁵
+6253	Maru	the thigh	357	tɔ̃⁵⁵puk⁵⁵	t ɔ̃ ∼ ⁵⁵ + p u k ⁵⁵	763 764	i r t + i r t	t ɔ̃∼ ⁵⁵ + p uk ⁵⁵
+#
+9784	Achang_Longchuan	the thorn	358	tɕo³¹	tɕ o ³¹	765	i r t	tɕ o ³¹
+9787	Maru	the thorn	358	tsau³⁵	ts au ³⁵	765	i r t	ts au ³⁵
+#
+9529	Achang_Longchuan	the thread	359	khʐəŋ⁵⁵	kʰ ʐ ə ŋ ⁵⁵	766	i m r t	kʰʐ ʐ ʐəŋ ⁵⁵
+9532	Maru	the thread	359	kjhaŋ³¹	k jh a ŋ ³¹	766	i m r t	kjh jh jhaŋ ³¹
+#
+6148	Achang_Longchuan	the thunder	360	mau³¹ʐau³¹	m au - ³¹ + ʐ au ³¹	57 768	i r t + i r t	m au ³¹ + ʐ au ³¹
+6207	Maru	the thunder	360	muk⁵⁵kum³¹	m u k ⁵⁵ + k u m ³¹	57 769	i r t + i r t	m uk ⁵⁵ + k um ³¹
+#
+6303	Achang_Longchuan	the tiger	361	lɔ³¹	l ɔ ³¹	771	i r t	l ɔ ³¹
+6371	Maru	the tiger	361	lɔ³⁵	l ɔ ³⁵	771	i r t	l ɔ ³⁵
+#
+4594	Achang_Longchuan	the tongue	362	ɕɔ⁵⁵	ɕ ɔ ⁵⁵	772	i r t	ɕ ɔ ⁵⁵
+4608	Maru	the tongue	362	ʃɔ³¹	ʃ ɔ ³¹	772	i r t	ʃ ɔ ³¹
+#
+4615	Achang_Longchuan	the tooth (front)	363	tɕoi⁵⁵	tɕ oi ⁵⁵	773	i r t	tɕ oi ⁵⁵
+4628	Maru	the tooth (front)	363	tsɔi³¹	ts ɔi ³¹	773	i r t	ts ɔi ³¹
+#
+4639	Achang_Longchuan	the tree	364	saŋ³¹tseŋ⁵⁵	s a ŋ ³¹ + ts e ŋ ⁵⁵	774 775	i r t + i r t	s aŋ ³¹ + ts eŋ ⁵⁵
+4648	Maru	the tree	364	sa̱k⁵⁵	ˀs a k ⁵⁵	776	i r t	ˀs ak ⁵⁵
+#
+10194	Achang_Longchuan	the trunk (of a tree)	365	saŋ³¹tseŋ⁵⁵tan³¹	s a ŋ ³¹ + ts e ŋ ⁵⁵ + t a n ³¹	777 778 779	i r t + i r t + i r t	s aŋ ³¹ + ts eŋ ⁵⁵ + t an ³¹
+11396	Maru	the trunk (of a tree)	365	sa̱k⁵⁵kɛ̃³¹	ˀs a k ⁵⁵ + k ɛ̃ ∼ ³¹	780 778	i r t + i r t	ˀs ak ⁵⁵ + k ɛ̃∼ ³¹
+#
+9819	Achang_Longchuan	the urine	366	kă³¹tʂhə³⁵	k ă ³¹ + tʂʰ ə ³⁵	781 782	i r t + i r t	k ă ³¹ + tʂʰ ə ³⁵
+9822	Maru	the urine	366	i̱k⁵⁵	ˀ/ʔ i k ⁵⁵	783	i r t	ʔ ik ⁵⁵
+#
+10557	Achang_Longchuan	the valley	367	xui³¹uaŋ³¹	x u i ³¹ + /ʔ u a ŋ ³¹	784 785	i m r t + i m r t	xu u ui ³¹ + ʔu u uaŋ ³¹
+10560	Maru	the valley	367	lɔ̃³⁵khauŋ²¹	l ɔ̃ ∼ ³⁵ + kh - au ŋ ²¹	786 785	i r t + i r t	l ɔ̃∼ ³⁵ + kh auŋ ²¹
+#
+9643	Maru	the village	368	vɔ³¹	v ɔ ³¹	787	i r t	v ɔ ³¹
+10173	Achang_Longchuan	the village	368	o⁵⁵	/ʔ o ⁵⁵	787	i r t	ʔ o ⁵⁵
+#
+10746	Achang_Longchuan	the wall	369	tʂhaŋ³¹	tʂʰ a ŋ ³¹	788	i r t	tʂʰ aŋ ³¹
+10749	Maru	the wall	369	tshə̆³¹ɣɛ̃³¹	tsh ə̆ ³¹ + ɣ ɛ̃ ∼ ³¹	789 790	i r t + i r t	tsh ə̆ ³¹ + ɣ ɛ̃∼ ³¹
+#
+4865	Achang_Longchuan	the water	370	ti⁵⁵	t i ⁵⁵	791	i r t	t i ⁵⁵
+4877	Maru	the water	370	ɣək³¹	ɣ ə k ³¹	792	i r t	ɣ ək ³¹
+#
+9732	Achang_Longchuan	the west	371	ni³¹mɔ³¹ɔŋ⁵⁵pa³¹	n i ³¹ + m ɔ ³¹ + /ʔ ɔ ŋ ⁵⁵ + p a ³¹	793 794 95 796	i r t + i r t + i r t + i r t	n i ³¹ + m ɔ ³¹ + ʔ ɔŋ ⁵⁵ + p a ³¹
+11479	Maru	the west	371	pa³¹vɔ̃³¹	p a ³¹ + v ɔ̃ ∼ ³¹	797 95	i r t + i r t	p a ³¹ + v ɔ̃∼ ³¹
+#
+6369	Achang_Longchuan	the wheat	372	meʔ³¹ʦɿ⁵⁵	m e ʔ ³¹ + /ʔ ɿ ⁵⁵	798 799	i r t + i r t	m eʔ ³¹ + ʔ ɿ ⁵⁵
+#
+10686	Achang_Longchuan	the wheel	373	l̥im⁵⁵	l̥ i m ⁵⁵	800	i r t	l̥ im ⁵⁵
+10688	Maru	the wheel	373	lɛ̱ŋ⁵⁵khjik³¹	ˀl ɛ ŋ ⁵⁵ + kh j i k ³¹	800 801	i r t + i m r t	ˀl ɛŋ ⁵⁵ + khj j jik ³¹
+#
+10320	Achang_Longchuan	the widow	374	meʔ³¹maiʔ³¹	m e ʔ ³¹ + m ai ʔ ³¹	803 804	i r t + i r t	m eʔ ³¹ + m aiʔ ³¹
+10323	Maru	the widow	374	tʃhuk⁵⁵mɔ⁵⁵	tʃh u k ⁵⁵ + m ɔ - ⁵⁵	805 804	i r t + i r t	tʃh uk ⁵⁵ + m ɔ ⁵⁵
+#
+5049	Achang_Longchuan	the wife	375	ȵi³¹mɔʔ³¹	ȵ i ³¹ + m ɔ ʔ ³¹	806 807	i r t + i r t	ȵ i ³¹ + m ɔʔ ³¹
+5058	Maru	the wife	375	mji³⁵	m j i ³⁵	808	i m r t	mj j ji ³⁵
+#
+9541	Achang_Longchuan	the willow	376	xaiʔ⁵⁵tseŋ⁵⁵	x ai ʔ ⁵⁵ + ts e ŋ ⁵⁵	809 810	i r t + i r t	x aiʔ ⁵⁵ + ts eŋ ⁵⁵
+9544	Maru	the willow	376	pə̱ŋ³¹tau³⁵	ˀp ə ŋ ³¹ + t au - ³⁵	811 810	i r t + i r t	ˀp əŋ ³¹ + t au ³⁵
+#
+5066	Achang_Longchuan	the wind	377	l̥i⁵⁵	l̥ i ⁵⁵	812	i r t	l̥ i ⁵⁵
+5075	Maru	the wind	377	la³¹	l a ³¹	812	i r t	l a ³¹
+#
+5089	Achang_Longchuan	the wing	378	a³¹tuŋ⁵⁵	/ʔ a ³¹ + t u ŋ ⁵⁵	813 814	i r t + i r t	ʔ a ³¹ + t uŋ ⁵⁵
+5100	Maru	the wing	378	tauŋ³¹	t au ŋ ³¹	814	i r t	t auŋ ³¹
+#
+10101	Achang_Longchuan	the winter	379	tɕhɔŋ³¹	tɕʰ ɔ ŋ ³¹	815	i r t	tɕʰ ɔŋ ³¹
+10237	Maru	the winter	379	kjɔʔ³¹mjɔ³¹	k j ɔ ʔ ³¹ + m j ɔ ³¹	816 817	i m r t + i m r t	kj j jɔʔ ³¹ + mj j jɔ ³¹
+#
+6238	Achang_Longchuan	the wolf	380	pum⁵⁵xui³¹	p u m ⁵⁵ + x u i ³¹	818 819	i r t + i m r t	p um ⁵⁵ + xu u ui ³¹
+6382	Maru	the wolf	380	mjaŋ³¹◦kʰa³⁵	m j a ŋ ³¹ + k - a ³⁵	820 819	i m r t + i r t	mj j jaŋ ³¹ + k a ³⁵
+#
+5127	Achang_Longchuan	the woman	381	i³¹ȵɔ³¹	/ʔ i ³¹ + ȵ ɔ ³¹	821 822	i r t + i r t	ʔ i ³¹ + ȵ ɔ ³¹
+5136	Maru	the woman	381	mji³⁵ɤɛ³⁵	m j i ³⁵ + /ʔ ɛ ³⁵	823 824	i m r t + i r t	mj j ji ³⁵ + ʔ ɛ ³⁵
+#
+5148	Achang_Longchuan	the wood (material)	382	ʂək⁵⁵	ʂ ə k ⁵⁵	825	i r t	ʂ ək ⁵⁵
+5156	Maru	the wood (material)	382	sak⁵⁵thauŋ³⁵	s a k ⁵⁵ + th au ŋ ³⁵	825 826	i r t + i r t	s ak ⁵⁵ + th auŋ ³⁵
+#
+5171	Achang_Longchuan	the year	384	n̥ək⁵⁵	n̥ ə k ⁵⁵	828	i r t	n̥ ək ⁵⁵
+5179	Maru	the year	384	tsəŋ³¹	ts ə ŋ ³¹	829	i r t	ts əŋ ³¹
+#
+4316	Achang_Longchuan	there	385	the⁵⁵thɔʔ⁵⁵	tʰ e ⁵⁵ + tʰ ɔ ʔ ⁵⁵	830 831	i r t + i r t	tʰ e ⁵⁵ + tʰ ɔʔ ⁵⁵
+4320	Maru	there	385	thø⁵⁵mɛ³¹	th ø ⁵⁵ + m ɛ ³¹	830 832	i r t + i r t	th ø ⁵⁵ + m ɛ ³¹
+#
+4356	Achang_Longchuan	thick	386	kan³¹	k a n ³¹	834	i r t	k an ³¹
+4365	Maru	thick	386	thau³¹	th au ³¹	835	i r t	th au ³¹
+#
+10257	Achang_Longchuan	thin (object)	387	ȵi⁵⁵	ȵ i ⁵⁵	836	i r t	ȵ i ⁵⁵
+10260	Maru	thin (object)	387	ŋai⁵⁵	ŋ ai ⁵⁵	836	i r t	ŋ ai ⁵⁵
+#
+9854	Achang_Longchuan	thirsty	388	ʂut⁵⁵	ʂ u t ⁵⁵	837	i r t	ʂ ut ⁵⁵
+11054	Maru	thirsty	388	fai⁵⁵	f ai ⁵⁵	838	i r t	f ai ⁵⁵
+#
+4467	Achang_Longchuan	this	389	xai⁵⁵	x ai ⁵⁵	839	i r t	x ai ⁵⁵
+4476	Maru	this	389	tʃhɛ³¹	tʃh ɛ ³¹	840	i r t	tʃh ɛ ³¹
+#
+5229	Achang_Longchuan	thou [second person singular]	390	nuaŋ⁵⁵	n u a ŋ ⁵⁵	841	i m r t	nu u uaŋ ⁵⁵
+5233	Maru	thou [second person singular]	390	nɔ̃³¹	n - ɔ̃ ∼ ³¹	841	i r t	n ɔ̃∼ ³¹
+#
+4524	Achang_Longchuan	three	391	sum³¹	s u m ³¹	842	i r t	s um ³¹
+4533	Maru	three	391	sam³¹	s a m ³¹	842	i r t	s am ³¹
+#
+10187	Achang_Longchuan	tired	392	muai³¹	m u ai ³¹	843	i m r t	mu u uai ³¹
+10190	Maru	tired	392	mjauŋ³⁵	m j au ŋ ³⁵	844	i m r t	mj j jauŋ ³⁵
+#
+11483	Achang_Longchuan	to be afraid	393	ʐoʔ⁵⁵	ʐ o ʔ ⁵⁵	845	i r t	ʐ oʔ ⁵⁵
+11486	Maru	to be afraid	393	kjauk³¹	k j au k ³¹	846	i m r t	kj j jauk ³¹
+#
+6236	Maru	to be alive	394	tɔi³¹kau³⁵	t ɔi ³¹ + k au ³⁵	847 848	i r t + i r t	t ɔi ³¹ + k au ³⁵
+#
+10908	Achang_Longchuan	to be ill	395	nɔ⁵⁵	n ɔ ⁵⁵	849	i r t	n ɔ ⁵⁵
+10911	Maru	to be ill	395	nɔ³¹	n ɔ ³¹	849	i r t	n ɔ ³¹
+#
+348	Maru	to bite	397	pəŋ³⁵	p ə ŋ ³⁵	850	i r t	p əŋ ³⁵
+#
+406	Achang_Longchuan	to blow (of wind)	398	xʐauʔ³⁵	x ʐ au ʔ ³⁵	851	i m r t	xʐ ʐ ʐauʔ ³⁵
+411	Maru	to blow (of wind)	398	khjuk⁵⁵	kh j u k ⁵⁵	852	i m r t	khj j juk ⁵⁵
+#
+10413	Achang_Longchuan	to breathe	399	sui⁵⁵	s u i ⁵⁵	853	i m r t	su u ui ⁵⁵
+10416	Maru	to breathe	399	soʔ⁵⁵	s o ʔ ⁵⁵	854	i r t	s oʔ ⁵⁵
+#
+10305	Achang_Longchuan	to buckle up / fasten (a belt)	400	tshe³¹	tsʰ e ³¹	855	i r t	tsʰ e ³¹
+10308	Maru	to buckle up / fasten (a belt)	400	tʃhui³⁵	tʃh u i ³⁵	856	i m r t	tʃhu u ui ³⁵
+#
+10272	Maru	to burn	401	tɛʔ³¹	t ɛ ʔ ³¹	858	i r t	t ɛʔ ³¹
+11352	Achang_Longchuan	to burn	401	ȵe³⁵	ȵ e ³⁵	857	i r t	ȵ e ³⁵
+#
+573	Achang_Longchuan	to burn [intransitive]	402	ȵe³⁵	ȵ e ³⁵	859	i r t	ȵ e ³⁵
+578	Maru	to burn [intransitive]	402	tɛʔ³¹	t ɛ ʔ ³¹	860	i r t	t ɛʔ ³¹
+#
+596	Achang_Longchuan	to buy	403	oi⁵⁵	/ʔ oi ⁵⁵	861	i r t	ʔ oi ⁵⁵
+603	Maru	to buy	403	vai³¹	v ai ³¹	861	i r t	v ai ³¹
+#
+11580	Achang_Longchuan	to catch	404	tʂhɔp⁵⁵	tʂʰ ɔ p ⁵⁵	862	i r t	tʂʰ ɔp ⁵⁵
+11583	Maru	to catch	404	ta̱uŋ³⁵	ˀt au ŋ ³⁵	863	i r t	ˀt auŋ ³⁵
+#
+6396	Maru	to chew	405	vɔ³⁵	v ɔ ³⁵	865	i r t	v ɔ ³⁵
+6466	Achang_Longchuan	to chew	405	mam³¹	m a m ³¹	864	i r t	m am ³¹
+#
+10343	Achang_Longchuan	to choose	406	ʐa³¹	ʐ a ³¹	866	i r t	ʐ a ³¹
+10631	Maru	to choose	406	khjiŋ³¹	kh j i ŋ ³¹	867	i m r t	khj j jiŋ ³¹
+#
+686	Achang_Longchuan	to come	407	ʐə³⁵	ʐ ə ³⁵	868	i r t	ʐ ə ³⁵
+695	Maru	to come	407	li⁵⁵	l i ⁵⁵	869	i r t	l i ⁵⁵
+#
+9827	Achang_Longchuan	to cough	408	khʐɔŋ³¹tʂhau³¹	kʰ ʐ ɔ ŋ ³¹ + tʂʰ au - ³¹	870 871	i m r t + i r t	kʰʐ ʐ ʐɔŋ ³¹ + tʂʰ au ³¹
+9830	Maru	to cough	408	khjauŋ³⁵tsu̱k⁵⁵	kh j au ŋ ³⁵ + ˀts u k ⁵⁵	870 871	i m r t + i r t	khj j jauŋ ³⁵ + ˀts uk ⁵⁵
+#
+738	Achang_Longchuan	to count	409	an³⁵	/ʔ a n ³⁵	872	i r t	ʔ an ³⁵
+744	Maru	to count	409	ŋɛ̱ʔ⁵⁵	ˀŋ ɛ ʔ ⁵⁵	873	i r t	ˀŋ ɛʔ ⁵⁵
+#
+9723	Achang_Longchuan	to cross (a river)	410	kʐo³¹	k ʐ o ³¹	874	i m r t	kʐ ʐ ʐo ³¹
+9726	Maru	to cross (a river)	410	kau³⁵	k - au ³⁵	874	i r t	k au ³⁵
+#
+6377	Achang_Longchuan	to cry (weep)	411	ŋau⁵⁵	ŋ au - ⁵⁵	875	i r t	ŋ au ⁵⁵
+6418	Maru	to cry (weep)	411	ŋuk³¹	ŋ u k ³¹	875	i r t	ŋ uk ³¹
+#
+896	Maru	to die	412	ʃik³¹	ʃ i k ³¹	876	i r t	ʃ ik ³¹
+#
+918	Maru	to dig	413	tau³⁵	t au ³⁵	877	i r t	t au ³⁵
+921	Achang_Longchuan	to dig	413	tu³¹	t u ³¹	877	i r t	t u ³¹
+#
+1017	Maru	to drink	414	ʃauk⁵⁵	ʃ au k ⁵⁵	878	i r t	ʃ auk ⁵⁵
+#
+9588	Achang_Longchuan	to dye (stuff)	415	nam³¹ ȵ̥ɔ³¹	n a m ³¹ + ȵ̥ ɔ ³¹	879 880	i r t + i r t	n am ³¹ + ȵ̥ ɔ ³¹
+#
+1132	Maru	to eat	416	tsɔ³⁵	ts ɔ ³⁵	881	i r t	ts ɔ ³⁵
+#
+1352	Achang_Longchuan	to fight	418	tek⁵⁵kɔ³¹	t e k ⁵⁵ + k ɔ ³¹	882 883	i r t + i r t	t ek ⁵⁵ + k ɔ ³¹
+1366	Maru	to fight	418	pɛʔ³¹la̱m³¹	p ɛ ʔ ³¹ + ˀl a m ³¹	884 885	i r t + i r t	p ɛʔ ³¹ + ˀl am ³¹
+#
+1433	Achang_Longchuan	to float	419	ȵə³¹	ȵ ə ³¹	886	i r t	ȵ ə ³¹
+1440	Maru	to float	419	mjuŋ³⁵	m j u ŋ ³⁵	887	i m r t	mj j juŋ ³⁵
+#
+1445	Achang_Longchuan	to flow	420	so³¹	s o ³¹	888	i r t	s o ³¹
+1451	Maru	to flow	420	juk³¹	/ʔ j u k ³¹	889	i m r t	ʔj j juk ³¹
+#
+1475	Maru	to fly (move through air)	421	tɔ̃³⁵	t ɔ̃ ∼ ³⁵	890	i r t	t ɔ̃∼ ³⁵
+#
+11200	Achang_Longchuan	to get / acquire	422	ʐua³⁵	ʐ u a ³⁵	891	i m r t	ʐu u ua ³⁵
+11301	Maru	to get / acquire	422	xuk⁵⁵ ŋɔ̱³¹	x u k ⁵⁵ + ˀŋ ɔ ³¹	892 893	i r t + i r t	x uk ⁵⁵ + ˀŋ ɔ ³¹
+#
+1604	Achang_Longchuan	to give	423	tsi³¹	ts i ³¹	894	i r t	ts i ³¹
+1609	Maru	to give	423	pjik⁵⁵	p j i k ⁵⁵	895	i m r t	pj j jik ⁵⁵
+#
+9557	Achang_Longchuan	to hate	424	tsit⁵⁵	ts i t ⁵⁵	896	i r t	ts it ⁵⁵
+9560	Maru	to hate	424	mai³⁵	m ai ³⁵	897	i r t	m ai ³⁵
+#
+1805	Achang_Longchuan	to hear	425	kʐua³¹	k u a ³¹	898	i m r t	ku u ua ³¹
+1812	Maru	to hear	425	ɣɔ⁵⁵kjɔ³⁵	ɣ ɔ ⁵⁵ + k j ɔ ³⁵	899 900	i r t + i m r t	ɣ ɔ ⁵⁵ + kj j jɔ ³⁵
+#
+1889	Achang_Longchuan	to hide (conceal)	426	sau⁵⁵	s au ⁵⁵	901	i r t	s au ⁵⁵
+1893	Maru	to hide (conceal)	426	ŋja̱m³⁵	ˀŋ j a m ³⁵	902	i m r t	ˀŋj j jam ³⁵
+#
+1918	Achang_Longchuan	to hold	427	m̥ʐəʔ⁵⁵	m̥ ʐ ə ʔ ⁵⁵	903	i m r t	m̥ʐ ʐ ʐəʔ ⁵⁵
+1926	Maru	to hold	427	tsɔi³⁵	ts ɔi ³⁵	904	i r t	ts ɔi ³⁵
+#
+2063	Achang_Longchuan	to hunt	428	tɕhet⁵⁵tauʔ⁵⁵	tɕʰ e t ⁵⁵ + t au ʔ ⁵⁵	905 906	i r t + i r t	tɕʰ et ⁵⁵ + t auʔ ⁵⁵
+2069	Maru	to hunt	428	ʃɔ̆³⁵pak³¹	ʃ ɔ̆ ³⁵ + p a k ³¹	907 908	i r t + i r t	ʃ ɔ̆ ³⁵ + p ak ³¹
+#
+10067	Achang_Longchuan	to itch	429	jɔ³¹	/ʔ j ɔ ³¹	909	i m r t	ʔj j jɔ ³¹
+10070	Maru	to itch	429	phan³⁵	ph a n ³⁵	910	i r t	ph an ³⁵
+#
+10158	Achang_Longchuan	to kick	430	thep³⁵	tʰ e p ³⁵	911	i r t	tʰ ep ³⁵
+10161	Maru	to kick	430	pa̱k⁵⁵	ˀp a k ⁵⁵	912	i r t	ˀp ak ⁵⁵
+#
+2184	Achang_Longchuan	to kill	431	sat⁵⁵	s a t ⁵⁵	913	i r t	s at ⁵⁵
+2192	Maru	to kill	431	sɛ̱ʔ⁵⁵	ˀs ɛ ʔ ⁵⁵	913	i r t	ˀs ɛʔ ⁵⁵
+#
+10450	Maru	to land / descend	432	kjɔ⁵⁵	k j ɔ ⁵⁵	915	i m r t	kj j jɔ ⁵⁵
+11424	Achang_Longchuan	to land / descend	432	nɔ³¹	n ɔ ³¹	914	i r t	n ɔ ³¹
+#
+2261	Maru	to laugh	433	ɣə³¹	ɣ ə ³¹	916	i r t	ɣ ə ³¹
+#
+2352	Maru	to lick	434	jɔʔ³¹	/ʔ j ɔ ʔ ³¹	917	i m r t	ʔj j jɔʔ ³¹
+#
+2357	Achang_Longchuan	to lie down	435	ŋ̊a⁵⁵	ŋ̊ a ⁵⁵	918	i r t	ŋ̊ a ⁵⁵
+2361	Maru	to lie down	435	laŋ³⁵	l a ŋ ³⁵	919	i r t	l aŋ ³⁵
+#
+10979	Achang_Longchuan	to lift (the lid)	436	phɔŋ³⁵	pʰ ɔ ŋ ³⁵	920	i r t	pʰ ɔŋ ³⁵
+10982	Maru	to lift (the lid)	436	phuŋ⁵⁵	ph u ŋ ⁵⁵	920	i r t	ph uŋ ⁵⁵
+#
+10477	Achang_Longchuan	to listen	437	kʐua³¹	k u a ³¹	921	i m r t	ku u ua ³¹
+10480	Maru	to listen	437	kjɔ³⁵	k j ɔ ³⁵	921	i m r t	kj j jɔ ³⁵
+#
+10112	Achang_Longchuan	to love	438	naŋ³¹	n a ŋ ³¹	922	i r t	n aŋ ³¹
+10115	Maru	to love	438	ŋɔi³¹	ŋ ɔi ³¹	923	i r t	ŋ ɔi ³¹
+#
+10495	Achang_Longchuan	to pee	439	tʂhə³¹	tʂʰ ə - ³¹	924	i r t	tʂʰ ə ³¹
+10497	Maru	to pee	439	ta̱k⁵⁵	ˀt a k ⁵⁵	924	i r t	ˀt ak ⁵⁵
+#
+11254	Achang_Longchuan	to pick	440	ʂaŋ⁵⁵	ʂ a ŋ ⁵⁵	925	i r t	ʂ aŋ ⁵⁵
+11265	Maru	to pick	440	khjuk⁵⁵	kh j u k ⁵⁵	926	i m r t	khj j juk ⁵⁵
+#
+6508	Achang_Longchuan	to plant (vegetals, rice)	441	sɔ³¹	s ɔ ³¹	927	i r t	s ɔ ³¹
+6560	Maru	to plant (vegetals, rice)	441	xɔ³⁵	x ɔ ³⁵	927	i r t	x ɔ ³⁵
+#
+3058	Achang_Longchuan	to play	442	tseʔ⁵⁵	ts e ʔ ⁵⁵	928	i r t	ts eʔ ⁵⁵
+3065	Maru	to play	442	na³¹ku̱m⁵⁵	n a ³¹ + ˀk u m ⁵⁵	929 930	i r t + i r t	n a ³¹ + ˀk um ⁵⁵
+#
+3100	Achang_Longchuan	to pull	443	ʂa⁵⁵	ʂ a ⁵⁵	931	i r t	ʂ a ⁵⁵
+3104	Maru	to pull	443	ʃɛ³¹	ʃ ɛ ³¹	931	i r t	ʃ ɛ ³¹
+#
+3143	Achang_Longchuan	to push	444	tun³¹	t u n ³¹	932	i r t	t un ³¹
+3151	Maru	to push	444	tʃu̱m³⁵	ˀtʃ u m ³⁵	932	i r t	ˀtʃ um ³⁵
+#
+10228	Achang_Longchuan	to read	445	nai³⁵	n ai - ³⁵	933	i r t	n ai ³⁵
+10384	Maru	to read	445	ŋɛ̱ʔ⁵⁵	ˀŋ ɛ ʔ ⁵⁵	933	i r t	ˀŋ ɛʔ ⁵⁵
+#
+10213	Achang_Longchuan	to remember	446	tɔŋ³⁵	t ɔ ŋ ³⁵	934	i r t	t ɔŋ ³⁵
+10216	Maru	to remember	446	mjik³¹	m j i k ³¹	935	i m r t	mj j jik ³¹
+#
+10937	Achang_Longchuan	to repair	447	phɔ⁵⁵	pʰ ɔ ⁵⁵	936	i r t	pʰ ɔ ⁵⁵
+10940	Maru	to repair	447	khjap⁵⁵	kh j a p ⁵⁵	937	i m r t	khj j jap ⁵⁵
+#
+3298	Achang_Longchuan	to reside (live)	448	ȵɔʔ⁵⁵	ȵ ɔ ʔ ⁵⁵	938	i r t	ȵ ɔʔ ⁵⁵
+3305	Maru	to reside (live)	448	na³¹	n a - ³¹	938	i r t	n a ³¹
+#
+9833	Achang_Longchuan	to return	449	təm⁵⁵	t ə m ⁵⁵	939	i r t	t əm ⁵⁵
+9836	Maru	to return	449	lɔ⁵⁵	l ɔ ⁵⁵	940	i r t	l ɔ ⁵⁵
+#
+9868	Achang_Longchuan	to ride	450	tsi³¹	ts i ³¹	941	i r t	ts i ³¹
+9871	Maru	to ride	450	tʃui³⁵	tʃ u i ³⁵	942	i m r t	tʃu u ui ³⁵
+#
+3525	Achang_Longchuan	to scratch	451	khʐən⁵⁵	kʰ ʐ ə n ⁵⁵	943	i m r t	kʰʐ ʐ ʐən ⁵⁵
+3529	Maru	to scratch	451	kji̱ŋ³¹	ˀk j i ŋ ³¹	943	i m r t	ˀkj j jiŋ ³¹
+#
+3556	Achang_Longchuan	to see	452	en³¹mʐaŋ⁵⁵	/ʔ e n ³¹ + m ʐ a ŋ ⁵⁵	944 945	i r t + i m r t	ʔ en ³¹ + mʐ ʐ ʐaŋ ⁵⁵
+3567	Maru	to see	452	mjɔ̃³¹	m j ɔ̃ ∼ ³¹	945	i m r t	mj j jɔ̃∼ ³¹
+#
+10711	Achang_Longchuan	to sell	453	uŋ³¹	/ʔ u ŋ ³¹	946	i r t	ʔ uŋ ³¹
+10714	Maru	to sell	453	auŋ³⁵	/ʔ au ŋ ³⁵	946	i r t	ʔ auŋ ³⁵
+#
+10226	Maru	to shave	455	khjat⁵⁵	kh j a t ⁵⁵	947	i m r t	khj j jat ⁵⁵
+10814	Achang_Longchuan	to shave	455	khʐət³⁵	kʰ ʐ ə t ³⁵	947	i m r t	kʰʐ ʐ ʐət ³⁵
+#
+10028	Achang_Longchuan	to shiver	456	nan³⁵	n a n ³⁵	948	i r t	n an ³⁵
+10031	Maru	to shiver	456	nəŋ⁵⁵	n ə ŋ ⁵⁵	948	i r t	n əŋ ⁵⁵
+#
+3671	Achang_Longchuan	to shoot (an arrow)	457	pək⁵⁵	p ə k ⁵⁵	949	i r t	p ək ⁵⁵
+3680	Maru	to shoot (an arrow)	457	pak³¹	p a k ³¹	949	i r t	p ak ³¹
+#
+9570	Achang_Longchuan	to shout	458	kʐə⁵⁵	k ʐ ə ⁵⁵	950	i m r t	kʐ ʐ ʐə ⁵⁵
+11103	Maru	to shout	458	jɔ̃³¹	/ʔ j ɔ̃ ∼ ³¹	951	i m r t	ʔj j jɔ̃∼ ³¹
+#
+3725	Achang_Longchuan	to sing	459	siaŋ³⁵ɕiaŋ⁵⁵	s i a ŋ ³⁵ + ɕ i a ŋ ⁵⁵	952 953	i m r t + i m r t	si i iaŋ ³⁵ + ɕi i iaŋ ⁵⁵
+3732	Maru	to sing	459	thu³¹	th u ³¹	954	i r t	th u ³¹
+#
+11154	Achang_Longchuan	to sink	460	ȵɔp⁵⁵	ȵ ɔ p ⁵⁵	955	i r t	ȵ ɔp ⁵⁵
+11503	Maru	to sink	460	nɔp³¹	n ɔ p ³¹	955	i r t	n ɔp ³¹
+#
+3802	Achang_Longchuan	to sleep	461	e³¹	/ʔ e ³¹	956	i r t	ʔ e ³¹
+3813	Maru	to sleep	461	jap³¹	/ʔ j a p ³¹	957	i m r t	ʔj j jap ³¹
+#
+3848	Maru	to smell (perceive odor) [transitive]	462	nɛ̃³¹	n ɛ̃ ∼ ³¹	958	i r t	n ɛ̃∼ ³¹
+#
+9741	Achang_Longchuan	to smile	463	ʐə⁵⁵	ʐ ə ⁵⁵	959	i r t	ʐ ə ⁵⁵
+9744	Maru	to smile	463	ɣə³¹	ɣ ə ³¹	959	i r t	ɣ ə ³¹
+#
+11134	Achang_Longchuan	to soak / steep	464	tsin⁵⁵	ts i n ⁵⁵	960	i r t	ts in ⁵⁵
+11137	Maru	to soak / steep	464	tʃam³¹	tʃ a m ³¹	960	i r t	tʃ am ³¹
+#
+3967	Achang_Longchuan	to spit	465	tɕho³¹	tɕʰ o ³¹	961	i r t	tɕʰ o ³¹
+3977	Maru	to spit	465	phø³⁵	ph ø ³⁵	962	i r t	ph ø ³⁵
+#
+10295	Achang_Longchuan	to split	466	tiak³⁵	t i a k ³⁵	963	i m r t	ti i iak ³⁵
+10298	Maru	to split	466	kɔʔ³¹	k ɔ ʔ ³¹	964	i r t	k ɔʔ ³¹
+#
+4043	Achang_Longchuan	to stand	467	ʑap⁵⁵	ʑ a p ⁵⁵	965	i r t	ʑ ap ⁵⁵
+4047	Maru	to stand	467	jɛʔ³¹	/ʔ j ɛ ʔ ³¹	966	i m r t	ʔj j jɛʔ ³¹
+#
+9626	Achang_Longchuan	to startle / disturb	468	thən³⁵	tʰ ə n ³⁵	967	i r t	tʰ ən ³⁵
+11567	Maru	to startle / disturb	468	kja̱uk⁵⁵	ˀk j au k ⁵⁵	968	i m r t	ˀkj j jauk ⁵⁵
+#
+4068	Achang_Longchuan	to steal	469	xau³¹	x au - ³¹	708	i r t	x au ³¹
+4077	Maru	to steal	469	khuk⁵⁵	kh u k ⁵⁵	708	i r t	kh uk ⁵⁵
+#
+10107	Achang_Longchuan	to swallow	470	thun³¹	tʰ u n ³¹	970	i r t	tʰ un ³¹
+10765	Maru	to swallow	470	mjuk³¹	m j u k ³¹	971	i m r t	mj j juk ³¹
+#
+10326	Achang_Longchuan	to swim	471	luai⁵⁵luai⁵⁵	l u ai ⁵⁵ + l u ai ⁵⁵	972 973	i m r t + i m r t	lu u uai ⁵⁵ + lu u uai ⁵⁵
+10329	Maru	to swim	471	ɣək³¹xɛ̱ʔ⁵⁵	ɣ ə k ³¹ + ˀx ɛ ʔ ⁵⁵	974 975	i r t + i r t	ɣ ək ³¹ + ˀx ɛʔ ⁵⁵
+#
+10737	Achang_Longchuan	to tell	472	kʐai⁵⁵tsi³¹	k ʐ ai ⁵⁵ + ts i ³¹	976 977	i m r t + i r t	kʐ ʐ ʐai ⁵⁵ + ts i ³¹
+10740	Maru	to tell	472	ta̱⁵⁵kjɔ̱³⁵	ˀt a ⁵⁵ + ˀk j ɔ ³⁵	978 979	i r t + i m r t	ˀt a ⁵⁵ + ˀkj j jɔ ³⁵
+#
+4453	Achang_Longchuan	to think (reflect)	473	sam⁵⁵	s a m ⁵⁵	980	i r t	s am ⁵⁵
+4461	Maru	to think (reflect)	473	mjik³¹	m j i k ³¹	981	i m r t	mj j jik ³¹
+#
+4541	Achang_Longchuan	to throw	474	xuat⁵⁵	x ua t ⁵⁵	982	i r t	x uat ⁵⁵
+4550	Maru	to throw	474	pjɛ̱ʔ⁵⁵	ˀp j ɛ ʔ ⁵⁵	983	i m r t	ˀpj j jɛʔ ⁵⁵
+#
+10405	Achang_Longchuan	to tie	475	toi³¹	t oi ³¹	668	i r t	t oi ³¹
+10408	Maru	to tie	475	tɔ̱i³⁵	ˀt ɔi ³⁵	668	i r t	ˀt ɔi ³⁵
+#
+4780	Achang_Longchuan	to vomit	476	phat⁵⁵	pʰ a t ⁵⁵	985	i r t	pʰ at ⁵⁵
+4790	Maru	to vomit	476	tauk³¹	t au k ³¹	986	i r t	t auk ³¹
+#
+11230	Achang_Longchuan	to wait	477	luaŋ³⁵	l u a ŋ ³⁵	987	i m r t	lu u uaŋ ³⁵
+11320	Maru	to wait	477	lɔ̃⁵⁵	l - ɔ̃ ∼ ⁵⁵	987	i r t	l ɔ̃∼ ⁵⁵
+#
+4798	Achang_Longchuan	to walk	478	so³¹	s o ³¹	988	i r t	s o ³¹
+4806	Maru	to walk	478	su³⁵	s u ³⁵	988	i r t	s u ³⁵
+#
+9883	Maru	to wash	479	tʃhik⁵⁵	tʃh i k ⁵⁵	990	i r t	tʃh ik ⁵⁵
+11325	Achang_Longchuan	to wash	479	phɔp⁵⁵	pʰ ɔ p ⁵⁵	989	i r t	pʰ ɔp ⁵⁵
+#
+9616	Achang_Longchuan	to watch (over somebody)	480	en³¹	/ʔ e n ³¹	991	i r t	ʔ en ³¹
+10098	Maru	to watch (over somebody)	480	vu⁵⁵	v u ⁵⁵	992	i r t	v u ⁵⁵
+#
+10835	Achang_Longchuan	to weave (a basket)	481	ʐuaʔ⁵⁵	ʐ ua ʔ ⁵⁵	993	i r t	ʐ uaʔ ⁵⁵
+10838	Maru	to weave (a basket)	481	ka̱t⁵⁵	ˀk a t ⁵⁵	994	i r t	ˀk at ⁵⁵
+#
+10760	Maru	to wink	482	tɔi³¹	t ɔi ³¹	995	i r t	t ɔi ³¹
+#
+5108	Achang_Longchuan	to wipe	484	sut⁵⁵	s u t ⁵⁵	996	i r t	s ut ⁵⁵
+5117	Maru	to wipe	484	sa̱t⁵⁵	ˀs a t ⁵⁵	996	i r t	ˀs at ⁵⁵
+#
+10679	Achang_Longchuan	to yawn	485	a⁵⁵xam³¹xam³¹	/ʔ a ⁵⁵ + x a m ³¹ + x a m ³¹	997 998 999	i r t + i r t + i r t	ʔ a ⁵⁵ + x am ³¹ + x am ³¹
+#
+6528	Achang_Longchuan	today	486	xai⁵⁵ȵen³¹	x ai ⁵⁵ + ȵ e n ³¹	1000 1001	i r t + i r t	x ai ⁵⁵ + ȵ en ³¹
+6589	Maru	today	486	a³¹na⁵⁵nɛʔ³¹	/ʔ a ³¹ + n a ⁵⁵ + n ɛ ʔ ³¹	1002 1003 1001	i r t + i r t + i r t	ʔ a ³¹ + n a ⁵⁵ + n ɛʔ ³¹
+#
+6290	Maru	tomorrow	487	nɛʔ³¹mɔ⁵⁵nɛʔ³¹	n ɛ ʔ ³¹ + m ɔ ⁵⁵ + n ɛ ʔ ³¹	1005 1006 1004	i r t + i r t + i r t	n ɛʔ ³¹ + m ɔ ⁵⁵ + n ɛʔ ³¹
+6532	Achang_Longchuan	tomorrow	487	pʰă⁵⁵nap⁵⁵	p ă ⁵⁵ + n a p ⁵⁵	1003 1004	i r t + i r t	p ă ⁵⁵ + n ap ⁵⁵
+#
+10142	Achang_Longchuan	turn over (on bed) (v.)	488	phan³¹	pʰ a n ³¹	1007	i r t	pʰ an ³¹
+10145	Maru	turn over (on bed) (v.)	488	kauŋ³¹phauk⁵⁵	k au ŋ ³¹ + ph au k ⁵⁵	1008 1009	i r t + i r t	k auŋ ³¹ + ph auk ⁵⁵
+#
+4699	Achang_Longchuan	twenty	489	tă³¹sau⁵⁵	t ă ³¹ + s au ⁵⁵	1010 1011	i r t + i r t	t ă ³¹ + s au ⁵⁵
+4707	Maru	twenty	489	ʃi̱k⁵⁵tshɛ³¹	ˀʃ i k ⁵⁵ + tsh ɛ ³¹	1012 1011	i r t + i r t	ˀʃ ik ⁵⁵ + tsh ɛ ³¹
+#
+11306	Maru	twist (a towel) (v.)	490	tʃa̱p⁵⁵	ˀtʃ a p ⁵⁵	1014	i r t	ˀtʃ ap ⁵⁵
+11408	Achang_Longchuan	twist (a towel) (v.)	490	tshit⁵⁵	tsʰ i t ⁵⁵	1013	i r t	tsʰ it ⁵⁵
+#
+4713	Achang_Longchuan	two	491	sək⁵⁵	s ə k ⁵⁵	1015	i r t	s ək ⁵⁵
+4722	Maru	two	491	ʃi̱k⁵⁵	ˀʃ i k ⁵⁵	1015	i r t	ˀʃ ik ⁵⁵
+#
+10901	Achang_Longchuan	understand (v.)	492	sa³⁵	s a ³⁵	1016	i r t	s a ³⁵
+10904	Maru	understand (v.)	492	sɛ⁵⁵	s ɛ ⁵⁵	1016	i r t	s ɛ ⁵⁵
+#
+9790	Maru	use or lean on (a walking stic (v.)	493	thauk⁵⁵	th au k ⁵⁵	1017	i r t	th auk ⁵⁵
+10651	Achang_Longchuan	use or lean on (a walking stic (v.)	493	thu⁵⁵ʐaŋ³¹	tʰ u - ⁵⁵ + ʐ a ŋ ³¹	1017 1018	i r t + i r t	tʰ u ⁵⁵ + ʐ aŋ ³¹
+#
+9852	Achang_Longchuan	wake up (v.)	494	pa⁵⁵	p a - ⁵⁵	1019	i r t	p a ⁵⁵
+11418	Maru	wake up (v.)	494	pum³⁵	p u m ³⁵	1019	i r t	p um ³⁵
+#
+10512	Maru	warm	495	ŋjø³⁵	ŋ j ø ³⁵	1021	i m r t	ŋj j jø ³⁵
+10748	Achang_Longchuan	warm	495	lum⁵⁵	l u m ⁵⁵	1020	i r t	l um ⁵⁵
+#
+10530	Achang_Longchuan	water / sprinkle / irrigate (v.)	496	kən³¹	k ə n ³¹	1022	i r t	k ən ³¹
+#
+4894	Achang_Longchuan	we [first person plural inclusive]	497	ŋɔ⁵⁵tuʔ³¹	ŋ ɔ ⁵⁵ + t u ʔ ³¹	1023 1024	i r t + i r t	ŋ ɔ ⁵⁵ + t uʔ ³¹
+4898	Maru	we [first person plural inclusive]	497	ŋɔ̆³¹na̱uŋ⁵⁵	ŋ ɔ̆ ³¹ + ˀn au ŋ ⁵⁵	1023 1025	i r t + i r t	ŋ ɔ̆ ³¹ + ˀn auŋ ⁵⁵
+#
+4951	Achang_Longchuan	wet	498	phet⁵⁵	pʰ e t ⁵⁵	1027	i r t	pʰ et ⁵⁵
+4958	Maru	wet	498	tʃu̱k⁵⁵	ˀtʃ u k ⁵⁵	1028	i r t	ˀtʃ uk ⁵⁵
+#
+4963	Achang_Longchuan	what	499	pi³¹si⁵⁵	p i ³¹ + s i ⁵⁵	1029 1030	i r t + i r t	p i ³¹ + s i ⁵⁵
+4971	Maru	what	499	pɛ̱⁵⁵	ˀp ɛ ⁵⁵	1029	i r t	ˀp ɛ ⁵⁵
+#
+4984	Achang_Longchuan	where	500	xoi⁵⁵thɔʔ⁵⁵	x oi ⁵⁵ + tʰ ɔ ʔ ⁵⁵	1031 1032	i r t + i r t	x oi ⁵⁵ + tʰ ɔʔ ⁵⁵
+4992	Maru	where	500	mhə̆³¹mɛ³¹	mh ə̆ ³¹ + m ɛ ³¹	1033 1034	i r t + i r t	mh ə̆ ³¹ + m ɛ ³¹
+#
+4998	Achang_Longchuan	white	501	phʐo⁵⁵	pʰ ʐ o ⁵⁵	1035	i m r t	pʰʐ ʐ ʐo ⁵⁵
+5005	Maru	white	501	phju³¹	ph j u ³¹	1035	i m r t	phj j ju ³¹
+#
+5014	Achang_Longchuan	who	502	xau⁵⁵	x au ⁵⁵	1036	i r t	x au ⁵⁵
+5023	Maru	who	502	khə̆³¹jauk³¹	kh ə̆ ³¹ + /ʔ j au k ³¹	1036 1037	i r t + i m r t	kh ə̆ ³¹ + ʔj j jauk ³¹
+#
+5202	Achang_Longchuan	yellow	503	ləŋ³⁵	l ə ŋ ³⁵	1039	i r t	l əŋ ³⁵
+5208	Maru	yellow	503	xui³¹	x u i ³¹	1040	i m r t	xu u ui ³¹
+#
+6529	Achang_Longchuan	yesterday	504	man³⁵	m a n ³⁵	1041	i r t	m an ³⁵
+6590	Maru	yesterday	504	a³¹ŋji³¹nɛʔ³¹	/ʔ a ³¹ + ŋ j i ³¹ + n ɛ ʔ ³¹	1042 1043 1044	i r t + i m r t + i r t	ʔ a ³¹ + ŋj j ji ³¹ + n ɛʔ ³¹
+#
+5220	Achang_Longchuan	you [second person plural]	505	nuaŋ⁵⁵tuʔ³¹	n u a ŋ ⁵⁵ + t u ʔ ³¹	1045 1046	i m r t + i r t	nu u uaŋ ⁵⁵ + t uʔ ³¹
+5226	Maru	you [second person plural]	505	nɔ̃̆³¹na̱uŋ⁵⁵	n ɔ̃̆ ∼ ³¹ + ˀn - au ŋ ⁵⁵	1047 1045	i r t + i r t	n ɔ̃̆∼ ³¹ + ˀn auŋ ⁵⁵
+#
+6219	Maru	young	506	ŋai³¹	ŋ ai ³¹	1048	i r t	ŋ ai ³¹
+6591	Achang_Longchuan	young	506	nom³⁵	n o m ³⁵	1047	i r t	n om ³⁵

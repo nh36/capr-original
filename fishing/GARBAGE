@@ -1,0 +1,14 @@
+            for doculect in lang_ids:
+                if doculect in cnt[position]:
+                    most_common_sound = cnt[position][doculect].most_common()[0][0]
+                    most_common_ipa = Counter(sylls[position][doculect][most_common_sound]).most_common()[0][0]
+
+                    # print(most_common_sound, '(', ', '.join(sylls[position][doculect][most_common_sound]), ')')
+                    for sound in sylls[position][doculect]:
+                        if sound == most_common_sound:
+                            continue
+                        # print(' ' * len(doculect), end='  ')
+                        # print('['+sound+']', '(', ', '.join(sylls[position][doculect][sound]), ')', 'of', '-'.join(sylls[position][doculect]))
+                else:
+                    # print()
+

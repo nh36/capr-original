@@ -1,0 +1,137 @@
+#!/usr/bin/python
+# CAPR v0.2
+# cache transducer
+# Remote script that, given a transducer and some source lexical file, returns the cached results of all applied transducers
+# JSON input
+# {"fstIndex": index to language name used in the foma file
+#  "transducer": transducer source file
+#  "words": JSON words
+# }
+# JSON output
+# {"fstUp": cached reverse projection,
+#  "fstDown": cached forward projection}
+
+# Basic imports
+import sys
+import re
+import os
+import csv
+import json
+from functools import reduce
+from foma import FST
+
+def eprint(*args, **kwargs):
+    print(*args, file=sys.stderr, **kwargs)
+
+# Replace unicode diacritics with ASCII equivalents for sending to the transducers
+UNICODE_MACRON_UNDER = " ̱ "[1]
+UNICODE_TILDE_OVER = " ̃"[1]
+def replace_diacritics_up(s):
+    return s.replace(UNICODE_MACRON_UNDER, '_').replace(UNICODE_TILDE_OVER, '~').replace('_~', '~_')
+
+def replace_diacritics_down(s):
+    return s.replace('_', UNICODE_MACRON_UNDER).replace('~', UNICODE_TILDE_OVER)
+
+# Convert a piece of text to its component syllables
+# If there is alrady "◦" or a space, use it to separate them
+# Otherwise, separate the tone letters other letters
+def syllabize(text):
+    split_result = re.split(r'([ ◦¹²³⁴⁵˩˨˧˦˥]+)', text)
+    l = len(split_result)
+
+    # There are two possibilities
+    # 'a◦b◦' → ['a', '◦', 'b', '◦', '']
+    # 'a◦b' → ['a', '◦', 'b']
+    # Both of them are odd, but should be treated differently
+    # At least, everything but the last can be done in the same way
+    # (5-1)/2 = 2
+
+    result = []
+    for i in range((l-1) // 2):
+        result.append(split_result[i*2] + split_result[i*2+1].strip('◦ '))
+    # If last non-zero, then copy to result
+    if split_result[l-1]:
+        result.append(split_result[l-1])
+
+    return result
+
+# emphasize_syllable("mi ma mu", 1) → "mi<ma>mu"
+def emphasize_syllable(text, syllable_index, usual_formatting = None, emphatic_formatting = None):
+    syllables = syllabize(text)
+    l = len(syllables)
+    result = ''
+    for i in range(l):
+        if i == syllable_index:
+            result = result + (emphatic_formatting or '<%s>') % syllables[i]
+        else:
+            result = result + (usual_formatting or '%s') % syllables[i]
+    return result
+
+# fetch_syllable("mi ma mu", 1) → "ma"
+def fetch_syllable(text, syllable_index):
+    syllables = syllabize(text)
+    return syllables[syllable_index]
+
+# Convert internal language name to printed name
+def print_language_name(name):
+    if name == 'Old_Burmese':
+        return 'OBur.'
+    else:
+        return name.replace('_', r'\_')
+
+##### MAIN PROGRAM #####
+
+eprint('Program starts')
+
+script_path = os.path.dirname(os.path.realpath(__file__))
+
+# Compile transducers
+from foma import FST
+import tempfile
+import os
+import subprocess
+
+# decode the input JSON
+input_json = json.load(sys.stdin)
+
+fst_index = input_json['fstIndex']
+
+
+# Reading transducers
+fsts = {}
+with tempfile.TemporaryDirectory() as tmpdirname:
+    os.chdir(tmpdirname)
+    eprint('Compiling FSTs')
+    eprint(input_json['transducer'])
+    with open('transducer.foma', 'w') as fp:
+        fp.write(input_json['transducer'])
+    output = subprocess.check_output(['foma', '-f', 'transducer.foma']).decode('UTF-8')
+    eprint('\n'.join(output.split('\n')[-5:]))
+    for doculect_name in fst_index:
+        if os.path.isfile(fst_index[doculect_name] + '.bin'):
+            fsts[doculect_name] = FST.load(fst_index[doculect_name] + '.bin')
+    os.chdir(script_path)
+    eprint('FSTs loaded:', ', '.join(fsts))
+
+# JSON output
+attested_reconstructions = set({})
+json_fst_doculects = [fst for fst in fsts]
+json_fst_up = {fst:{} for fst in fsts}
+json_fst_down = {fst:{} for fst in fsts}
+
+for word_index in input_json['words']:
+    word = input_json['words'][word_index]
+    if word['doculect'] in fsts:
+        for syl in word['syllables']:
+            the_syl = replace_diacritics_up(syl)
+            rec = list(fsts[word['doculect']].apply_up(the_syl))
+            json_fst_up[word['doculect']][syl] = sorted(set(rec))
+            attested_reconstructions.update(rec)
+
+# calculate json_fst_down
+for language in json_fst_doculects:
+    for proto_form in sorted(attested_reconstructions):
+        json_fst_down[language][proto_form] = sorted(set(replace_diacritics_down(s) for s in fsts[language].apply_down(proto_form)))
+
+json.dump({'fstDoculects': json_fst_doculects, 'fstUp': json_fst_up, 'fstDown': json_fst_down}, sys.stdout, indent=2)
+print('')
